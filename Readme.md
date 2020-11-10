@@ -1,9 +1,9 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Глеб Хлопков](https://up.htmlacademy.ru/adaptive/21/user/1295047).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Пудов](https://htmlacademy.ru/profile/kamelot43).
 
----
+----
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 
