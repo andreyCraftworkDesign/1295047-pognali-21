@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Направления</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo logo">
+        <img src="" alt="логотип сервиса Погнали?">
+      </a>
+      <div class="page-header__content">
+        <nav class="page-header__main-nav main-nav">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О сервисе</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Направления</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__user-menu user-menu">
+          <a class="button user-menu__login" href="login.html">Авторизоваться</a>
+          <a class="user-menu__phone" href="tel:+78005558628"><span class="visually-hidden">8 800 555-86-28</span></a>
+          <a class="user-menu__email" href="mailto:mail@htmlcademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
+        </div>
+        <div class="page-header__contacts contacts">
+          <a class="contacts__phone" href="tel:+78005558628">8 800 555-86-28</a>
+          <a class="contacts__email" href="mailto:mail@htmlcademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="page-header__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Instagram</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="page-main-wrapper">
+        <h1 class="page-main__title">Направления</h1>
+      </div>
+      <form class="page-main__direction-form direction-form">
+        <section class="direction-form__user-info user-info">
+          <h2 class="visually-hidden">Информация о попутчике</h2>
+          <div class="user-info__level level">
+            <p class="level__title">level</p>
+            <span class="level__value">99</span>
+          </div>
+          <img class="user-info__avatar avatar"src="" alt="">
+          <label for="avatar"><span class="visually-hidden">Сменить</span> фото</label>
+          <input class="visually-hidden" id="avatar" name="avatar" type="file">
+          <fieldset class="user-info__fieldset">
+            <legend class="user-info__legend">Тэги</legend>
+            <label class="visually-hidden" for="tags">Укажите список тэгов</label>
+            <textarea name="tags" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="user-info__fieldset">
+            <legend class="user-info__legend">Транспорт</legend>
+            <input class="user-info__input-checkbox visually-hidden" id="aeroplane" name="aeroplane" type="checkbox" checked>
+            <label class="user-info__label user-info__label--aeroplane" for="aeroplane"><span class="visually-hidden">Самолёт</span></label>
+            <input class="user-info__input-checkbox visually-hidden" id="car" name="car" type="checkbox" checked>
+            <label class="user-info__label user-info__label--aeroplane" for="car"><span class="visually-hidden">Автотранспорт</span></label>
+            <input class="user-info__input-checkbox visually-hidden" id="bike" name="bike" type="checkbox">
+            <label class="user-info__label user-info__label--aeroplane" for="bike"><span class="visually-hidden">Велосипед</span></label>
+            <input class="user-info__input-checkbox visually-hidden" id="walk" name="walk" type="checkbox" checked>
+            <label class="user-info__label user-info__label--aeroplane" for="walk"><span class="visually-hidden">Пешком</span></label>
+          </fieldset>
+        </section>
+      </form>
+
+    </main>
+    <footer class="page-footer">
+
+    </footer>
+  </body>
+</html>
