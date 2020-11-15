@@ -96,6 +96,44 @@
             </li>
           </ol>
         </section>
+        <section class="direction-form__add-plane add-plane">
+          <div class="add-plane__header">
+            <h2 class="add-plane__title">Добавить план:</h2>
+            <div class="add-plane__step-marker step-marker">
+              <ul class="step-marker__list">
+                <li class="step-marker step-marker--active">Даты</li>
+                <li class="step-marker">Маршрут</li>
+                <li class="step-marker">Развлечения</li>
+              </ul>
+            </div>
+          </div>
+          <section class="add-plane__plane-step plane-step plane-step--1">
+            <h3 class="plane-step__title">Шаг 1. Даты пребывания</h3>
+            <p class="plane-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="plane-step-input-wrapper">
+              <label class="plane-step__label" for="travelers-value">Ищу попутчиков</label>
+              <span class="plane-step__unit-measure">Чел.</span>
+              <div class="plane-step-input-number-wrapper">
+                <button class="plane-step__button plane-step__button--minus" type="button">-</button>
+                <input class="plane-step__input-number" id="travelers-value" name="travelers-value" type="number" value="2">
+                <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="plane-step-input-number-wrapper">
+              <label class="plane-step__label" for="days-value">Длительность</label>
+              <span class="plane-step__unit-measure">Дн.</span>
+              <div class="plane-step-input-number-wrapper">
+                <button class="plane-step__button plane-step__button--minus" type="button">-</button>
+                <input class="plane-step__input-number" id="days-value" name="days-value" type="number" value="2">
+                <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="plane-step-input-wrapper">
+              <input class="visually-hidden" id="child-yes" type="checkbox" checked>
+              <label class="plane-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
+            </div>
+          </section>
+        </section>
       </form>
 
     </main>
