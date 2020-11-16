@@ -69,8 +69,8 @@
           </fieldset>
           <fieldset class="user-info__fieldset">
             <legend class="user-info__legend">Транспорт</legend>
-            <input class="user-info__input-checkbox visually-hidden" id="aeroplane" name="aeroplane" type="checkbox" checked>
-            <label class="user-info__label user-info__label--aeroplane" for="aeroplane"><span class="visually-hidden">Самолёт</span></label>
+            <input class="user-info__input-checkbox visually-hidden" id="aeroplan" name="aeroplan" type="checkbox" checked>
+            <label class="user-info__label user-info__label--aeroplan" for="aeroplan"><span class="visually-hidden">Самолёт</span></label>
             <input class="user-info__input-checkbox visually-hidden" id="car" name="car" type="checkbox" checked>
             <label class="user-info__label user-info__label--car" for="car"><span class="visually-hidden">Автотранспорт</span></label>
             <input class="user-info__input-checkbox visually-hidden" id="bike" name="bike" type="checkbox">
@@ -79,62 +79,62 @@
             <label class="user-info__label user-info__label--walk" for="walk"><span class="visually-hidden">Пешком</span></label>
           </fieldset>
         </section>
-        <section class="direction-form__user-plane user-plane">
-          <h2 class="user-plane__title">Мои планы:</h2>
-          <ol class="user-plane__list">
-            <li class="user-plane__item plane-item">
-              <p class="plane-item__country">Франция, Италия</p>
-              <p class="plane-item__travelers">3 попутчика</p>
-              <p class="plane-item__dates">26 мар — 29 мар</p>
-              <a class="plane-item__edit" href="#">Изменить</a>
+        <section class="direction-form__user-plan user-plan">
+          <h2 class="user-plan__title">Мои планы:</h2>
+          <ol class="user-plan__list">
+            <li class="user-plan__item plan-item">
+              <p class="plan-item__country">Франция, Италия</p>
+              <p class="plan-item__travelers">3 попутчика</p>
+              <p class="plan-item__dates">26 мар — 29 мар</p>
+              <a class="plan-item__edit" href="#">Изменить</a>
             </li>
-            <li class="user-plane__item plane-item">
-              <p class="plane-item__country">Тайланд, Индонезия</p>
-              <p class="plane-item__travelers">1 попутчик</p>
-              <p class="plane-item__dates">1 июл — 15 июл</p>
-              <a class="plane-item__edit" href="#">Изменить</a>
+            <li class="user-plan__item plan-item">
+              <p class="plan-item__country">Тайланд, Индонезия</p>
+              <p class="plan-item__travelers">1 попутчик</p>
+              <p class="plan-item__dates">1 июл — 15 июл</p>
+              <a class="plan-item__edit" href="#">Изменить</a>
             </li>
           </ol>
         </section>
-        <section class="direction-form__add-plane add-plane">
-          <div class="add-plane__header">
-            <h2 class="add-plane__title">Добавить план:</h2>
-            <div class="add-plane__step-marker step-marker">
+        <section class="direction-form__add-plan add-plan">
+          <div class="add-plan__header">
+            <h2 class="add-plan__title">Добавить план:</h2>
+            <div class="add-plan__step-marker step-marker">
               <ul class="step-marker__list">
-                <li class="step-marker step-marker--active">Даты</li>
-                <li class="step-marker">Маршрут</li>
-                <li class="step-marker">Развлечения</li>
+                <li class="step-marker__item step-marker__item--active"><span class="step-marker__name">Даты</span></li>
+                <li class="step-marker__item"><span class="step-marker__name">Маршрут</span></li>
+                <li class="step-marker__item"><span class="step-marker__name">Развлечения</span></li>
               </ul>
             </div>
           </div>
-          <section class="add-plane__plane-step plane-step plane-step--1">
-            <h3 class="plane-step__title">Шаг 1. Даты пребывания</h3>
-            <p class="plane-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <div class="plane-step-input-group-wrapper">
-              <div class="plane-step-input-wrapper">
-                <label class="plane-step__label" for="travelers-value">Ищу попутчиков</label>
-                <span class="plane-step__unit-measure">Чел.</span>
-                <div class="plane-step-input-number-wrapper">
-                  <button class="plane-step__button plane-step__button--minus" type="button">-</button>
-                  <input class="plane-step__input-number" id="travelers-value" name="travelers-value" type="number" value="2">
-                  <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+          <section class="add-plan__plan-step plan-step plan-step--1">
+            <h3 class="plan-step__title"><span class="plan-step__number">Шаг 1.</span> Даты пребывания</h3>
+            <p class="plan-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="plan-step-input-group-wrapper">
+              <div class="plan-step-input-wrapper">
+                <label class="plan-step__label" for="travelers-value">Ищу попутчиков</label>
+                <span class="plan-step__unit-measure">Чел.</span>
+                <div class="plan-step-input-number-wrapper">
+                  <button class="plan-step__button plan-step__button--minus" type="button">-</button>
+                  <input class="plan-step__input-number" id="travelers-value" name="travelers-value" type="number" value="2">
+                  <button class="plan-step__button plan-step__button--plus" type="button">+</button>
                 </div>
               </div>
-              <div class="plane-step-input-wrapper">
-                <label class="plane-step__label" for="days-value">Длительность</label>
-                <span class="plane-step__unit-measure">Дн.</span>
-                <div class="plane-step-input-number-wrapper">
-                  <button class="plane-step__button plane-step__button--minus" type="button">-</button>
-                  <input class="plane-step__input-number" id="days-value" name="days-value" type="number" value="2">
-                  <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+              <div class="plan-step-input-wrapper">
+                <label class="plan-step__label" for="days-value">Длительность</label>
+                <span class="plan-step__unit-measure">Дн.</span>
+                <div class="plan-step-input-number-wrapper">
+                  <button class="plan-step__button plan-step__button--minus" type="button">-</button>
+                  <input class="plan-step__input-number" id="days-value" name="days-value" type="number" value="2">
+                  <button class="plan-step__button plan-step__button--plus" type="button">+</button>
                 </div>
               </div>
-              <div class="plane-step-input-wrapper">
+              <div class="plan-step-input-wrapper">
                 <input class="visually-hidden" id="child-yes" type="checkbox" checked>
-                <label class="plane-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
+                <label class="plan-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
               </div>
             </div>
-            <div class="plane-step__calendar calendar">
+            <div class="plan-step__calendar calendar">
               <div class="calendar__header">
                 <button class="calendar__button calendar__button--prev"></button>
                 <p class="calendar__title">Март 2019</p>
@@ -336,8 +336,175 @@
                 </tbody>
               </table>
             </div>
-            <a class="button button--big button__step" href="#">Следующий шаг</a>
+            <a class="button button--big plan-step__button-next" href="#">Следующий шаг</a>
           </section>
+          <section class="add-plan__plan-step plan-step plan-step--2">
+            <h3 class="plan-step__title"><span class="plan-step__number">Шаг 2.</span> Маршрут</h3>
+            <p class="plan-step__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            <div class="plan-step__select select-country">
+              <div class="select-country-wrapper">
+                <button class="select-country__choice" type="button">
+                  Босния и Герцеговина
+                </button>
+                <div class="select-country__flag flag flag--bosnia"></div>
+                <button class="select-country__delete" type="button"></button>
+              </div>
+              <div class="select-country-wrapper">
+                <button class="select-country__choice" type="button">
+                  Босния и Герцеговина
+                </button>
+                <div class="select-country__flag flag flag--czech"></div>
+                <button class="select-country__delete" type="button"></button>
+              </div>
+              <div class="select-country-wrapper">
+                <button class="select-country__choice" type="button">
+                  Выберите страну
+                </button>
+                <div class="select-country__flag flag"></div>
+                <button class="select-country__delete" type="button"></button>
+                <div class="select-country__dropdown">
+                  <div class="select-country__filter-abc filter-abc">
+                    <ul class="filter-abc__list">
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">а</button>
+                        <ul class="select-country__list">
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-australia">Австралия</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-australia">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-austria">Австрия</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-austria">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-azerbaijan">Азербайджан</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-azerbaijan">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-albania">Албания</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-albania">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-algeria">Алжир</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-algeria">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-angola">Ангола</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-angola">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-andorra">Андорра</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-andorra">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-antigua">Антигуа и Барбуда</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-antigua">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-argentina">Аргентина</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-argentina">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-armenia">Армения</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-armenia">
+                          </li>
+                          <li class="select-country__item">
+                            <label class="select-country__option" for="select-country-afghanistan">Афганистан</label>
+                            <input class="visually-hidden" type="radio" name="select-country-3" id="select-country-afghanistan">
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">б</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">в</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">г</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">д</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">е</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">з</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">и</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">к</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">л</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">м</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">н</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">о</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">п</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">р</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">с</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">т</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">у</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">ф</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">х</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">ч</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">ш</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">э</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">ю</button>
+                      </li>
+                      <li class="filter-abc__item">
+                        <button class="filter-abc__button filter-abc__button--active" type="button">я</button>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="select-country-wrapper">
+                <button class="select-country__add" type="button">
+                  Добавить страну
+                </button>
+              </div>
+            </div>
+            <div class="plan-step-buttons-wrapper">
+              <a class="button button--big plan-step__button-next" href="#">Следующий шаг</a>
+              <a class="plane-step__button-prev" href="#">На шаг назад</a>
+            </div>
+          </section>
+
+
 
         </section>
 
