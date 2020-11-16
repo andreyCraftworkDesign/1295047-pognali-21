@@ -110,30 +110,54 @@
           <section class="add-plane__plane-step plane-step plane-step--1">
             <h3 class="plane-step__title">Шаг 1. Даты пребывания</h3>
             <p class="plane-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <div class="plane-step-input-wrapper">
-              <label class="plane-step__label" for="travelers-value">Ищу попутчиков</label>
-              <span class="plane-step__unit-measure">Чел.</span>
-              <div class="plane-step-input-number-wrapper">
-                <button class="plane-step__button plane-step__button--minus" type="button">-</button>
-                <input class="plane-step__input-number" id="travelers-value" name="travelers-value" type="number" value="2">
-                <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+            <div class="plane-step-input-group-wrapper">
+              <div class="plane-step-input-wrapper">
+                <label class="plane-step__label" for="travelers-value">Ищу попутчиков</label>
+                <span class="plane-step__unit-measure">Чел.</span>
+                <div class="plane-step-input-number-wrapper">
+                  <button class="plane-step__button plane-step__button--minus" type="button">-</button>
+                  <input class="plane-step__input-number" id="travelers-value" name="travelers-value" type="number" value="2">
+                  <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+                </div>
+              </div>
+              <div class="plane-step-input-wrapper">
+                <label class="plane-step__label" for="days-value">Длительность</label>
+                <span class="plane-step__unit-measure">Дн.</span>
+                <div class="plane-step-input-number-wrapper">
+                  <button class="plane-step__button plane-step__button--minus" type="button">-</button>
+                  <input class="plane-step__input-number" id="days-value" name="days-value" type="number" value="2">
+                  <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+                </div>
+              </div>
+              <div class="plane-step-input-wrapper">
+                <input class="visually-hidden" id="child-yes" type="checkbox" checked>
+                <label class="plane-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
               </div>
             </div>
-            <div class="plane-step-input-number-wrapper">
-              <label class="plane-step__label" for="days-value">Длительность</label>
-              <span class="plane-step__unit-measure">Дн.</span>
-              <div class="plane-step-input-number-wrapper">
-                <button class="plane-step__button plane-step__button--minus" type="button">-</button>
-                <input class="plane-step__input-number" id="days-value" name="days-value" type="number" value="2">
-                <button class="plane-step__button plane-step__button--plus" type="button">+</button>
+            <div class="plane-step__calendar calendar">
+              <div class="calendar__header">
+                <button class="calendar__button calendar__button--prev"></button>
+                <p class="calendar__title">Март 2019</p>
+                <button class="calendar__button calendar__button--next"></button>
               </div>
-            </div>
-            <div class="plane-step-input-wrapper">
-              <input class="visually-hidden" id="child-yes" type="checkbox" checked>
-              <label class="plane-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
+              <table class="calendar__body">
+                <thead>
+                  <tr>
+                    <th class="calendar__day-of-week"></th>
+                    <th class="calendar__day-of-week"></th>
+                    <th class="calendar__day-of-week"></th>
+                    <th class="calendar__day-of-week"></th>
+                    <th class="calendar__day-of-week"></th>
+                    <th class="calendar__day-of-week calendar__day-of-week--weekend"></th>
+                    <th class="calendar__day-of-week calendar__day-of-week--weekend"></th>
+                  </tr>
+
+                </thead>
+              </table>
             </div>
           </section>
         </section>
+
       </form>
 
     </main>
