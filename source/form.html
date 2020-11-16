@@ -52,7 +52,7 @@
       <div class="page-main-wrapper">
         <h1 class="page-main__title">Направления</h1>
       </div>
-      <form class="page-main__direction-form direction-form">
+      <form class="page-main__direction-form direction-form" action="https://echo.htmlacademy.ru" method="GET">
         <section class="direction-form__user-info user-info">
           <h2 class="visually-hidden">Информация о попутчике</h2>
           <div class="user-info__level level">
@@ -140,22 +140,205 @@
                 <p class="calendar__title">Март 2019</p>
                 <button class="calendar__button calendar__button--next"></button>
               </div>
-              <table class="calendar__body">
-                <thead>
+              <table class="calendar__table">
+                <thead class="calendar__head">
                   <tr>
-                    <th class="calendar__day-of-week"></th>
-                    <th class="calendar__day-of-week"></th>
-                    <th class="calendar__day-of-week"></th>
-                    <th class="calendar__day-of-week"></th>
-                    <th class="calendar__day-of-week"></th>
-                    <th class="calendar__day-of-week calendar__day-of-week--weekend"></th>
-                    <th class="calendar__day-of-week calendar__day-of-week--weekend"></th>
+                    <th class="calendar__day-of-week">пн</th>
+                    <th class="calendar__day-of-week">вт</th>
+                    <th class="calendar__day-of-week">ср</th>
+                    <th class="calendar__day-of-week">чт</th>
+                    <th class="calendar__day-of-week">пт</th>
+                    <th class="calendar__day-of-week calendar__day-of-week--weekend">сб</th>
+                    <th class="calendar__day-of-week calendar__day-of-week--weekend">вс</th>
                   </tr>
-
                 </thead>
+                <tbody class="calendar__body">
+                  <tr>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="february-23" name="february" value="23" disabled>
+                      <label class="calendar__day-number" for="february-23">23</label>
+                    </td>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="february-24" name="february" value="24" disabled>
+                      <label class="calendar__day-number" for="february-24" >24</label>
+                    </td>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="february-25" name="february" value="25" disabled>
+                      <label class="calendar__day-number" for="february-25">25</label>
+                    </td>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="february-26" name="february" value="26" disabled>
+                      <label class="calendar__day-number" for="february-26">26</label>
+                    </td>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="february-27" name="february" value="27" disabled>
+                      <label class="calendar__day-number" for="february-27">27</label>
+                    </td>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="february-28" name="february" value="28" disabled>
+                      <label class="calendar__day-number" for="february-28">28</label>
+                    </td>
+                    <td class="calendar__day calendar__day--disable">
+                      <input class="visually-hidden" type="checkbox" id="march-1" name="march" value="1" disabled>
+                      <label class="calendar__day-number" for="march-1">1 <span class="calendar__month-name">мар</span></label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-2" name="march" value="2" disabled>
+                      <label class="calendar__day-number" for="march-2">2</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-3" name="march" value="3" disabled>
+                      <label class="calendar__day-number" for="march-3">3</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-4" name="march" value="4" disabled>
+                      <label class="calendar__day-number" for="march-4">4</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-5" name="march" value="5" disabled>
+                      <label class="calendar__day-number" for="march-5">5</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-6" name="march" value="6" disabled>
+                      <label class="calendar__day-number" for="march-6">6</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-7" name="march" value="7" disabled>
+                      <label class="calendar__day-number" for="march-7">7</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-8" name="march" value="8" disabled>
+                      <label class="calendar__day-number" for="march-8">8</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-9" name="march" value="9" disabled>
+                      <label class="calendar__day-number" for="march-9">9</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-10" name="march" value="10" disabled>
+                      <label class="calendar__day-number" for="march-10">10</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-11" name="march" value="11" disabled>
+                      <label class="calendar__day-number" for="march-11">11</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-12" name="march" value="12" disabled>
+                      <label class="calendar__day-number" for="march-12">12</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-13" name="march" value="13" disabled>
+                      <label class="calendar__day-number" for="march-13">13</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-14" name="march" value="14" disabled>
+                      <label class="calendar__day-number" for="march-14">14</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-15" name="march" value="15" disabled>
+                      <label class="calendar__day-number" for="march-15">15</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-16" name="march" value="16" disabled>
+                      <label class="calendar__day-number" for="march-16">16</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-17" name="march" value="17" disabled>
+                      <label class="calendar__day-number" for="march-17">17</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-18" name="march" value="18" disabled>
+                      <label class="calendar__day-number" for="march-18">18</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-19" name="march" value="19" disabled>
+                      <label class="calendar__day-number" for="march-19">19</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-20" name="march" value="20" disabled>
+                      <label class="calendar__day-number" for="march-20">20</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-21" name="march" value="21" disabled>
+                      <label class="calendar__day-number" for="march-21">21</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-22" name="march" value="22" disabled>
+                      <label class="calendar__day-number" for="march-22">22</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-23" name="march" value="23" disabled>
+                      <label class="calendar__day-number" for="march-23">23</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-24" name="march" value="24" disabled>
+                      <label class="calendar__day-number" for="march-24" >24</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-25" name="march" value="25" disabled>
+                      <label class="calendar__day-number" for="march-25">25</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-26" name="march" value="26" checked>
+                      <label class="calendar__day-number" for="march-26">26</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-27" name="march" value="27" checked>
+                      <label class="calendar__day-number" for="march-27">27</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-28" name="march" value="28" checked>
+                      <label class="calendar__day-number" for="march-28">28</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-29" name="march" value="29">
+                      <label class="calendar__day-number" for="march-29">29</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-30" name="march" value="30">
+                      <label class="calendar__day-number" for="march-30">30</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="march-31" name="march" value="31">
+                      <label class="calendar__day-number" for="march-31" >31</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="april-1" name="april" value="1">
+                      <label class="calendar__day-number" for="april-18">1 <span class="calendar__month-name">апр</span></label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="april-2" name="april" value="2">
+                      <label class="calendar__day-number" for="april-2">2</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="april-3" name="april" value="3">
+                      <label class="calendar__day-number" for="april-3">3</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="april-4" name="april" value="4">
+                      <label class="calendar__day-number" for="april-4">4</label>
+                    </td>
+                    <td class="calendar__day">
+                      <input class="visually-hidden" type="checkbox" id="april-5" name="april" value="5">
+                      <label class="calendar__day-number" for="april-5">5</label>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
+            <a class="button button--big button__step" href="#">Следующий шаг</a>
           </section>
+
         </section>
 
       </form>
