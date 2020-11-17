@@ -110,29 +110,27 @@
           <section class="add-plan__plan-step plan-step plan-step--1">
             <h3 class="plan-step__title"><span class="plan-step__number">Шаг 1.</span> Даты пребывания</h3>
             <p class="plan-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <div class="plan-step-input-group-wrapper">
-              <div class="plan-step-input-wrapper">
-                <label class="plan-step__label" for="travelers-value">Ищу попутчиков</label>
-                <span class="plan-step__unit-measure">Чел.</span>
-                <div class="plan-step-input-number-wrapper">
-                  <button class="plan-step__button plan-step__button--minus" type="button">-</button>
-                  <input class="plan-step__input-number" id="travelers-value" name="travelers-value" type="number" value="2">
-                  <button class="plan-step__button plan-step__button--plus" type="button">+</button>
+            <div class="plan-step-input-wrapper">
+              <div class="plan-step__counter counter">
+                <label class="plan-step__label input-counter__label" for="travelers-value">Ищу попутчиков</label>
+                <span class="input-counter__unit-measure">Чел.</span>
+                <div class="input-counter-inner">
+                  <button class="input-counter__button input-counter__button--minus" type="button">-</button>
+                  <input class="input-counter__number" id="travelers-value" name="travelers-value" type="number" value="2">
+                  <button class="input-counter__button input-counter__button--plus" type="button">+</button>
                 </div>
               </div>
-              <div class="plan-step-input-wrapper">
-                <label class="plan-step__label" for="days-value">Длительность</label>
-                <span class="plan-step__unit-measure">Дн.</span>
-                <div class="plan-step-input-number-wrapper">
-                  <button class="plan-step__button plan-step__button--minus" type="button">-</button>
-                  <input class="plan-step__input-number" id="days-value" name="days-value" type="number" value="2">
-                  <button class="plan-step__button plan-step__button--plus" type="button">+</button>
+              <div class="plan-step__input-counter input-counter">
+                <label class="plan-step__label input-counter__label" for="days-value">Длительность</label>
+                <span class="input-counter__unit-measure">Дн.</span>
+                <div class="input-counter-inner">
+                  <button class="input-counter__button input-counter__button--minus" type="button">-</button>
+                  <input class="input-counter__input-number" id="days-value" name="days-value" type="number" value="2">
+                  <button class="input-counter__button input-counter__button--plus" type="button">+</button>
                 </div>
               </div>
-              <div class="plan-step-input-wrapper">
-                <input class="visually-hidden" id="child-yes" type="checkbox" checked>
-                <label class="plan-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
-              </div>
+              <input class="plan-step__input-checkbox visually-hidden" id="child-yes" type="checkbox" checked>
+              <label class="plan-step__label" for="child-yes" name="child-yes">Можно с детьми</label>
             </div>
             <div class="plan-step__calendar calendar">
               <div class="calendar__header">
