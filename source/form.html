@@ -49,7 +49,7 @@
       </div>
     </header>
     <main class="page-main">
-      <div class="page-main-wrapper">
+      <div class="page-main__header">
         <h1 class="page-main__title">Направления</h1>
       </div>
       <form class="page-main__direction-form direction-form" action="https://echo.htmlacademy.ru" method="GET">
@@ -110,11 +110,11 @@
           <section class="add-plan__plan-step plan-step plan-step--1">
             <h3 class="plan-step__title"><span class="plan-step__number">Шаг 1.</span> Даты пребывания</h3>
             <p class="plan-step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <div class="plan-step-input-wrapper">
-              <div class="plan-step__counter counter">
+            <div class="plan-step__input-wrapper">
+              <div class="plan-step__counter input-counter">
                 <label class="plan-step__label input-counter__label" for="travelers-value">Ищу попутчиков</label>
                 <span class="input-counter__unit-measure">Чел.</span>
-                <div class="input-counter-inner">
+                <div class="input-counter__inner">
                   <button class="input-counter__button input-counter__button--minus" type="button">-</button>
                   <input class="input-counter__number" id="travelers-value" name="travelers-value" type="number" value="2">
                   <button class="input-counter__button input-counter__button--plus" type="button">+</button>
@@ -123,7 +123,7 @@
               <div class="plan-step__input-counter input-counter">
                 <label class="plan-step__label input-counter__label" for="days-value">Длительность</label>
                 <span class="input-counter__unit-measure">Дн.</span>
-                <div class="input-counter-inner">
+                <div class="input-counter__inner">
                   <button class="input-counter__button input-counter__button--minus" type="button">-</button>
                   <input class="input-counter__input-number" id="days-value" name="days-value" type="number" value="2">
                   <button class="input-counter__button input-counter__button--plus" type="button">+</button>
@@ -680,7 +680,7 @@
                 </button>
               </div>
             </div>
-            <div class="plan-step-buttons-wrapper">
+            <div class="plan-step__buttons-wrapper">
               <a class="button button--big plan-step__button-next" href="#">Следующий шаг</a>
               <a class="plane-step__button-prev" href="#">На шаг назад</a>
             </div>
@@ -712,7 +712,7 @@
                   <div class="country-activity__required">Это поле должно быть заполнено</div>
               </div>
             </div>
-            <div class="plan-step-buttons-wrapper">
+            <div class="plan-step__buttons-wrapper">
               <button class="button button--big" type="submit">Отправить</button>
               <a class="plane-step__button-prev" href="#">На шаг назад</a>
             </div>
