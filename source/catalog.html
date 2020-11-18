@@ -752,27 +752,61 @@
               <legend class="fieldset-accordion__legend">
                 <button class="fieldset-accordion__toggle">Транспорт</button>
               </legend>
-              <ul class="fieldset-accordion__list">
-                <li class="fieldset-accordion__item">
-                  <input type="checkbox" name="food" id="food-meat" value="meat">
-                  <label for="food-meat">Мясоед</label>
-                </li>
-                <li class="fieldset-accordion__item">
-                  <input type="checkbox" name="food" id="food-good-nutrition" value="good-nutrition">
-                  <label for="food-good-nutrition">Правильное питание</label>
-                </li>
-                <li class="fieldset-accordion__item">
-                  <input type="checkbox" name="food" id="food-vegan-raw" value="vegan-raw">
-                  <label for="food-vegan-raw">Веган-сыроед</label>
-                </li>
-              </ul>
+              <div class="fieldset-accordion__transport transport">
+                <ul class="fieldset-accordion__list transport__list">
+                  <li class="fieldset-accordion__item">
+                    <input type="checkbox" name="transport" id="transport-plane" value="plane">
+                    <label class="transport__item" for="transport-plane">
+                      <span class="transport__item__tooltip">Авиаперелет</span>
+                    </label>
+                  </li>
+                  <li class="fieldset-accordion__item">
+                    <input type="checkbox" name="transport" id="transport-car" value="car">
+                    <label class="transport__item" for="transport-car">
+                      <span class="transport__item__tooltip">Автотранспорт</span>
+                    </label>
+                  </li>
+                  <li class="fieldset-accordion__item">
+                    <input type="checkbox" name="transport" id="transport-bike" value="bike">
+                    <label class="transport__item" for="transport-bike">
+                      <span class="transport__item__tooltip">Велосипед</span>
+                    </label>
+                  </li>
+                  <li class="fieldset-accordion__item">
+                    <input type="checkbox" name="transport" id="transport-walk" value="walk">
+                    <label class="transport__item" for="transport-walk">
+                      <span class="transport__item__tooltip">Пешком</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </fieldset>
-            <button type="submit">Показать</button>
+            <fieldset class="filter-travelers__fieldset fieldset-accordion">
+              <legend class="fieldset-accordion__legend">
+                <button class="fieldset-accordion__toggle">Level</button>
+              </legend>
+              <div class="fieldset-accordion__range range">
+                <div class="range__controls">
+                  <div class="range__scale">
+                    <div class="range__bar"></div>
+                  </div>
+                  <div class="range__toggle range__toggle--min"></div>
+                  <div class="range__toggle range__toggle--max"></div>
+                </div>
+                <div class="range__price">
+                  <label class="range-min-price">
+                    от <input type="number" name="min-price" value="30">
+                  </label>
+                  <label class="range-max-price">
+                    до <input type="number" name="max-price" value="100">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button class="filter-travelers__button" type="submit">Показать</button>
           </form>
         </section>
-
       </div>
-
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo logo">
