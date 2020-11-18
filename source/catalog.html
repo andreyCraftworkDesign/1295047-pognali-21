@@ -53,7 +53,259 @@
         <h1 class="page-main__title">Попутчики</h1>
         <a class="page-main__button-prev" href="#">На главную</a>
       </div>
+      <section class="page-main__filter-country filter-country">
+        <div class="filter-country__header">
+          <h2 class="filter-country__title">Фильтрация по странам</h2>
+          <ul class="filter-country__macro-regions macro-regions">
+            <li class="macro-regions__item">
+              <a class="macro-regions__link macro-regions__link--active" href="#">Европа</a>
+            </li>
+            <li class="macro-regions__item">
+              <a class="macro-regions__link" href="#">Азия</a>
+            </li>
+            <li class="macro-regions__item">
+              <a class="macro-regions__link" href="#">Америка</a>
+            </li>
+            <li class="macro-regions__item">
+              <a class="macro-regions__link" href="#">Острова</a>
+            </li>
+          </ul>
+          <button class="filter-country__toggle toggle toggle--active">
+            <span class="toggle__text-open">Показать все</span>
+            <span class="toggle__text-close">Свернуть</span>
+          </button>
+        </div>
+        <div class="filter-country__body select-country">
+          <div class="select-country__dropdown">
+            <div class="select-country__filter-abc filter-abc">
+              <ul class="filter-abc__list">
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button filter-abc__button--active" type="button">А</button>
+                  <ul class="select-country__list">
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-australia">Австралия</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-australia"
+                        value="australia">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-austria">Австрия</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-austria"
+                        value="austria">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-azerbaijan">Азербайджан</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-azerbaijan"
+                        value="azerbaijan">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-albania">Албания</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-albania"
+                        value="albania">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-algeria">Алжир</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-algeria"
+                        value="algeria">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-angola">Ангола</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-angola"
+                        value="angola">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-andorra">Андорра</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-andorra"
+                        value="andorra">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-antigua">Антигуа и Барбуда</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-antigua"
+                        value="antigua">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-argentina">Аргентина</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-argentina"
+                        value="argentina">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-armenia">Армения</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-armenia"
+                        value="armenia">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-afghanistan">Афганистан</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-afghanistan" value="afghanistan">
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button filter-abc__button--active" type="button">Б</button>
+                  <ul class="select-country__list">
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bahamas">Багамские острова</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-bahamas"
+                        value="bahamas">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bangladesh">Бангладеш</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-bangladesh"
+                        value="bangladesh">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-barbados">Барбадос</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-barbados"
+                        value="barbados">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bahrain">Бахрейн</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-bahrain"
+                        value="bahrain">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-belarus">Беллоруссия</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-belarus"
+                        value="belarus">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-belize">Белиз</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-belize"
+                        value="belize">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-belgium">Бельгия</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-belgium"
+                        value="belgium">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-benin">Бенин</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-benin"
+                        value="benin">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-argentina">Болгария</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-argentina"
+                        value="argentina">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bulgaria">Боливия</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice" id="select-country-bulgaria"
+                        value="bulgaria">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bosnia">Босния и Герцеговина</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-bosnia" value="bosnia">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-botswana">Ботсвана</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-botswana" value="botswana">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-brazil">Бразилия</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-brazil" value="brazil">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bfaso">Буркина-Фасо</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-bfaso" value="bfaso">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-Burundi">Бурунди</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-Burundi" value="Burundi">
+                    </li>
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-bhutan">Бутан</label>
+                      <input class="visually-hidden" type="radio" name="travelers-country-choice"
+                        id="select-country-bhutan" value="bhutan">
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">в</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">г</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">д</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">е</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">з</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">и</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">к</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">л</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">м</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">н</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">о</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">п</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">р</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">с</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">т</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">у</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">ф</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">х</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">ч</button>
+                  <ul class="select-country__list">
+                    <li class="select-country__item">
+                      <label class="select-country__option" for="select-country-czech">Чехия</label>
+                      <input class="visually-hidden" type="radio" name="select-country-2" id="select-country-czech"
+                        value="czech" checked>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">ш</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">э</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">ю</button>
+                </li>
+                <li class="filter-abc__item">
+                  <button class="filter-abc__button" type="button">я</button>
+                </li>
+              </ul>
+            </div>
+          </div>
 
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo logo">
