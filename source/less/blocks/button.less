@@ -1,0 +1,39 @@
+.button {
+  font-weight: 700;
+  color: @basic-blue;
+  text-decoration: none;
+
+  background-color: @basic-yellow;
+  border: none;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@basic-blue, 30%);
+  }
+}
+
+.button--big {
+  position: relative;
+
+  padding-top: 26px;
+  padding-right: 37px;
+  padding-bottom: 26px;
+  padding-left: 34px;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  border-radius: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+}
