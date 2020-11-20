@@ -1,10 +1,12 @@
+@size-card: 270px;
+
 .card-travelers {
   display: flex;
   flex-direction: column;
-  width: 285px;
+  width: @size-card;
 
   background-color: @basic-white;
-  border-radius: 20px;
+  border-radius: 10px;
 
   box-sizing: border-box;
   overflow: hidden;
@@ -25,9 +27,51 @@
 
   font-weight: 700;
   font-style: normal;
-  font-size: 24px;
-  line-height: 22px;
+  font-size: 21px;
+  line-height: 21px;
+
   color: @basic-blue-light;
 
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: fade(@basic-blue-light, 70%);
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
+
+  &::before {
+    @size: 6px;
+
+    content: "";
+
+    position: absolute;
+    left: -10px;
+    top: 50% - @size / 2;
+
+    width: @size;
+    height: @size;
+    border-radius: 50%;
+
+    background-color: @special-red;
+  }
+
+  &--online::before {
+    background-color: @special-green;
+  }
+}
+
+
+.card-travelers__countries {
+  position: absolute;
+  top: @size-card - 24px / 2;
+}
+
+.card-travelers__level {
+  position: absolute;
+  top: 19px;
+  left: 19px;
 }
