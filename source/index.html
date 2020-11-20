@@ -36,8 +36,8 @@
             <a class="user-menu__email" href="mailto:mail@htmlcademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
           </div>
           <div class="page-header__contacts contacts">
-            <a class="contacts__phone" href="tel:+78005558628">8 800 555-86-28</a>
-            <a class="contacts__email" href="mailto:mail@htmlcademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__link contacts--phone" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contacts__link contacts--email" href="mailto:mail@htmlcademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div class="page-header__socials socials">
             <ul class="socials__list">
@@ -58,7 +58,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">"Погнали?" - сервис по поиску попутчиков</h1>
       <div class="page-main__promo promo">
-        <p class="promo__title">В путешествие с крутыми попутчиками!</p>
+        <p class="promo__title">В путешествие<br>с крутыми<br>попутчиками!</p>
         <div class="promo__reviews reviews">
           <blockquote class="reviews__item">
             <p class="reviews__text">«Лучшее приложение, что я видел в жизни!»</p>
@@ -69,16 +69,16 @@
           <h2 class="visually-hidden">Порядок действий</h2>
           <ol class="steps__list">
             <li class="steps__item">
-              Выберите направление
+              Выберите<br>направление
             </li>
             <li class="steps__item">
-              Изучите идеи путешественников
+              Изучите идеи<br>путешественников
             </li>
             <li class="steps__item">
-              Находите тех, кто похож на вас
+              Находите тех,<br>кто похож на вас
             </li>
             <li class="steps__item">
-              Путешествуйте вместе!
+              Путешествуйте<br>вместе!
             </li>
           </ol>
         </section>
@@ -87,14 +87,14 @@
         <h2 class="section__title">О сервисе</h2>
         <p class="section__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
         <p class="section__text section__text--accent">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-        <a class="button visually-hidden" href="#">Подробнее</a>
+        <a class="button button--big" href="#">Подробнее</a>
       </section>
       <section class="page-main__directions directions section">
         <h2 class="section__title">Направления</h2>
         <p class="section__text section__text--dark">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="directions__list">
           <li class="directions__item">
-            <a class=" card-country" href="#">
+            <a class="card-country" href="#">
               <img class="card-country__image" src="" alt="">
               <div class="card-country__flag flag flag--thailand"></div>
               <div class="card-country__content">
@@ -144,89 +144,105 @@
         <p class="section__text section__text--accent">Теперь можно легко найти единомышленников!</p>
         <ul class="travelers__list">
           <li class="travelers__item card-travelers">
-            <img class="card-travelers__photo" src="" alt="">
-            <a class="card-travelers__user card-travelers__user--offline">Таня Фирсова</a>
-            <div class="card-travelers__tags tags">
-              <p class="tags__title visually-hidden">Тэги</p>
-              <ul class="tags__list">
-                <li class="tags__item">#ЗОЖ</li>
-                <li class="tags__item">#ПП</li>
-                <li class="tags__item">#Фитнес</li>
-                <li class="tags__item">#пляж</li>
-                <li class="tags__item">#авокадо</li>
-                <li class="tags__item">#смузи</li>
-              </ul>
-            </div>
-            <div class="card-travelers__countries countries">
-              <p class="countries__title visually-hidden">Хочет посетить:</p>
-              <ul class="countries__list">
-                <li class="countries__item countries__item--sri-lanka"><span class="visually-hidden">Шри-Ланка</span></li>
-                <li class="countries__item countries__item--thailand"><span class="visually-hidden">Тайланд</span></li>
-                <li class="countries__item countries__item--seychelles"><span class="visually-hidden">Сейшелы</span></li>
-              </ul>
-            </div>
-            <div class="card-travelers__transport transport">
-              <p class="transport__title visually-hidden">Транспорт:</p>
-              <ul class="transport__list">
-                <li class="transport__item transport__item--plane transport__item--active">
-                  <span class="transport__item__tooltip">Авиаперелет</span>
-                </li>
-                <li class="transport__item transport__item--car">
-                  <span class="transport__item__tooltip">Автотранспорт</span>
-                </li>
-                <li class="transport__item transport__item--bike">
-                  <span class="transport__item__tooltip">Велосипед</span>
-                </li>
-                <li class="transport__item transport__item--walk">
-                  <span class="transport__item__tooltip">Пешком</span>
-                </li>
-              </ul>
-            </div>
-            <div class="card-travelers__level level">
-              <p class="level__title">level</p>
-              <span class="level__value">99</span>
+            <img class="card-travelers__photo" src="http://placehold.it/285x285" alt="" width="285" height="285">
+            <div class="card-travelers__content">
+              <a class="card-travelers__user card-travelers__user--offline" href="#">Таня Фирсова</a>
+              <div class="card-travelers__tags tags">
+                <p class="tags__title visually-hidden">Тэги</p>
+                <ul class="tags__list">
+                  <li class="tags__item">#ЗОЖ</li>
+                  <li class="tags__item">#ПП</li>
+                  <li class="tags__item">#Фитнес</li>
+                  <li class="tags__item">#пляж</li>
+                  <li class="tags__item">#авокадо</li>
+                  <li class="tags__item">#смузи</li>
+                </ul>
+              </div>
+              <div class="card-travelers__countries countries">
+                <p class="countries__title visually-hidden">Хочет посетить:</p>
+                <ul class="countries__list">
+                  <li class="countries__item">
+                    <div class="countries__flag flag flag--sri-lanka">
+                      <span class="visually-hidden">Шри-Ланка</span>
+                    </div>
+                  </li>
+                  <li class="countries__item">
+                    <div class="countries__flag flag flag--thailand">
+                      <span class="visually-hidden">Тайланд</span>
+                    </div>
+                  </li>
+                  <li class="countries__item">
+                    <div class="countries__flag flag flag--seychelles">
+                      <span class="visually-hidden">Сейшелы</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-travelers__transport transport">
+                <p class="transport__title visually-hidden">Транспорт:</p>
+                <ul class="transport__list">
+                  <li class="transport__item transport__item--plane transport__item--active">
+                    <span class="transport__item__tooltip">Авиаперелет</span>
+                  </li>
+                  <li class="transport__item transport__item--car">
+                    <span class="transport__item__tooltip">Автотранспорт</span>
+                  </li>
+                  <li class="transport__item transport__item--bike">
+                    <span class="transport__item__tooltip">Велосипед</span>
+                  </li>
+                  <li class="transport__item transport__item--walk">
+                    <span class="transport__item__tooltip">Пешком</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-travelers__level level">
+                <p class="level__title">level</p>
+                <span class="level__value">99</span>
+              </div>
             </div>
           </li>
           <li class="travelers__item card-travelers">
-            <img class="card-travelers__photo" src="" alt="">
-            <a class="card-travelers__user card-travelers__user--offline">Петя Демин</a>
-            <div class="card-travelers__tags tags">
-              <p class="tags__title visually-hidden">Тэги</p>
-              <ul class="tags__list">
-                <li class="tags__item">#бургер</li>
-                <li class="tags__item">#бар</li>
-                <li class="tags__item">#футбол</li>
-                <li class="tags__item">#концерт</li>
-                <li class="tags__item">#крафт</li>
-              </ul>
-            </div>
-            <div class="card-travelers__countries countries">
-              <p class="countries__title visually-hidden">Хочет посетить:</p>
-              <ul class="countries__list">
-                <li class="countries__item countries__item--belgium"><span class="visually-hidden">Бельгия</span></li>
-                <li class="countries__item countries__item--czech"><span class="visually-hidden">Чехия</span></li>
-              </ul>
-            </div>
-            <div class="card-travelers__transport transport">
-              <p class="transport__title visually-hidden">Транспорт:</p>
-              <ul class="transport__list">
-                <li class="transport__item transport__item--plane transport__item--active">
-                  <span class="transport__item__tooltip">Авиаперелет</span>
-                </li>
-                <li class="transport__item transport__item--car transport__item--active">
-                  <span class="transport__item__tooltip">Автотранспорт</span>
-                </li>
-                <li class="transport__item transport__item--bike">
-                  <span class="transport__item__tooltip">Велосипед</span>
-                </li>
-                <li class="transport__item transport__item--walk transport__item--active">
-                  <span class="transport__item__tooltip">Пешком</span>
-                </li>
-              </ul>
-            </div>
-            <div class="card-travelers__level level">
-              <p class="level__title">level</p>
-              <span class="level__value">80</span>
+            <img class="card-travelers__photo" src="http://placehold.it/285x285" alt="" width="285" height="285">
+            <div class="card-travelers__content">
+              <a class="card-travelers__user card-travelers__user--offline" href="#">Петя Демин</a>
+              <div class="card-travelers__tags tags">
+                <p class="tags__title visually-hidden">Тэги</p>
+                <ul class="tags__list">
+                  <li class="tags__item">#бургер</li>
+                  <li class="tags__item">#бар</li>
+                  <li class="tags__item">#футбол</li>
+                  <li class="tags__item">#концерт</li>
+                  <li class="tags__item">#крафт</li>
+                </ul>
+              </div>
+              <div class="card-travelers__countries countries">
+                <p class="countries__title visually-hidden">Хочет посетить:</p>
+                <ul class="countries__list">
+                  <li class="countries__item countries__item--belgium"><span class="visually-hidden">Бельгия</span></li>
+                  <li class="countries__item countries__item--czech"><span class="visually-hidden">Чехия</span></li>
+                </ul>
+              </div>
+              <div class="card-travelers__transport transport">
+                <p class="transport__title visually-hidden">Транспорт:</p>
+                <ul class="transport__list">
+                  <li class="transport__item transport__item--plane transport__item--active">
+                    <span class="transport__item__tooltip">Авиаперелет</span>
+                  </li>
+                  <li class="transport__item transport__item--car transport__item--active">
+                    <span class="transport__item__tooltip">Автотранспорт</span>
+                  </li>
+                  <li class="transport__item transport__item--bike">
+                    <span class="transport__item__tooltip">Велосипед</span>
+                  </li>
+                  <li class="transport__item transport__item--walk transport__item--active">
+                    <span class="transport__item__tooltip">Пешком</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-travelers__level level">
+                <p class="level__title">level</p>
+                <span class="level__value">80</span>
+              </div>
             </div>
           </li>
         </ul>
@@ -263,8 +279,14 @@
         </form>
         <p class="section__text">Остались вопросы? Мы с радостью на них ответим!</p>
         <div class="contacts">
-          <a class="contacts__phone" href="tel:+78005558628">8 800 555-86-28</a>
-          <a class="contacts__email" href="mailto:mail@htmlcademy.ru">mail@htmlacademy.ru</a>
+          <a class="contacts__link contacts--phone" href="tel:+78005558628">
+            <svg>
+
+            </svg>8 800 555-86-28</a>
+          <a class="contacts__link contacts--email" href="mailto:mail@htmlcademy.ru">
+            <svg>
+
+            </svg>mail@htmlacademy.ru</a>
         </div>
       </section>
       <section class="page-main__location location">
