@@ -1,0 +1,28 @@
+.link {
+  position: relative;
+  color: @basic-yellow;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: @basic-yellow;
+  }
+
+  &:hover,
+  &:focus {
+    color: @special-orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: @special-orange;
+  }
+}
