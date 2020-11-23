@@ -1,11 +1,50 @@
 .contacts__link {
   position: relative;
+  display: flex;
+  align-items: center;
 
   font-weight: 700;
   font-style: normal;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 22px;
   text-decoration: none;
   text-transform: uppercase;
   color: @basic-yellow;
+
+  &:hover,
+  &:focus {
+    color: @special-yellow-dark;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: @special-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@special-yellow-dark, 30%);
+  }
+
+  &:active path {
+    fill: fade(@special-yellow-dark, 30%);
+  }
+}
+
+.contacts__link--dark {
+  color: @basic-blue-saturate;
+
+  &:hover,
+  &:focus {
+    color: fade(@basic-blue-saturate, 60%)
+  }
+
+  &:active {
+    color: fade(@basic-blue-saturate, 30%)
+  }
+}
+
+.contacts__icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
 }
