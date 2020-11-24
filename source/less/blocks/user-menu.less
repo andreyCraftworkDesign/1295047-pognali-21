@@ -1,0 +1,52 @@
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.user-menu__phone {
+  background-color: @special-orange;
+
+  &:hover,
+  &:focus {
+    background-color: @special-orange-light;
+  }
+}
+
+.user-menu__email {
+  background-color: @special-yellow-dark;
+
+  &:hover,
+  &:focus {
+    background-color: @special-orange;
+  }
+}
+
+.user-menu__login {
+  justify-content: center;
+  flex-grow: 1;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.page-header__user-menu .user-menu__link {
+  display: none;
+}

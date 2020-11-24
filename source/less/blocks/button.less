@@ -1,0 +1,84 @@
+.button {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  color: @basic-blue;
+  text-decoration: none;
+
+  background-color: @basic-yellow;
+  border: none;
+  border-radius: 25px;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@basic-blue, 30%);
+  }
+}
+
+.button--big {
+  position: relative;
+  min-width: 60px;
+  padding-top: 21px;
+  padding-right: 23px;
+  padding-bottom: 21px;
+  padding-left: @left-offset;
+
+  font-size: 18px;
+  line-height: 18px;
+
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: 20px;
+    width: 14px;
+    height: 16px;
+    background-image: url("../img/decor/polygon-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // border: 6px solid transparent;
+    // border-left: 7px solid @basic-blue-light;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.button--stroke {
+  display: flex;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 3px @basic-blue-saturate;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    color: @basic-white;
+    background-color: @basic-blue-saturate;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../img/decor/polygon-white.svg");
+  }
+
+  &:active {
+    color: fade(@basic-white, 30%);
+  }
+
+  &:active::before {
+    background-image: url("../img/decor/polygon-white.svg");
+    opacity: 0.3;
+  }
+}

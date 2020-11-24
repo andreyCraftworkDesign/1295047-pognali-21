@@ -1,0 +1,41 @@
+.transport__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.transport__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+  margin-right: 1px;
+
+  border-radius: 50%;
+}
+
+.transport__item:last-child {
+  margin-right: 0;
+}
+
+.transport__item--active .transport__icon {
+  fill: @basic-blue-light;
+}
+
+.transport__icon {
+  fill: fade(@basic-blue-light, 15%);
+}
+
+.transport__tooltip {
+  display: none;
+}
+
+.transport__item:hover .transport__tooltip {
+  display: flex;
+  justify-content: center;
+}

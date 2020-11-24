@@ -1,0 +1,43 @@
+.socials__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.socials__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: transparent;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.socials__link--bg {
+  background-color: @basic-yellow;
+
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active .socials__icon {
+    opacity: 0.3;
+  }
+}

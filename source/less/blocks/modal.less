@@ -1,0 +1,32 @@
+.modal {
+  display: none;
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal__close {
+  width: 100%;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+
+  background-color: @blue-lighten;
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  cursor: pointer;
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
+}
