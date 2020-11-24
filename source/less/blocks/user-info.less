@@ -1,0 +1,140 @@
+.user-info {
+  background-color: @basic-blue-lighten;
+}
+
+.user-info__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  .container();
+}
+
+.user-info__level {
+  padding-right: 18px;
+  padding-left: 16px;
+}
+
+.user-info__avatar {
+  padding-right: 19px;
+  padding-left: 17px;
+  border-radius: 50%;
+}
+
+.user-info__button {
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 25px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  color: @basic-blue;
+  text-transform: uppercase;
+
+  background-color: @special-blue-light;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #D1D7E9;
+  }
+
+  &:active {
+    color: fade(@basic-blue, 30);
+  }
+}
+
+.user-info__fieldset {
+  width: 100%;
+  margin-bottom: 18px;
+  padding-top: 16px;
+  padding-right: 25px;
+  padding-bottom: 16px;
+  padding-left: 25px;
+
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: inset 0 0 0 1px #CBCED9;
+}
+
+.user-info__legend {
+  padding-right: 14px;
+  padding-left: 14px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: @basic-blue-lighten;
+}
+
+.user-info__textarea {
+  width: 100%;
+  padding: 0;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: @special-grey;
+  background-color: transparent;
+  border: none;
+  resize: none;
+}
+
+.user-info__transport {
+  display: flex;
+  justify-content: center;
+}
+
+.user-info__label {
+  background-color: @basic-white;
+
+  cursor: pointer;
+}
+
+.user-info__label {
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 6px fade(@basic-blue, 17%);
+  }
+
+  &:active {
+    background-color: #E2E5F1;
+  }
+}
+
+.user-info .transport__icon {
+  fill: #D9D9D9;
+}
+
+.user-info__label:hover .transport__icon,
+.user-info__label:focus .transport__icon {
+  fill: #B2B2B2;
+}
+
+.user-info__input-checkbox:checked + .transport__item .transport__icon {
+  fill: @basic-blue-light;
+}
+
+.user-info__input-checkbox:checked + .user-info__label:hover .transport__icon,
+.user-info__input-checkbox:checked + .user-info__label:focus .transport__icon {
+  fill: fade(@basic-blue-light, 70%);
+}
+
+.user-info__input-checkbox:checked + .user-info__label:active .transport__icon {
+  fill: fade(@basic-blue-light, 30%);
+}
+
+
