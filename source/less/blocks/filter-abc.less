@@ -1,0 +1,44 @@
+.filter-abc {
+  width: 100%;
+}
+
+.filter-abc__list {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  box-shadow: 0 2px 16px 0 #D4D9EB;
+}
+
+.filter-abc__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid @basic-border-input;
+  background-color: @basic-white;
+}
+
+.filter-abc__button--active {
+  background-color: @basic-blue-lighten;
+
+  + .select-country__list {
+    display: block;
+  }
+}
+
