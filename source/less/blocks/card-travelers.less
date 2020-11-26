@@ -1,9 +1,7 @@
-@size-card: 270px;
-
 .card-travelers {
   display: flex;
   flex-direction: column;
-  width: @size-card;
+  width: 270px;
 
   background-color: @basic-white;
   border-radius: 10px;
@@ -12,15 +10,17 @@
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0px 4px 9px fade(@basic-black, 16%);
+    box-shadow: 0 4px 9px fade(@basic-black, 16%);
   }
 }
 
 .card-travelers__image {
   display: flex;
-  overflow: hidden;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  overflow: hidden;
 }
 
 .card-travelers__photo {
@@ -78,15 +78,17 @@
 
     background-color: @special-red;
   }
+}
 
-  &--online::before {
+.card-travelers__user--online {
+  &::before {
     background-color: @special-green;
   }
 }
 
 .card-travelers__countries {
   position: absolute;
-  top: @size-card - 24px / 2;
+  top: 270px - 24px / 2;
 }
 
 .card-travelers__tags {

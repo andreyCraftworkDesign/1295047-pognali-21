@@ -8,7 +8,6 @@
 }
 
 .steps__item {
-  @border-radius: 10px;
   @bottom-offset: 9px;
 
   position: relative;
@@ -19,7 +18,7 @@
   padding-top: 22px;
   padding-right: 21px;
   padding-bottom: 22px;
-  padding-left: @left-offset;
+  padding-left: 25px;
 
   font-weight: 700;
   font-style: normal;
@@ -27,8 +26,8 @@
   line-height: 18px;
   color: @basic-blue;
 
-  border-top-left-radius: @border-radius;
-  border-top-right-radius: @border-radius;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   box-sizing: border-box;
 
@@ -68,7 +67,7 @@
     min-height: 80px;
     bottom: @bottom-offset * 3;
     background-color: spin(@special-orange, 20);
-    border-radius: @border-radius;
+    border-radius: 10px;
 
     &::before {
       content: "4";

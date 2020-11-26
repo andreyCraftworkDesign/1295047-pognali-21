@@ -1,0 +1,118 @@
+.input-counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-counter__label {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+}
+
+.input-counter__unit-measure {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  color: fade(@basic-blue-light, 30%);
+  text-transform: uppercase;
+}
+
+.input-counter__inner {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid @basic-border-input;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: @hover-border-input;
+  }
+
+  &:active {
+    border-color: @basic-blue;
+  }
+}
+
+.input-counter__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 21px;
+  padding-left: 21px;
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 14px;
+    height: 2px;
+
+    background-color: #cccccc;
+  }
+
+  &:hover,
+  &:focus {
+    &::after,
+    &::before {
+      background-color: #999999;
+    }
+  }
+
+  &:active {
+    &::after,
+    &::before {
+      background-color: #e5e5e5;
+    }
+  }
+}
+
+.input-counter__button--plus {
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 2px;
+    height: 14px;
+
+    background-color: #cccccc;
+  }
+}
+
+.input-counter__input-number {
+  width: 100%;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 11px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: @basic-blue-light;
+  text-align: center;
+
+  border: none;
+}
+
+.input-counter__input-number::-webkit-outer-spin-button,
+.input-counter__input-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}

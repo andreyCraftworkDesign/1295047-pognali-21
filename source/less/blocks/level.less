@@ -1,6 +1,7 @@
 .level {
   position: relative;
   z-index: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +9,25 @@
 
   width: 56px;
   height: 56px;
+
+  &--big {
+    width: 100px;
+    height: 100px;
+  }
+
+  &--big .level__value {
+    font-size: 38px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
+
+  &--big .level__title {
+    padding-top: 6px;
+
+    &::before {
+      background-color: fade(@special-grey, 30%);
+    }
+  }
 }
 
 .level__value {
@@ -15,7 +35,12 @@
   font-style: normal;
   font-size: 24px;
   line-height: 24px;
-  color: @basic-white;
+  color: @basic-blue;
+  vertical-align: top;
+
+  &--light {
+    color: @basic-white;
+  }
 }
 
 .level__title {
@@ -28,7 +53,8 @@
   font-style: normal;
   font-size: 14px;
   line-height: 14px;
-  color: @basic-white;
+  color: @special-grey;
+  vertical-align: top;
 
   &::before {
     content: "";
@@ -39,6 +65,10 @@
     height: 1px;
 
     background-color: fade(@basic-white, 30%);
+  }
+
+  &--light {
+    color: @basic-white;
   }
 }
 

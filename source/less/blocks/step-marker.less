@@ -1,0 +1,44 @@
+.step-marker__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step-marker__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  color: fade(@basic-black, 60%);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: fade(@basic-blue-light, 30%);
+    border-radius: 50%;
+  }
+}
+
+.step-marker__item--active {
+  color: @basic-black;
+
+  &::before {
+    background-color: @basic-blue-light;
+  }
+}
+
+.step-marker__name {
+  &--hidden {
+    .visualy-hidden();
+  }
+}

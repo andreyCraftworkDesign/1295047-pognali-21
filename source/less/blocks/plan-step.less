@@ -1,0 +1,142 @@
+.plan-step {
+  padding-top: 24px;
+  padding-right: 25px;
+  padding-bottom: 23px;
+  padding-left: 25px;
+
+  background-color: @basic-white;
+  border-radius: 10px;
+}
+
+.plan-step__title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic-blue-light;
+}
+
+.plan-step__text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special-grey;
+}
+
+.plan-step__input-wrapper {
+  padding-bottom: 25px;
+}
+
+.plan-step__checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 39px;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: @basic-blue-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+    left: 0;
+
+    border: 1px solid @basic-border-input;
+    border-radius: 4px;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: @hover-border-input;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #e2e5f1;
+      background-color: #e2e5f1;
+    }
+  }
+}
+
+.plan-step__input-checkbox:checked + .plan-step__checkbox {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    height: 13px;
+
+    background-image: url("../img/decor/check-mark-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.plan-step__calendar {
+  margin-bottom: 22px;
+}
+
+.plan-step__button {
+  width: 100%;
+  margin-bottom: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.plane-step__button-prev {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.plan-step__select-country {
+  margin-top: 21px;
+}
+
+.plan-step__country-activity {
+  margin-bottom: 22px;
+}

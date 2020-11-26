@@ -15,14 +15,13 @@
   &:hover,
   &:focus {
     color: @special-orange;
+
+    &::before {
+      background-color: @special-orange;
+    }
   }
 
   &:active {
     opacity: 0.3;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    background-color: @special-orange;
   }
 }
