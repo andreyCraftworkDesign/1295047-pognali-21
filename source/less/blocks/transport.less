@@ -17,25 +17,25 @@
   margin-right: 1px;
 
   border-radius: 50%;
-}
 
-.transport__item:last-child {
-  margin-right: 0;
-}
+  &:last-child {
+    margin-right: 0;
+  }
 
-.transport__item--active .transport__icon {
-  fill: @basic-blue-light;
+  &:hover .transport__tooltip {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .transport__icon {
   fill: fade(@basic-blue-light, 15%);
 }
 
-.transport__tooltip {
-  display: none;
+.transport__item--active .transport__icon {
+  fill: @basic-blue-light;
 }
 
-.transport__item:hover .transport__tooltip {
-  display: flex;
-  justify-content: center;
+.transport__tooltip {
+  display: none;
 }
