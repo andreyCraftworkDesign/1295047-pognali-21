@@ -1,0 +1,350 @@
+.select-country__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 50px;
+    bottom: -17px;
+
+    width: 11px;
+    height: 11px;
+
+    background-image: url("../img/decor/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.select-country__inner:last-of-type {
+
+  &::after {
+    display: none;
+  }
+}
+
+.select-country__choice {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  min-width: 165px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+
+  border: 1px solid @basic-border-input;
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: @hover-border-input;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 52px;
+    height: 100%;
+    background:
+    url("../img/decor/down-arrow.svg"),
+    linear-gradient(90deg, fade(@basic-white, 0%), @basic-white 36%);
+
+    background-repeat: no-repeat;
+    background-position-x: 57%;
+    background-position-y: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 159px;
+    z-index: 1;
+
+    width: 8px;
+    height: 8px;
+
+    border: 1px solid @basic-border-input;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.select-country__choice--yes {
+
+  &::after {
+    background-color: @basic-blue-light;
+    border-color: @basic-blue-light;
+  }
+}
+
+.select-country__choice--add-country {
+  padding: 0;
+  background-color: @basic-blue-lighten;
+
+  &:hover,
+  &:hover {
+    border-color: @basic-border-input;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.select-country__choice--active {
+  z-index: 3;
+  background-color: @basic-blue-light;
+  border-color: @basic-blue-light;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  .select-country__name {
+    color: @basic-white;
+  }
+
+  ~.select-country__delete {
+    display: none;
+  }
+
+  +.select-country__dropdown {
+    position: absolute;
+    z-index: 2;
+    top: 42px;
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
+  &::before {
+    background:
+      url("../img/decor/close-icon-white.svg"),
+      linear-gradient(90deg, fade(@basic-blue-light, 0%), @basic-blue-light 36%);
+
+    background-repeat: no-repeat;
+    background-position-x: 57%;
+    background-position-y: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    opacity: 0.3;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.select-country__name {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.select-country__dropdown {
+  display: none;
+  width: 100%;
+  box-shadow: 0 2px 16px 0 #D4D9EB;
+}
+
+.select-country__flag {
+  position: relative;
+  left: -1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px;
+  border: 1px solid @basic-border-input;
+  border-radius: 4px;
+}
+
+.select-country__delete {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -8px;
+  top: -11px;
+  width: 21px;
+  height: 21px;
+
+  background-color: @basic-blue-lighten;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    background-image: url("../img/decor/close-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0.1;
+  }
+
+  &:hover,
+  &:focus {
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+
+    &::before {
+      opacity: 0.05;
+    }
+  }
+}
+
+.select-country__add {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @special-blue-light;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 15px;
+
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../img/decor/plus-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+  }
+}
+
+.select-country__list {
+  position: absolute;
+  z-index: -1;
+  top: 215px;
+
+  width: 100%;
+  display: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  background-color: @basic-white;
+  border: 1px solid @basic-border-input;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 16px 0 #D4D9EB;
+
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.select-country__item {
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.select-country__option {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special-grey;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
+}
