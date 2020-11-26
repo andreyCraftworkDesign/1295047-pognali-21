@@ -1,10 +1,14 @@
 .button {
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding-top: 14px;
+  padding-bottom: 13px;
 
   font-weight: 700;
   color: @basic-blue;
   text-decoration: none;
+  text-transform: uppercase;
 
   background-color: @basic-yellow;
   border: none;
@@ -25,14 +29,16 @@
 
 .button--big {
   position: relative;
+  justify-content: flex-start;
   min-width: 60px;
   padding-top: 21px;
   padding-right: 23px;
   padding-bottom: 21px;
-  padding-left: @left-offset;
+  padding-left: 25px;
 
   font-size: 18px;
   line-height: 18px;
+  text-transform: unset;
 
   border-radius: 10px;
 
@@ -43,12 +49,11 @@
     right: 20px;
     width: 14px;
     height: 16px;
+
     background-image: url("../img/decor/polygon-1.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // border: 6px solid transparent;
-    // border-left: 7px solid @basic-blue-light;
   }
 
   &:active::before {
@@ -58,27 +63,28 @@
 
 .button--stroke {
   display: flex;
+
   background-color: transparent;
   box-shadow: inset 0 0 0 3px @basic-blue-saturate;
+
   box-sizing: border-box;
 
   &:hover,
   &:focus {
     color: @basic-white;
     background-color: @basic-blue-saturate;
-  }
 
-  &:hover::before,
-  &:focus::before {
-    background-image: url("../img/decor/polygon-white.svg");
+    &::before {
+      background-image: url("../img/decor/polygon-white.svg");
+    }
   }
 
   &:active {
     color: fade(@basic-white, 30%);
-  }
 
-  &:active::before {
-    background-image: url("../img/decor/polygon-white.svg");
-    opacity: 0.3;
+    &::before {
+      background-image: url("../img/decor/polygon-white.svg");
+      opacity: 0.3;
+    }
   }
 }
