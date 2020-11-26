@@ -21,7 +21,6 @@
 }
 
 .select-country__inner:last-of-type {
-
   &::after {
     display: none;
   }
@@ -59,8 +58,8 @@
     width: 52px;
     height: 100%;
     background:
-    url("../img/decor/down-arrow.svg"),
-    linear-gradient(90deg, fade(@basic-white, 0%), @basic-white 36%);
+          url("../img/decor/down-arrow.svg"),
+          linear-gradient(90deg, fade(@basic-white, 0%), @basic-white 36%);
 
     background-repeat: no-repeat;
     background-position-x: 57%;
@@ -85,7 +84,6 @@
 }
 
 .select-country__choice--yes {
-
   &::after {
     background-color: @basic-blue-light;
     border-color: @basic-blue-light;
@@ -97,7 +95,7 @@
   background-color: @basic-blue-lighten;
 
   &:hover,
-  &:hover {
+  &:focus {
     border-color: @basic-border-input;
   }
 
@@ -130,14 +128,12 @@
 
   &:hover,
   &:focus {
-
     &::before {
       opacity: 1;
     }
   }
 
   &:active {
-
     &::before {
       opacity: 0.1;
     }
@@ -181,7 +177,7 @@
 .select-country__dropdown {
   display: none;
   width: 100%;
-  box-shadow: 0 2px 16px 0 #D4D9EB;
+  box-shadow: 0 2px 16px 0 #d4d9eb;
 }
 
 .select-country__flag {
@@ -228,14 +224,12 @@
 
   &:hover,
   &:focus {
-
     &::before {
       opacity: 0.3;
     }
   }
 
   &:active {
-
     &::before {
       opacity: 0.05;
     }
@@ -277,7 +271,6 @@
   }
 
   &:active {
-
     &::before {
       opacity: 0.1;
     }
@@ -316,7 +309,7 @@
   border: 1px solid @basic-border-input;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
-  box-shadow: 0 2px 16px 0 #D4D9EB;
+  box-shadow: 0 2px 16px 0 #d4d9eb;
 
   list-style: none;
   box-sizing: border-box;

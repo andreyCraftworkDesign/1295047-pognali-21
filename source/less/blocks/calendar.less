@@ -9,8 +9,8 @@
   justify-content: space-between;
   margin-bottom: 20px;
 
-  border-top: 1px solid #D6D9E6;
-  border-bottom: 1px solid #D6D9E6;
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
   box-sizing: border-box;
 }
 
@@ -39,7 +39,6 @@
 
   &:hover,
   &:focus {
-
     &::before,
     &::after {
       opacity: 0.5;
@@ -47,7 +46,6 @@
   }
 
   &:active {
-
     &::before,
     &::after {
       opacity: 0.1;
@@ -66,7 +64,7 @@
     width: 9px;
     height: 18px;
 
-    background-image: url(../img/decor/calendar-arrow.svg);
+    background-image: url("../img/decor/calendar-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,7 +86,7 @@
     width: 9px;
     height: 18px;
 
-    background-image: url(../img/decor/calendar-arrow.svg);
+    background-image: url("../img/decor/calendar-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,7 +101,7 @@
 
 .calendar__day {
   padding: 0;
-  border: 1px solid #D6D9E6;
+  border: 1px solid #d6d9e6;
 }
 
 .calendar__day-of-week {
@@ -114,7 +112,7 @@
   color: @special-grey;
 
   &--weekend {
-    color: #FF5C23;
+    color: #ff5c23;
   }
 }
 
@@ -142,7 +140,6 @@
 
   &:hover,
   &:focus {
-
     &::before {
       content: "";
 
@@ -150,7 +147,7 @@
       width: 100% + 6px;
       height: 100% + 6px;
 
-      border: 2px solid #FF5C23;
+      border: 2px solid #ff5c23;
     }
   }
 }
@@ -167,7 +164,7 @@
   cursor: not-allowed;
 
   &::before {
-    display: none
+    display: none;
   }
 }
 

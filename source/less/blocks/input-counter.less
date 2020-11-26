@@ -68,7 +68,6 @@
 
   &:hover,
   &:focus {
-
     &::after,
     &::before {
       background-color: #999999;
@@ -76,17 +75,14 @@
   }
 
   &:active {
-
     &::after,
     &::before {
-      background-color: #E5E5E5;
+      background-color: #e5e5e5;
     }
   }
-
 }
 
 .input-counter__button--plus {
-
   &::after {
     content: "";
     position: absolute;
@@ -117,10 +113,6 @@
 
 .input-counter__input-number::-webkit-outer-spin-button,
 .input-counter__input-number::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
-}
-
-.input-counter__input-number[type=number] {
-  -moz-appearance: textfield;
 }

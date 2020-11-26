@@ -104,24 +104,21 @@
 }
 
 .user-info__label {
-
   &:hover,
   &:focus {
     box-shadow: 0 2px 6px fade(@basic-blue, 17%);
+    .transport__icon {
+      fill: #b2b2b2;
+    }
   }
 
   &:active {
-    background-color: #E2E5F1;
+    background-color: #e2e5f1;
   }
 }
 
 .user-info .transport__icon {
-  fill: #D9D9D9;
-}
-
-.user-info__label:hover .transport__icon,
-.user-info__label:focus .transport__icon {
-  fill: #B2B2B2;
+  fill: #d9d9d9;
 }
 
 .user-info__input-checkbox:checked + .transport__item .transport__icon {
