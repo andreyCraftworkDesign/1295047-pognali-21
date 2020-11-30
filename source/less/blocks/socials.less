@@ -21,11 +21,15 @@
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    .socials__icon {
+      opacity: 0.6;
+    }
   }
 
   &:active {
-    opacity: 0.3;
+    .socials__icon {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -35,9 +39,15 @@
   &:hover,
   &:focus {
     background-color: @special-yellow-dark;
+
+    .socials__icon {
+      opacity: 1;
+    }
   }
 
-  &:active .socials__icon {
-    opacity: 0.3;
+  &:active {
+    .socials__icon {
+      opacity: 0.3;
+    }
   }
 }

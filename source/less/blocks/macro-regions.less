@@ -1,0 +1,38 @@
+.macro-regions {
+  display: none;
+  padding: 0;
+
+  list-style: none;
+}
+
+.macro-regions__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.macro-regions__link {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: @basic-blue-saturate;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.macro-regions__link--active {
+  opacity: 1;
+}

@@ -1,0 +1,156 @@
+.filter-country {
+  background-color: @bg-filter-country;
+}
+
+.filter-country--active {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .filter-country__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 28px;
+  }
+
+  .filter-country__macro-regions {
+    display: block;
+  }
+
+  .select-country {
+    position: relative;
+  }
+
+  .select-country__dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: none;
+  }
+
+  .filter-abc__list {
+    width: 220px;
+    padding-left: 20px;
+    box-shadow: none;
+  }
+
+  .select-country__list {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .filter-country__button {
+    display: flex;
+  }
+}
+
+.filter-country__wrapper {
+  .container();
+}
+
+.filter-country__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+
+.filter-country__toggle {
+  .activity();
+}
+
+.filter-country__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: @basic-blue-saturate;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    left: -25px;
+
+    background-image: url("../img/decor/filter-country-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.filter-country__macro-regions {
+  order: 1;
+  margin-top: 38px;
+  margin-bottom: 0;
+}
+
+.filter-country__body {
+  margin-top: 21px;
+}
+
+.filter-country__button {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: @basic-blue-saturate;
+  text-transform: uppercase;
+
+  background-color: #d6daed;
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 80px;
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../img/decor/close-icon-dark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    color: fade(@basic-blue-saturate, 30%);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}

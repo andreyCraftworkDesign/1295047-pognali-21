@@ -1,82 +1,49 @@
 .card-travelers {
-  display: flex;
-  flex-direction: column;
-  width: 270px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 
   background-color: @basic-white;
-  border-radius: 10px;
 
-  box-sizing: border-box;
-  transition: 0.3s;
-
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 4px 9px fade(@basic-black, 16%);
   }
 }
 
-.card-travelers__image {
-  display: flex;
-
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
-  overflow: hidden;
-}
-
 .card-travelers__photo {
-  transition: 0.3s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.card-travelers__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 27px;
-  padding-right: 25px;
-  padding-bottom: 20px;
-  padding-left: 25px;
+  border-radius: 50%;
 }
 
 .card-travelers__user {
-  position: relative;
-  margin-bottom: 15px;
+  position: absolute;
+  width: 78px;
+  top: 20px;
+  left: 103px;
 
   font-weight: 700;
   font-style: normal;
-  font-size: 21px;
-  line-height: 21px;
-
+  font-size: 20px;
+  line-height: 20px;
   color: @basic-blue-light;
-
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: fade(@basic-blue-light, 70%);
-  }
-
-  &:active {
-    color: fade(@basic-blue-light, 30%);
-  }
+  .activity();
 
   &::before {
-    @size: 6px;
-
     content: "";
-
     position: absolute;
-    left: -10px;
-    top: 50% - @size / 2;
+    top: 6px;
+    right: -63px;
 
-    width: @size;
-    height: @size;
+    width: 6px;
+    height: 6px;
+
+    background-color: #f97676;
     border-radius: 50%;
-
-    background-color: @special-red;
   }
 }
 
@@ -86,17 +53,77 @@
   }
 }
 
-.card-travelers__countries {
-  position: absolute;
-  top: 270px - 24px / 2;
+.card-travelers__tags {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  margin-top: 13px;
+
+  .tags__list {
+    width: 176px;
+    justify-content: flex-start;
+  }
+
+  .tags__item {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
-.card-travelers__tags {
-  margin-bottom: 14px;
+.card-travelers__countries {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.card-travelers__countries .countries__list {
+  flex-direction: column;
+}
+
+.card-travelers__transport {
+  margin-bottom: 7px;
 }
 
 .card-travelers__level {
+  position: relative;
+  justify-self: end;
+  align-self: end;
+
+  &::before {
+    content: "Левел";
+
+    position: absolute;
+    top: -21px;
+    left: -10px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    width: 64px;
+
+    background-color: @basic-white;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 16px;
+    color: @special-grey;
+    text-transform: lowercase;
+  }
+}
+
+.card-travelers .level__title {
+  .visually-hidden();
+}
+
+.card-travelers__button {
+  margin-top: 14px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.card-travelers__likes {
   position: absolute;
-  top: 19px;
-  left: 19px;
+  top: 60px;
+  left: 67px;
 }

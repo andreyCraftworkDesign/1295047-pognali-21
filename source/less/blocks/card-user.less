@@ -1,0 +1,113 @@
+.card-user {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+
+  background-color: @basic-white;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+  transition: 0.3s;
+
+  .countries__item {
+    margin-bottom: 0;
+  }
+
+  .transport__item {
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 9px fade(@basic-black, 16%);
+  }
+
+  .level__background {
+    fill: fade(@basic-black, 60%);
+  }
+}
+
+.card-user__image {
+  display: flex;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  overflow: hidden;
+}
+
+.card-user__photo {
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.card-user__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+}
+
+.card-user__traveler {
+  position: relative;
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 21px;
+
+  color: @basic-blue-light;
+
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: fade(@basic-blue-light, 70%);
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -10px;
+    top: 7px;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    background-color: @special-red;
+  }
+}
+
+.card-user__traveler--online {
+  &::before {
+    background-color: @special-green;
+  }
+}
+
+.card-user__countries {
+  position: absolute;
+  top: 238px;
+}
+
+.card-user__tags {
+  margin-bottom: 14px;
+}
+
+.card-user__level {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}

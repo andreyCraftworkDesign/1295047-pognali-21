@@ -9,26 +9,36 @@
 
   width: 56px;
   height: 56px;
+}
 
-  &--big {
-    width: 100px;
-    height: 100px;
-  }
+.level--big {
+  width: 100px;
+  height: 100px;
 
-  &--big .level__value {
-    font-size: 38px;
-    line-height: 38px;
-    margin-bottom: 6px;
-  }
-
-  &--big .level__title {
+  .level__title {
     padding-top: 6px;
 
     &::before {
       background-color: fade(@special-grey, 30%);
     }
   }
+
+  .level__value {
+    font-size: 38px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
 }
+
+.level--small {
+  width: 45px;
+  height: 45px;
+
+  .level__progress {
+    stroke-width: 3px;
+  }
+}
+
 
 .level__value {
   font-weight: 700;
@@ -37,10 +47,10 @@
   line-height: 24px;
   color: @basic-blue;
   vertical-align: top;
+}
 
-  &--light {
-    color: @basic-white;
-  }
+.level__value--light {
+  color: @basic-white;
 }
 
 .level__title {
@@ -66,10 +76,10 @@
 
     background-color: fade(@basic-white, 30%);
   }
+}
 
-  &--light {
-    color: @basic-white;
-  }
+.level__title--light {
+  color: @basic-white;
 }
 
 .level__icon {
@@ -77,10 +87,13 @@
   top: 0;
   left: 0;
   z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.level__bg {
-  fill: fade(@basic-black, 60%);
+.level__background {
+  fill: transparent;
 }
 
 .level__progress {

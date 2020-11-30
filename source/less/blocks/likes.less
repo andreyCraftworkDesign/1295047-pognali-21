@@ -1,0 +1,74 @@
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.likes__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+  width: 30px;
+  height: 30px;
+
+  background-color: @bg-filter-country;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .likes__icon {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    .likes__icon {
+      opacity: 0.1;
+    }
+  }
+}
+
+.likes__button--active {
+  background-color: #f9eaea;
+
+  &:hover,
+  &:focus {
+    background-color: #f9d8d8;
+    opacity: 1;
+
+    .likes__icon {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .likes__icon {
+      opacity: 0.3;
+    }
+  }
+
+  .likes__icon {
+    fill-rule: nonzero;
+    opacity: 1;
+  }
+
+  path {
+    fill: #f02323;
+  }
+}
+
+.likes__icon {
+  fill-rule: evenodd;
+  opacity: 0.3;
+}
+
+.likes__value {
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
