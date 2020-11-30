@@ -1,0 +1,71 @@
+.pagination {
+  display: flex;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  .visually-hidden();
+}
+
+.pagination__link {
+  text-decoration: none;
+}
+
+.pagination__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding-top: 26px;
+  padding-bottom: 25px;
+
+  background-color: @basic-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 15px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.pagination__button--prev {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  &::before {
+    background-image: url("../img/decor/polygon-1.svg");
+    transform: rotate(180deg);
+  }
+}
+
+.pagination__button--next {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &::before {
+    background-image: url("../img/decor/polygon-1.svg");
+  }
+}
