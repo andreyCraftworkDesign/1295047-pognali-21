@@ -1,3 +1,43 @@
+.transport__title {
+  position: relative;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 16px;
+  color: @special-grey;
+  text-transform: lowercase;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: -20px;
+
+    width: 15px;
+    height: 1px;
+
+    background-color: @basic-blue-lighten;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    right: -119px;
+
+    width: 168px;
+    height: 1px;
+
+    background-color: @basic-blue-lighten;
+  }
+}
+
 .transport__list {
   display: flex;
   margin: 0;
@@ -15,7 +55,7 @@
   width: 32px;
   height: 32px;
   margin-right: 1px;
-
+  background-color: @basic-blue-lighten;
   border-radius: 50%;
 
   &:last-child {
