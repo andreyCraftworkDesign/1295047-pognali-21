@@ -1,7 +1,13 @@
+@width-card: 270px;
+
+@media (min-width: @tablet-width) {
+  @width-card: 285px;
+}
+
 .card-user {
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: @width-card;
 
   background-color: @basic-white;
   border-radius: 10px;
@@ -42,15 +48,19 @@
   &:hover {
     transform: scale(1.1);
   }
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+  }
 }
 
 .card-user__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 27px;
+  padding-top: 25px;
   padding-right: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   padding-left: 25px;
 }
 
@@ -80,8 +90,8 @@
     content: "";
 
     position: absolute;
-    left: -10px;
-    top: 7px;
+    left: -16px;
+    top: 10px;
 
     width: 6px;
     height: 6px;
@@ -99,15 +109,11 @@
 
 .card-user__countries {
   position: absolute;
-  top: 238px;
-}
-
-.card-user__tags {
-  margin-bottom: 14px;
+  top: @width-card - 29px;
 }
 
 .card-user__level {
   position: absolute;
-  top: 19px;
-  left: 19px;
+  top: 17px;
+  left: 17px;
 }
