@@ -1,17 +1,98 @@
 .price {
-  padding-top: 53px;
-  padding-bottom: 38px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: @bg-price;
+
+  .section-radius();
+
+  &::before {
+    .section-bg-mod();
+
+    background-color: @bg-price;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 37px;
+    right: 25px;
+
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../img/decor/price-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-blue-lighten;
+
+    &::before {
+      background-color: @basic-blue-lighten;
+    }
+
+    &::after {
+      z-index: 3;
+      top: auto;
+      bottom: 44px;
+      right: 85px;
+    }
+  }
 }
 
 .price__wrapper {
   .container();
 }
 
+.price__title {
+  width: 107px;
+  margin-bottom: 43px;
+  .section-title();
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 73px;
+    text-align: center;
+  }
+}
+
 .price__list {
-  margin-left: 25px;
-  margin-right: 45px;
-  margin-bottom: 31px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-top: 0;
+  margin-bottom: 29px;
+  padding-left: 25px;
+  padding-right: 45px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    padding-left: 90px;
+    padding-right: 35px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      z-index: 1;
+
+      width: 198px;
+      height: 285px;
+
+      background-color: @bg-filter-country;
+      border-radius: 20px;
+    }
+  }
 }
 
 .price__item {
@@ -19,7 +100,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 13px;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
 
   font-weight: 300;
   font-style: normal;
@@ -41,7 +122,7 @@
   &::before {
     position: absolute;
     right: -44px;
-    top: 3px;
+    top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +134,24 @@
     color: @basic-white;
 
     border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 19px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      top: 0;
+      left: -90px;
+
+      width: 68px;
+      height: 68px;
+    }
   }
 }
 
@@ -71,12 +170,26 @@
   background-color: @basic-yellow;
 }
 
+.price__name {
+  margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
 .price__value {
+  position: relative;
+  z-index: 2;
   margin: 0;
 }
 
 .price__link {
+  position: relative;
+  display: flex;
+  align-items: center;
   padding-left: 25px;
+
   font-weight: 700;
   font-style: normal;
   font-size: 16px;
@@ -92,5 +205,26 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 68px;
+      height: 68px;
+
+      background-color: @bg-filter-country;
+      border-radius: 50%;
+
+      background-image: url("../img/decor/businessman-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
