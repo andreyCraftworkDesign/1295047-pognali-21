@@ -1,5 +1,127 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: @basic-blue;
+
+  .page-header__user-menu {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .logo__image--dark {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    .page-header__user-menu {
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-header--active {
+  width: 100%;
+  z-index: 5;
+  position: absolute;
   background-color: @basic-white;
+
+  .page-header__content {
+    display: block;
+  }
+
+  .main-nav {
+    display: block;
+  }
+
+  .page-header__user-menu {
+    display: flex;
+  }
+
+  .contacts {
+    display: block;
+  }
+
+  .socials {
+    display: block;
+  }
+
+  .logo__image--white {
+    display: none;
+  }
+
+  .logo__image--dark {
+    display: block;
+  }
+
+  .page-header__toggle {
+    &::before {
+      background-color: #cccccc;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 13px;
+      background-color: #cccccc;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 28px;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+
+  width: 30px;
+  height: 21px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: @basic-white;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: @basic-white;
+    border-radius: 2px;
+  }
 }
 
 .page-header__wrapper {
@@ -7,8 +129,18 @@
 }
 
 .page-header__content {
-  padding-bottom: 25px;
+  position: relative;
+
+  padding-top: 28px;
+  padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
+
 
 .page-header__main-nav {
   margin-top: 70px;
@@ -16,6 +148,8 @@
 }
 
 .page-header__user-menu {
+  display: flex;
+  align-items: center;
   margin-bottom: 50px;
 }
 
