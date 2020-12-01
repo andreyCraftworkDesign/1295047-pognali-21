@@ -46,37 +46,95 @@
 
 .page-main__promo {
   padding-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+    padding-bottom: 96px;
+  }
 }
 
 .page-main__about {
-  padding-top: 33px;
-  padding-bottom: 66px;
+  position: relative;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 31px;
+  padding-bottom: 68px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+  }
 }
 
 .page-main__directions {
-  padding-top: 71px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 68px;
   padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 80px;
+  }
 }
 
 .page-main__users {
+  z-index: 5;
   padding-top: 68px;
-  padding-bottom: 31px;
-  background-color: @basic-blue-saturate;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 87px;
+  }
+}
+
+.page-main__price {
+  z-index: 4;
+  padding-top: 51px;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 85px;
+  }
 }
 
 .page-main__registration {
-  padding-top: 72px;
+  z-index: 3;
+  padding-top: 70px;
   padding-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 60px;
+  }
 }
 
 .page-main__location {
-  padding-top: 33px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 84px;
+  }
 }
 
 .page-main__catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: @basic-blue-lighten;
 }
 
 .page-main__filter-country {
   padding-top: 20px;
+}
+
+.page-main__map {
+  position: relative;
+  top: -35px;
 }

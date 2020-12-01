@@ -4,6 +4,12 @@
 
 .promo__wrapper {
   .container();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .promo__title {
@@ -16,28 +22,54 @@
   line-height: 40px;
   color: @basic-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 80px;
+    font-size: 60px;
+    line-height: 70px;
+  }
 }
 
 .promo__image {
+  position: relative;
+  right: 23px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 25px;
 
-  background-image: url("../img/globe-back-mobile-1.png");
+  // background-image: url("../img/globe-back-mobile-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    right: 36px;
+    order: 3;
+
+    img {
+      width: 372px;
+      height: 451px;
+    }
+  }
 }
+
 
 .promo__user-menu {
   position: relative;
   bottom: 20px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .promo__reviews {
-  margin-bottom: 29px;
+  order: 2;
+  margin-bottom: 30px;
 }
 
 .promo__steps {
+  order: 4;
   padding-bottom: 12px;
 }
