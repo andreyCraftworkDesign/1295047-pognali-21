@@ -38,6 +38,11 @@
 .location__adress-wrapper {
   display: flex;
   align-items: center;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 155px;
+    margin-right: 147px;
+  }
 }
 
 .location__adress {
@@ -58,10 +63,6 @@
 
     font-size: 28px;
     line-height: 28px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 147px;
   }
 }
 
