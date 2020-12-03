@@ -14,7 +14,8 @@
   font-size: 36px;
   line-height: 36px;
   color: @basic-white;
-  vertical-align: middle;
+
+  vertical-align: top;
 
   &::before {
     content: "";
@@ -37,6 +38,7 @@
   color: @basic-white;
   text-transform: uppercase;
   text-decoration: none;
+
   .visually-hidden();
 }
 
@@ -54,67 +56,88 @@
 }
 
 .page-main__about {
-  position: relative;
   z-index: 7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   padding-top: 31px;
   padding-bottom: 68px;
 
   @media (min-width: @tablet-width) {
     padding-top: 41px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 132px;
+    padding-bottom: 163px;
+  }
 }
 
 .page-main__directions {
   z-index: 6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   padding-top: 68px;
   padding-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 80px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 161px;
+    padding-bottom: 138px;
+  }
 }
 
 .page-main__users {
   z-index: 5;
+
   padding-top: 68px;
   padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 87px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 130px;
+    padding-bottom: 134px;
+  }
 }
 
 .page-main__price {
   z-index: 4;
+
   padding-top: 51px;
   padding-bottom: 38px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 85px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 107px;
+    padding-bottom: 187px;
+  }
 }
 
 .page-main__registration {
   z-index: 3;
+
   padding-top: 70px;
   padding-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 105px;
+    padding-bottom: 187px;
+  }
 }
 
 .page-main__location {
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   padding-top: 15px;
   padding-bottom: 35px;
 
