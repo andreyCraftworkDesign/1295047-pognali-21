@@ -29,6 +29,10 @@
   @media (min-width: @tablet-width) {
     width: 285px;
   }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 20px;
+  }
 }
 
 .card-user__image {
@@ -38,6 +42,11 @@
   border-top-right-radius: 10px;
 
   overflow: hidden;
+
+  @media (min-width: @desktop-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .card-user__photo {
@@ -60,6 +69,10 @@
   padding-right: 25px;
   padding-bottom: 18px;
   padding-left: 25px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 29px;
+  }
 }
 
 .card-user__traveler {
@@ -97,6 +110,10 @@
 
     background-color: @special-red;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .card-user__traveler--online {
@@ -118,4 +135,10 @@
   position: absolute;
   top: 17px;
   left: 17px;
+}
+
+.card-user__tags {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 13px;
+  }
 }
