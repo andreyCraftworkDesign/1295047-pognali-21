@@ -1,4 +1,5 @@
 .page-main__header {
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 12px;
   background-color: @bg-main-header;
@@ -154,10 +155,21 @@
 }
 
 .page-main__filter-country {
+  width: 100%;
   padding-top: 20px;
 }
 
 .page-main__map {
   position: relative;
   top: -35px;
+  height: 264px;
+
+  @media (min-width: @tablet-width) {
+    height: 465px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 405px;
+  }
+
 }
