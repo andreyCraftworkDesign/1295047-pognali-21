@@ -1,13 +1,7 @@
-@width-card: 270px;
-
-@media (min-width: @tablet-width) {
-  @width-card: 285px;
-}
-
 .card-user {
   display: flex;
   flex-direction: column;
-  width: @width-card;
+  width: 270px;
 
   background-color: @basic-white;
   border-radius: 10px;
@@ -30,6 +24,10 @@
 
   .level__background {
     fill: fade(@basic-black, 60%);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
   }
 }
 
@@ -109,7 +107,11 @@
 
 .card-user__countries {
   position: absolute;
-  top: @width-card - 29px;
+  top: 270px - 29px;
+
+  @media (min-width: @tablet-width) {
+    top: 285px - 29px;
+  }
 }
 
 .card-user__level {

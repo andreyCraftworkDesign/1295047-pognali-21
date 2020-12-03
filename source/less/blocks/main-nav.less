@@ -1,5 +1,23 @@
 .main-nav {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 145px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 40px;
+
+      width: 60px;
+      height: 2px;
+
+      background-color: @basic-white;
+    }
+  }
 }
 
 .main-nav__list {
@@ -10,6 +28,20 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: @desktop-width) {
+    margin-right: 34px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .main-nav__link {
@@ -29,16 +61,37 @@
 
   box-sizing: border-box;
 
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
+  .activity();
 
-  &:active {
-    opacity: 0.3;
-  }
-}
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-white;
 
-.main-nav__toggle {
-  display: none;
+    &:hover,
+    &:focus {
+      opacity: 1;
+      .main-nav__transition-text {
+        color: @basic-yellow;
+        transform: translateY(-100%);
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    .main-nav__transition-text {
+      position: relative;
+      transition: transform 0.3s;
+
+      &::before {
+        position: absolute;
+        top: 100%;
+
+        content: attr(data-hover);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
 }
