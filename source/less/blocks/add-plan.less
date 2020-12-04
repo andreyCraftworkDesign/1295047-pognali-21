@@ -1,5 +1,18 @@
 .add-plan {
+  position: relative;
   background-color: #d4d9eb;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -49px;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: #d4d9eb;
+  }
 }
 
 .add-plan__wrapper {
@@ -10,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .add-plan__title {
@@ -22,6 +35,10 @@
   font-size: 24px;
   line-height: 24px;
   color: @basic-blue-light;
+}
+
+.add-plan__step-marker {
+  margin-right: 23px;
 }
 
 .add-plan__plan-step {
