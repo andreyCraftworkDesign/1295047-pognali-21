@@ -4,6 +4,22 @@
   padding-top: 30px;
   padding-bottom: 12px;
   background-color: @bg-main-header;
+
+
+  @media (min-width: @tablet-width) {
+    padding-top: 104px;
+
+    .section-radius();
+  }
+}
+
+.page-main__wrapper {
+  .container();
+
+  @media (min-width: @tablet-width) {
+    padding-right: 75px;
+    padding-left: 75px;
+  }
 }
 
 .page-main__title {
@@ -30,6 +46,18 @@
     background-color: @special-orange;
     border-radius: 4px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 55px;
+    font-size: 60px;
+    line-height: 60px;
+
+    &::before {
+      bottom: -15px;
+      height: 8px;
+    }
+  }
+
 }
 
 .page-main__button-prev {
@@ -42,10 +70,6 @@
   text-decoration: none;
 
   .visually-hidden();
-}
-
-.page-main__wrapper {
-  .container();
 }
 
 .page-main__promo {
