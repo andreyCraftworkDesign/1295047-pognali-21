@@ -1,8 +1,3 @@
-.user-menu {
-  display: flex;
-  align-items: center;
-}
-
 .user-menu__link {
   display: flex;
   align-items: center;
@@ -14,6 +9,16 @@
 
   &:active svg {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -40,13 +45,20 @@
   flex-grow: 1;
 
   padding-top: 5px;
+  padding-right: 29px;
+  padding-left: 28px;
   padding-bottom: 5px;
 
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
-}
 
-.page-header__user-menu .user-menu__link {
-  display: none;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

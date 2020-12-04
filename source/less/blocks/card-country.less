@@ -4,36 +4,80 @@
   flex-direction: column;
 
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 20px;
+  }
 }
 
 .card-country__image {
+  width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    width: 185px;
+    height: 140px;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .card-country__flag {
   position: absolute;
-  top: 110px - 10px - 12px;
+  bottom: 88px;
   z-index: 1;
   left: 25px;
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+    right: 150px;
+    left: auto;
+  }
 }
 
 .card-country__content {
   position: relative;
   bottom: 10px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
+  min-height: 89px;
 
-  padding-top: 26px;
+  padding-top: 23px;
   padding-right: 24px;
-  padding-bottom: 24px;
-  padding-left: 25px;
+  padding-bottom: 9px;
+  padding-left: 24px;
 
   background-color: @basic-white;
   border-radius: 10px;
 
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    bottom: 0;
+    min-height: 140px;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 27px;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 }
 
 .card-country__title {
@@ -45,10 +89,16 @@
   font-size: 21px;
   line-height: 21px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .card-country__subtitle {
   order: 1;
+  width: 100%;
   margin-top: 0;
   margin-bottom: 0;
 
@@ -57,4 +107,15 @@
   font-size: 16px;
   line-height: 18px;
   color: fade(@special-grey, 30%);
+
+  span {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

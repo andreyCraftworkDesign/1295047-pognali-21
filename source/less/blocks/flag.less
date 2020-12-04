@@ -3,14 +3,19 @@
 
   display: flex;
   justify-content: center;
-  width: 70px;
-  height: 47px;
+  width: 35px;
+  height: 24px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   border-radius: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+  }
 }
 
 .flag__tooltip {

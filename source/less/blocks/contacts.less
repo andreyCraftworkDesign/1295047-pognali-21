@@ -1,3 +1,10 @@
+.contacts {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .contacts__link {
   position: relative;
   display: flex;
@@ -28,6 +35,19 @@
   &:active path {
     fill: fade(@special-yellow-dark, 30%);
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 110px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
 }
 
 .contacts__link--dark {
@@ -47,4 +67,18 @@
   width: 45px;
   height: 45px;
   margin-right: 16px;
+
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
+  }
 }

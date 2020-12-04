@@ -1,4 +1,6 @@
 .page-main__header {
+  display: flex;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 12px;
   background-color: @bg-main-header;
@@ -14,7 +16,8 @@
   font-size: 36px;
   line-height: 36px;
   color: @basic-white;
-  vertical-align: middle;
+
+  vertical-align: top;
 
   &::before {
     content: "";
@@ -37,6 +40,7 @@
   color: @basic-white;
   text-transform: uppercase;
   text-decoration: none;
+
   .visually-hidden();
 }
 
@@ -46,37 +50,127 @@
 
 .page-main__promo {
   padding-top: 21px;
+  padding-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+    padding-bottom: 96px;
+  }
 }
 
 .page-main__about {
-  padding-top: 33px;
-  padding-bottom: 66px;
+  z-index: 7;
+
+  padding-top: 31px;
+  padding-bottom: 68px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 132px;
+    padding-bottom: 163px;
+  }
 }
 
 .page-main__directions {
-  padding-top: 71px;
+  z-index: 6;
+
+  padding-top: 68px;
   padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 161px;
+    padding-bottom: 138px;
+  }
 }
 
 .page-main__users {
+  z-index: 5;
+
   padding-top: 68px;
-  padding-bottom: 31px;
-  background-color: @basic-blue-saturate;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 130px;
+    padding-bottom: 134px;
+  }
+}
+
+.page-main__price {
+  z-index: 4;
+
+  padding-top: 51px;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 107px;
+    padding-bottom: 187px;
+  }
 }
 
 .page-main__registration {
-  padding-top: 72px;
+  z-index: 3;
+
+  padding-top: 70px;
   padding-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 105px;
+    padding-bottom: 187px;
+  }
 }
 
 .page-main__location {
-  padding-top: 33px;
+  z-index: 2;
+
+  padding-top: 15px;
+  padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 84px;
+  }
 }
 
 .page-main__catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: @basic-blue-lighten;
 }
 
 .page-main__filter-country {
+  width: 100%;
   padding-top: 20px;
+}
+
+.page-main__map {
+  position: relative;
+  top: -35px;
+  height: 264px;
+
+  @media (min-width: @tablet-width) {
+    height: 465px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 405px;
+  }
 }

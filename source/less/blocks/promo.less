@@ -1,9 +1,28 @@
 .promo {
+
   background-color: @basic-blue;
+
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 72px;
+    padding-bottom: 96px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 110px;
+    padding-bottom: 123px;
+  }
 }
 
 .promo__wrapper {
   .container();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .promo__title {
@@ -16,28 +35,73 @@
   line-height: 40px;
   color: @basic-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 80px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-bottom: 101px;
+    padding-left: 69px;
+
+    text-align: start;
+  }
 }
 
 .promo__image {
+  position: relative;
+  right: 23px;
+
   display: flex;
   justify-content: flex-end;
-  padding-right: 25px;
 
-  background-image: url("../img/globe-back-mobile-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+    right: 36px;
+    order: 3;
+
+    img {
+      width: 372px;
+      height: 451px;
+    }
+  }
 }
+
 
 .promo__user-menu {
   position: relative;
   bottom: 20px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .promo__reviews {
-  margin-bottom: 29px;
+  order: 2;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 211px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .promo__steps {
+  width: 100%;
+  order: 4;
   padding-bottom: 12px;
 }
