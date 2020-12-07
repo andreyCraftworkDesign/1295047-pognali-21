@@ -115,6 +115,16 @@
   }
 }
 
+.section-radius-top() {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  @media (min-width: @tablet-width) {
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
+}
+
 .section-bg-mod() {
   content: "";
   position: absolute;
@@ -127,5 +137,67 @@
   @media (min-width: @tablet-width) {
     top: -60px;
     height: 60px;
+  }
+}
+
+.section-bg-mod-bottom() {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -30px;
+
+  width: 100%;
+  height: 30px;
+
+  @media (min-width: @tablet-width) {
+    bottom: -60px;
+    height: 60px;
+  }
+}
+
+.button-big() {
+  position: relative;
+  justify-content: flex-start;
+  min-width: 60px;
+
+  padding-top: 22px;
+  padding-right: 23px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: unset;
+
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: 20px;
+    width: 14px;
+    height: 16px;
+
+    background-image: url("../img/decor/polygon-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    padding-right: 32px;
+    padding-bottom: 28px;
+    padding-left: 32px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
   }
 }
