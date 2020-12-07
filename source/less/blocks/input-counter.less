@@ -1,8 +1,37 @@
 .input-counter {
+  width: 100%;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: @stroke-price-color;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    padding-top: 0;
+    width: auto;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .input-counter__label {
@@ -13,6 +42,17 @@
   letter-spacing: 0.09em;
   color: @basic-blue-light;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0;
+  }
 }
 
 .input-counter__unit-measure {
@@ -23,6 +63,19 @@
   letter-spacing: 0.06em;
   color: fade(@basic-blue-light, 30%);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    letter-spacing: 0;
+    color: @basic-blue-light;
+  }
 }
 
 .input-counter__inner {
@@ -40,6 +93,16 @@
 
   &:active {
     border-color: @basic-blue;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-top: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    margin: 0;
   }
 }
 
@@ -80,6 +143,15 @@
       background-color: #e5e5e5;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 32px;
+    padding-left: 32px;
+
+    &::before {
+      width: 20px;
+    }
+  }
 }
 
 .input-counter__button--plus {
@@ -91,6 +163,12 @@
     height: 14px;
 
     background-color: #cccccc;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      height: 20px;
+    }
   }
 }
 
@@ -109,6 +187,13 @@
   text-align: center;
 
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .input-counter__input-number::-webkit-outer-spin-button,

@@ -17,6 +17,12 @@
     padding-right: 75px;
     padding-left: 75px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 31px;
+    padding-left: 125px;
+    padding-right: 60px;
+  }
 }
 
 .user-info__level {
@@ -27,6 +33,12 @@
     padding: 0;
     order: 1;
   }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 461px;
+    top: -147px;
+  }
 }
 
 .user-info__avatar {
@@ -36,6 +48,12 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 226px;
+    top: -190px;
   }
 }
 
@@ -70,18 +88,44 @@
 
   @media (min-width: @tablet-width) {
     order: 4;
+    margin-top: 32px;
+    margin-bottom: 50px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 226px;
+
+    width: 190px;
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 15px;
+
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    span {
+      display: none;
+    }
   }
 }
 
 .user-info__fieldset {
+  position: relative;
+
   width: 100%;
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 18px;
-  padding-top: 16px;
-  padding-right: 25px;
-  padding-bottom: 24px;
-  padding-left: 25px;
 
   border: none;
   border-radius: 10px;
@@ -101,11 +145,25 @@
   text-align: center;
 
   background-color: @basic-blue-lighten;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -8px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
 }
 
 .user-info__textarea {
   width: 100%;
-  padding: 0;
+
+  padding-top: 16px;
+  padding-right: 25px;
+  padding-bottom: 24px;
+  padding-left: 25px;
 
   font-family: "BloggerSans", "Arial", sans-serif;
   font-weight: 400;
@@ -117,26 +175,61 @@
   background-color: transparent;
   border: none;
   resize: none;
+
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 36px;
+    padding-right: 40px;
+    padding-bottom: 19px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .user-info__tags {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
   @media (min-width: @tablet-width) {
     order: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 732px;
+    order: 4;
+
+    .user-info__legend {
+      left: 24px;
+    }
   }
 }
 
 .user-info__transport {
   display: flex;
   justify-content: center;
+
   padding-top: 7px;
+  padding-right: 25px;
   padding-bottom: 14px;
+  padding-left: 25px;
+
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     order: 2;
     width: 308px;
+    padding-top: 26px;
+    padding-bottom: 25px;
   }
 
-  box-sizing: border-box;
+  @media (min-width: @desktop-width) {
+    order: 5;
+    width: 384px;
+  }
 }
 
 .user-info__label {
@@ -160,6 +253,11 @@
 
 .user-info .transport__icon {
   fill: #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 22px;
+  }
 }
 
 .user-info__input-checkbox:checked + .transport__item .transport__icon {

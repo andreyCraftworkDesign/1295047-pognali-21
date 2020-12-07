@@ -9,6 +9,28 @@
   color: @basic-blue-light;
   background-color: @basic-white;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: 40px;
+    padding-right: 33px;
+    padding-bottom: 17px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    align-items: center;
+
+    padding-top: 37px;
+    padding-right: 41px;
+    padding-bottom: 35px;
+    padding-left: 43px;
+  }
 }
 
 .plan-item__country {
@@ -18,33 +40,90 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 52px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    margin: 0;
+  }
 }
 
 .plan-item__number {
   margin-right: 5px;
+  font-weight: 500;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+    margin-right: 35px;
+  }
 }
 
 .plan-item__travelers {
   margin-top: 0;
   margin-bottom: 5px;
 
+  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .plan-item__dates {
   margin-top: 0;
   margin-bottom: 24px;
 
+  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -20px;
+  }
 }
 
 .plan-item__edit {
+  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   color: fade(@basic-black, 30%);
@@ -58,5 +137,19 @@
 
   &:active {
     color: fade(@basic-black, 10%);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-left: 82px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    text-align: end;
   }
 }

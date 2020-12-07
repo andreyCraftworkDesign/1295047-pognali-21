@@ -2,7 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding-top: 28px;
+  padding-bottom: 24px;
+
   background-color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
 }
 
 .page-header--active {
@@ -58,7 +67,6 @@
 
 .page-header__toggle {
   position: absolute;
-  top: 28px;
   right: 0;
 
   display: flex;
@@ -114,9 +122,7 @@
 
 .page-header__content {
   position: relative;
-
-  padding-top: 28px;
-  padding-bottom: 24px;
+  display: flex;
 
   @media (min-width: @tablet-width) {
     display: flex;
