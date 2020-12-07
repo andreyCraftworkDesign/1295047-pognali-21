@@ -2,7 +2,6 @@
   position: relative;
   background-color: #d4d9eb;
 
-
   &::after {
     content: "";
     position: absolute;
@@ -17,13 +16,32 @@
 
 .add-plan__wrapper {
   .container();
+
+  @media (min-width: @tablet-width) {
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
 }
 
 .add-plan__header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 70px;
+  }
 }
 
 .add-plan__title {
@@ -35,12 +53,43 @@
   font-size: 24px;
   line-height: 24px;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .add-plan__step-marker {
   margin-right: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 200px;
+    top: 200px;
+  }
 }
 
 .add-plan__plan-step {
   margin-bottom: 10px;
+
+  &:nth-of-type(2) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 43px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 42px;
+    }
+  }
 }

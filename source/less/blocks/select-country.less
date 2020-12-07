@@ -18,6 +18,14 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .select-country__inner:last-of-type {
@@ -79,6 +87,37 @@
     border-radius: 50%;
     box-sizing: border-box;
   }
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    width: 372px;
+    padding-top: 24px;
+    padding-right: 27px;
+    padding-bottom: 24px;
+    padding-left: 27px;
+
+    &::before {
+      width: 75px;
+    }
+
+    &::after {
+      top: 25px;
+      left: 390px;
+
+      width: 14px;
+      height: 14px;
+
+      background-color: @basic-white;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+
+    &::after {
+      left: 767px;
+    }
+  }
 }
 
 .select-country__choice--yes {
@@ -100,12 +139,21 @@
   &::before {
     display: none;
   }
+
+  @media (min-width: @tablet-width) {
+    background-color: @special-blue-light;
+    border-color: @special-blue-light;
+
+    &::after {
+      background-color: @basic-blue-lighten;
+      border-color: @basic-border-input;
+    }
+  }
 }
 
 .select-country__choice--active {
   z-index: 3;
   padding-left: 16px;
-  padding-bottom: 12px;
 
   background-color: @basic-blue-light;
   border-color: @basic-blue-light;
@@ -123,9 +171,6 @@
   }
 
   + .select-country__dropdown {
-    position: absolute;
-    z-index: 2;
-    top: 41px;
     display: block;
   }
 
@@ -159,6 +204,16 @@
   &::after {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 21px;
+    padding-bottom: 27px;
+    padding-left: 24px;
+
+    .select-country__name {
+      letter-spacing: 0.1em;
+    }
+  }
 }
 
 .select-country__name {
@@ -175,12 +230,36 @@
 
   border-radius: 4px;
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .select-country__dropdown {
+  position: absolute;
+  z-index: 2;
+  top: 41px;
+
   display: none;
   width: 100%;
+
+  background-color: @basic-white;
   box-shadow: 0 2px 16px 0 #d4d9eb;
+
+  box-sizing: border-box;
+
+
+  @media (min-width: @tablet-width) {
+    top: 70px;
+    width: 575px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+  }
 }
 
 .select-country__flag {
@@ -196,6 +275,16 @@
 
   border: 1px solid @basic-border-input;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -7px;
+    padding: 0;
+  }
 }
 
 .select-country__delete {
@@ -241,6 +330,28 @@
       opacity: 0.05;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    background-color: transparent;
+    top: auto;
+    right: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 24px;
+      height: 24px;
+
+      background-image: url("../img/decor/close-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.1;
+    }
+  }
 }
 
 .select-country__add {
@@ -263,6 +374,8 @@
   letter-spacing: 0.1em;
   color: @basic-blue-light;
   text-transform: uppercase;
+
+  background-color: transparent;
 
   border: none;
   border-radius: 4px;
@@ -297,6 +410,23 @@
     background-size: cover;
     opacity: 0.2;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+    padding-right: 28px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.09em;
+
+    &::before {
+      right: 25px;
+      width: 21px;
+      height: 21px;
+    }
+  }
 }
 
 .select-country__list {
@@ -321,6 +451,20 @@
 
   list-style: none;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+    left: auto;
+    right: -197px;
+    width: auto;
+    border: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 14px;
+    right: -200px;
+  }
 }
 
 .select-country__item {
@@ -328,6 +472,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
   }
 }
 
@@ -348,5 +496,10 @@
 
   &:active {
     color: fade(@basic-blue-light, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
