@@ -50,6 +50,3 @@ if (likesButtons) {
     })
   }
 }
-
-
-
