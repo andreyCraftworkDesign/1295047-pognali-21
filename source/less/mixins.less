@@ -30,6 +30,17 @@
   clip: rect(0 0 0 0);
 }
 
+.visualy-normal() {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  clip: auto;
+}
+
 .activity() {
   &:hover,
   &:focus {
@@ -93,15 +104,6 @@
 
   @media (min-width: @desktop-width) {
     line-height: 24px;
-  }
-}
-
-.new-stroke() {
-  display: block;
-
-  @media (min-width: @tablet-width) {
-    display: inline;
-    vertical-align: top;
   }
 }
 

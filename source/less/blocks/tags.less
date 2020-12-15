@@ -10,7 +10,6 @@
 }
 
 .tags__text {
-  width: 188px;
   margin: 0;
 
   font-weight: 400;
@@ -19,6 +18,11 @@
   line-height: 18px;
   color: @special-grey;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .tags__item {

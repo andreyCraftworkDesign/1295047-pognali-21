@@ -46,7 +46,6 @@
 }
 
 .location__adress {
-  width: 200px;
   margin-left: 16px;
 
   font-weight: 700;
@@ -63,6 +62,10 @@
 
     font-size: 28px;
     line-height: 28px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -82,10 +85,29 @@
 }
 
 .location__button {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-top: 18px;
+
+  &::before {
+    right: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 36px;
+
+    &::before {
+      right: 33px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
     width: 324px;
     margin: 0;
+
+    &::before {
+      right: 30px;
+    }
   }
 }

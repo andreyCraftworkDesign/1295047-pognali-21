@@ -1,29 +1,5 @@
 .plan-step {
-  padding-top: 22px;
-  padding-right: 25px;
-  padding-bottom: 10px;
-  padding-left: 25px;
-
   background-color: @basic-white;
-  border-radius: 10px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 43px;
-    padding-right: 40px;
-    padding-bottom: 54px;
-    padding-left: 40px;
-
-    border-radius: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 97px;
-    padding-right: 160px;
-    padding-bottom: 106px;
-    padding-left: 160px;
-
-    border-radius: 60px;
-  }
 }
 
 .plan-step--2 {
@@ -83,7 +59,7 @@
     margin-bottom: 34px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-bottom: 56px;
   }
 }
@@ -112,6 +88,43 @@
     border-top: 1px solid @stroke-price-color;
   }
 }
+
+.plan-step__input-counter {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: @stroke-price-color;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    padding-top: 0;
+    width: auto;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 
 .plan-step__checkbox {
   position: relative;
@@ -217,6 +230,9 @@
 }
 
 .plan-step__calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
@@ -227,6 +243,7 @@
     margin-bottom: 58px;
   }
 }
+
 
 .plane-step__button-prev {
   position: relative;
@@ -322,16 +339,26 @@
 }
 
 .plan-step__country-activity {
+  position: relative;
+
   margin-top: 21px;
   margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     margin-top: 14px;
     margin-bottom: 12px;
+    padding-left: 3px;
+    padding-right: 33px;
+
+    border-top: 1px solid @stroke-price-color;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 75px;
+    padding-right: 115px;
+    padding-left: 0;
   }
 }
 
@@ -349,7 +376,19 @@
 }
 
 .plan-step__button {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  width: 100%;
+
+  font-size: 17px;
+  line-height: 30px;
 
   @media (min-width: @tablet-width) {
     width: 284px;

@@ -39,7 +39,12 @@
 
   .section-title();
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
   @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
     margin-left: 112px;
   }
 }
@@ -67,6 +72,7 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
+    margin-top: 107px;
     margin-bottom: 46px;
   }
 
@@ -88,7 +94,16 @@
 }
 
 .directions__button {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-top: auto;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      right: 32px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
     width: 275px;

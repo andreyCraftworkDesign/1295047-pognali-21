@@ -1,6 +1,4 @@
 .user-info {
-  display: flex;
-  width: 100%;
   background-color: @basic-blue-lighten;
 }
 
@@ -30,15 +28,78 @@
   padding-right: 18px;
   padding-left: 16px;
 
+  .level {
+    width: 100px;
+    height: 100px;
+  }
+
+  .level__value {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .level__title {
+    font-size: 18px;
+    line-height: 18px;
+    color: @special-grey;
+
+    &::before {
+      background-color: fade(@special-grey, 30%);
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     order: 1;
+
+    width: 94px;
+    height: 94px;
+
+    .level {
+      width: 94px;
+      height: 94px;
+    }
+
+    .level__title {
+      font-size: 18px;
+      line-height: 18px;
+      padding-top: 6px;
+
+      &::before {
+        background-color: fade(@special-grey, 30%);
+      }
+    }
+
+    .level__value {
+      margin-bottom: 6px;
+    }
+
+    .level__background {
+      cx: 47px;
+      cy: 47px;
+      r: 45px;
+    }
+
+    .level__progress {
+      cx: 53px;
+      cy: 48px;
+      r: 45px;
+      stroke-dasharray: 235;
+    }
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     right: 390px;
     top: -190px;
+
+    .level__title {
+      color: @basic-white;
+
+      &::before {
+        background-color: @basic-white;
+      }
+    }
   }
 }
 
@@ -163,7 +224,7 @@
 
   padding-top: 16px;
   padding-right: 25px;
-  padding-bottom: 24px;
+  padding-bottom: 28px;
   padding-left: 25px;
 
   font-family: "BloggerSans", "Arial", sans-serif;
@@ -178,6 +239,10 @@
   resize: none;
 
   box-sizing: border-box;
+
+  &::placeholder {
+    color: @special-grey;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 36px;
