@@ -1,6 +1,34 @@
+.filter-travelers {
+  background-color: @basic-yellow;
+
+  padding-top: 24px;
+  padding-right: 25px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
+  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 37px;
+    padding-right: 35px;
+    padding-bottom: 37px;
+    padding-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    padding-top: 43px;
+    padding-right: 45px;
+    padding-bottom: 49px;
+    padding-left: 47px;
+  }
+}
+
 .filter-travelers__title {
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   font-weight: 700;
   font-style: normal;
@@ -9,13 +37,57 @@
   color: @basic-blue-light;
 
   letter-spacing: 0.02em;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+
+    font-size: 30px;
+    line-height: 30px;
+
+    letter-spacing: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.filter-travelers__form {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid #f3c72b;
+    padding-top: 36px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 86px;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: #f3c72b;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    padding-top: 0;
+  }
 }
 
 .filter-travelers__button {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 15px;
 
   padding-top: 12px;
   padding-bottom: 12px;
@@ -41,5 +113,40 @@
 
   &:active {
     background-color: #f3c72b;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 75px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 42px;
+  }
+}
+
+.filter-travelers__fieldset {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+
+    &:nth-of-type(4) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+
+    &:nth-of-type(4) {
+      margin-bottom: 0;
+    }
   }
 }

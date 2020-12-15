@@ -19,6 +19,10 @@
     background-position: center;
   }
 
+  .select-country__filter-abc {
+    background-color: @basic-white;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 15px;
 
@@ -205,6 +209,10 @@
     display: none;
   }
 
+  @media (min-width: @tablet-width) {
+    padding-left: 27px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-top: 21px;
     padding-bottom: 27px;
@@ -214,6 +222,10 @@
       letter-spacing: 0.1em;
     }
   }
+}
+
+.select-country__filter-abc {
+  box-shadow: 0 2px 16px 0 #d4d9eb;
 }
 
 .select-country__name {
@@ -246,11 +258,7 @@
   display: none;
   width: 100%;
 
-  background-color: @basic-white;
-  box-shadow: 0 2px 16px 0 #d4d9eb;
-
   box-sizing: border-box;
-
 
   @media (min-width: @tablet-width) {
     top: 70px;

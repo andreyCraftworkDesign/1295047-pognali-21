@@ -1,13 +1,5 @@
 .card-user {
-  display: flex;
-  flex-direction: column;
-  width: 270px;
-
   background-color: @basic-white;
-  border-radius: 10px;
-
-  box-sizing: border-box;
-  transition: 0.3s;
 
   .countries__item {
     margin-bottom: 0;
@@ -27,11 +19,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 285px;
-  }
-
-  @media (min-width: @desktop-width) {
-    border-radius: 20px;
+    .transport__item {
+      margin-right: 0;
+      width: 34px;
+      height: 23px;
+    }
   }
 }
 
@@ -70,8 +62,13 @@
   padding-bottom: 18px;
   padding-left: 25px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 29px;
+    padding-bottom: 28px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-bottom: 29px;
+    padding-bottom: 26px;
   }
 }
 
@@ -111,6 +108,19 @@
     background-color: @special-red;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+
+    font-size: 24px;
+    line-height: 22px;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      left: -22px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 30px;
   }
@@ -135,10 +145,25 @@
   position: absolute;
   top: 17px;
   left: 17px;
+
+  @media (min-width: @tablet-width) {
+    top: 21px;
+    left: 22px;
+  }
 }
 
 .card-user__tags {
   @media (min-width: @desktop-width) {
     margin-bottom: 13px;
+  }
+}
+
+.card-user__transport {
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
