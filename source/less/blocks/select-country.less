@@ -81,7 +81,7 @@
   &::after {
     content: "";
     position: absolute;
-    left: 162px;
+    left: 159px;
     z-index: 1;
 
     width: 8px;
@@ -211,6 +211,14 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 27px;
+
+    ~ .select-country__delete {
+      display: flex;
+    }
+
+    &::after {
+      display: flex;
+    }
   }
 
   @media (min-width: @desktop-width) {
