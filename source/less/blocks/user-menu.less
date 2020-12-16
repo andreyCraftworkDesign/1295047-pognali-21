@@ -1,3 +1,7 @@
+// .user-menu {
+//   height: 100%;
+// }
+
 .user-menu__link {
   display: flex;
   align-items: center;
@@ -22,6 +26,14 @@
   }
 }
 
+.user-menu__link--hidden {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .user-menu__phone {
   background-color: @special-orange;
 
@@ -43,6 +55,7 @@
 .user-menu__login {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-grow: 1;
 
   padding-top: 5px;
@@ -57,9 +70,16 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    margin-left: auto;
     padding-top: 16px;
     padding-bottom: 14px;
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+.user-menu__login--big {
+  padding-top: 9px;
+  padding-bottom: 11px;
 }

@@ -6,8 +6,13 @@
   .container();
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
   }
 }
@@ -24,6 +29,9 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
     width: 100%;
     margin-bottom: 80px;
 
@@ -33,7 +41,6 @@
 
   @media (min-width: @desktop-width) {
     width: auto;
-    margin-bottom: 101px;
     padding-left: 69px;
 
     text-align: start;
@@ -77,13 +84,20 @@
 .promo__reviews {
   order: 2;
   margin-bottom: 30px;
+  padding-left: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 211px;
+    grid-column-start: 1;
+    margin-bottom: 213px;
+    padding-left: 33px;
   }
 
   @media (min-width: @desktop-width) {
+    grid-column-start: 4;
     margin-bottom: 0;
+    padding-top: 5px;
+    padding-right: 27px;
+    padding-left: 42px;
   }
 }
 
@@ -91,4 +105,13 @@
   width: 100%;
   order: 4;
   padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+  }
 }

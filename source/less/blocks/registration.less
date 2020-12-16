@@ -1,10 +1,4 @@
 .registration {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   background-color: @basic-blue-saturate;
   text-align: center;
 
@@ -13,10 +7,6 @@
   &::before {
     .section-bg-mod();
     background-color: @basic-blue-saturate;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 104px;
   }
 }
 
@@ -35,6 +25,7 @@
 }
 
 .registration__title {
+  margin-top: 0;
   margin-bottom: 20px;
 
   .section-title();
@@ -43,6 +34,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
   }
 }
 
@@ -54,6 +49,7 @@
   padding-left: 0;
 
   @media (min-width: @tablet-width) {
+    text-indent: -18px;
     br {
       display: none;
     }
@@ -64,8 +60,19 @@
   }
 }
 
+.registration__text--indent {
+  text-indent: 0;
+  @media (min-width: @desktop-width) {
+    text-indent: 21px;
+  }
+}
+
 .registration__text--spacing {
   letter-spacing: 0.01em;
+
+  @media (min-width: @tablet-width) {
+    text-indent: 0;
+  }
 }
 
 .registration__form {
@@ -80,8 +87,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 60px;
-    margin-bottom: 70px;
+    margin-top: 62px;
+    margin-bottom: 68px;
   }
 }
 
@@ -157,6 +164,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 37px;
     width: 324px;
   }
 }
@@ -174,5 +182,9 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 45px;
   }
 }

@@ -29,6 +29,10 @@
 
   list-style: none;
 
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+  }
+
   @media (min-width: @desktop-width) {
     flex-direction: row;
   }
@@ -43,6 +47,7 @@
     }
   }
 }
+
 
 .main-nav__link {
   display: flex;
@@ -62,6 +67,11 @@
   box-sizing: border-box;
 
   .activity();
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
