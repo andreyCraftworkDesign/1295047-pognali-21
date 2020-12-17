@@ -40,6 +40,11 @@
     right: 150px;
     left: auto;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 23px;
+    right: 152px;
+  }
 }
 
 .card-country__content {
@@ -83,6 +88,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 22px;
     padding-bottom: 24px;
+    padding-left: 30px;
   }
 }
 
@@ -114,18 +120,24 @@
   line-height: 18px;
   color: fade(@special-grey, 30%);
 
-  span {
-    display: block;
-  }
-
   @media (min-width: @tablet-width) {
     order: 0;
 
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .card-country__users-country {
-  margin-top: auto;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 }
