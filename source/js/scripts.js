@@ -56,10 +56,12 @@ if (filterCountryClose) {
 
 if (selectCountryChoices) {
   for (let selectCountryChoice of selectCountryChoices) {
-    selectCountryChoice.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      selectCountryChoice.classList.toggle('select-country__choice--active')
-    })
+    if (selectCountryChoice.classList.contains('select-country__choice--select')) {
+      selectCountryChoice.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        selectCountryChoice.classList.toggle('select-country__choice--active')
+      })
+    }
   }
 }
 
