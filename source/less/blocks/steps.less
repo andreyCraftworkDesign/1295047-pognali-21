@@ -126,6 +126,10 @@
 
     &:nth-child(3) {
       border-top-left-radius: 0;
+
+      &::after {
+        background-color: spin(@special-orange, 14);
+      }
     }
 
     &:nth-child(4) {
@@ -146,12 +150,6 @@
 
     &:nth-child(2n)::after {
       display: none;
-    }
-
-    &:nth-child(3) {
-      &::after {
-        background-color: spin(@special-orange, 14);
-      }
     }
   }
 
