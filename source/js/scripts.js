@@ -12,6 +12,27 @@ let mainMenuToggle = document.querySelector('.page-header__toggle');
 let pageHeader = document.querySelector('.page-header');
 
 
+let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
+let filterAbcLists = document.querySelectorAll('.filter-abc__list');
+
+for (let filterAbcList of filterAbcLists) {
+  filterAbcList.addEventListener('click', function(evt) {
+    if(evt.target.classList.contains('filter-abc__button')) {
+      let array = Array.from(filterAbcButtons);
+      let target = evt.target;
+      let index = array.indexOf(target);
+
+      array.forEach(function(item, i, arr) {
+        if(i === index) {
+          item.classList.add('filter-abc__button--active');
+        } else {
+          item.classList.remove('filter-abc__button--active');
+        }
+      });
+    }
+  });
+}
+
 if (toggleCountries) {
   toggleCountries.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -41,6 +62,7 @@ if (selectCountryChoices) {
     })
   }
 }
+
 
 if (likesButtons) {
   for (let likesButton of likesButtons) {
