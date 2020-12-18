@@ -1,3 +1,7 @@
+let priceModalButton = document.querySelector('.price__link');
+let priceModal = document.querySelector('.business-price');
+let modalCloseButton = document.querySelector('.modal__close');
+
 let toggleCountries = document.querySelector('.toggle-countries');
 let filterCountryClose = document.querySelector('.filter-country__button');
 let filterCountry = document.querySelector('.filter-country');
@@ -14,6 +18,20 @@ let pageHeader = document.querySelector('.page-header');
 
 let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
 let filterAbcLists = document.querySelectorAll('.filter-abc__list');
+
+if (priceModalButton) {
+  priceModalButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    priceModal.classList.add('modal--show');
+  });
+}
+
+if (modalCloseButton) {
+  modalCloseButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    priceModal.classList.remove('modal--show');
+  });
+}
 
 for (let filterAbcList of filterAbcLists) {
   filterAbcList.addEventListener('click', function(evt) {
