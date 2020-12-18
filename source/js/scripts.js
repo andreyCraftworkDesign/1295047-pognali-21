@@ -1,3 +1,6 @@
+let mainMenuToggle = document.querySelector('.page-header__toggle');
+let pageHeader = document.querySelector('.page-header');
+
 let priceModalButton = document.querySelector('.price__link');
 let priceModal = document.querySelector('.business-price');
 let modalCloseButton = document.querySelector('.modal__close');
@@ -12,12 +15,16 @@ let fieldsetAccordion = document.querySelector('.fieldset-accordion');
 let likesButtons = document.querySelectorAll('.likes__button');
 
 let selectCountryChoices = document.querySelectorAll('.select-country__choice');
-let mainMenuToggle = document.querySelector('.page-header__toggle');
-let pageHeader = document.querySelector('.page-header');
+let selectCountrySelect = document.querySelector('.select-country__choice--select');
+let selectCountryName = selectCountrySelect.querySelector('.select-country__name');
+let selectCountryOptions = document.querySelectorAll('.select-country__option');
+let selectFlag = document.querySelector('.flag--select');
+let selectFlagTooltip = selectFlag.querySelector('.flag__tooltip');
 
 
 let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
 let filterAbcLists = document.querySelectorAll('.filter-abc__list');
+
 
 if (priceModalButton) {
   priceModalButton.addEventListener('click', function(evt) {
@@ -80,6 +87,61 @@ if (selectCountryChoices) {
         selectCountryChoice.classList.toggle('select-country__choice--active')
       })
     }
+  }
+}
+
+if (selectCountryOptions) {
+  for (let selectCountryOption of selectCountryOptions) {
+    selectCountryOption.addEventListener('click', function(evt) {
+      selectCountryName.textContent = selectCountryOption.textContent;
+      selectCountrySelect.classList.remove('select-country__choice--active');
+      selectCountrySelect.classList.add('select-country__choice--yes');
+      selectFlag.className = 'flag--select';
+      selectFlag.classList.add('flag');
+      if (selectCountryOption.textContent === 'Австралия') {
+        selectFlag.classList.add('flag--australia');
+        selectFlagTooltip.textContent = 'Австралия';
+      } else if (selectCountryOption.textContent === 'Тайланд') {
+        selectFlag.classList.add('flag--thailand');
+        selectFlagTooltip.textContent = 'Тайланд';
+      } else if (selectCountryOption.textContent === 'Тайланд') {
+        selectFlag.classList.add('flag--thailand');
+        selectFlagTooltip.textContent = 'Тайланд';
+      } else if (selectCountryOption.textContent === 'Шри-Ланка') {
+        selectFlag.classList.add('flag--sri-lanka');
+        selectFlagTooltip.textContent = 'Шри-Ланка';
+      } else if (selectCountryOption.textContent === 'Сейшелы') {
+        selectFlag.classList.add('flag--seychelles');
+        selectFlagTooltip.textContent = 'Сейшелы';
+      } else if (selectCountryOption.textContent === 'Бельгия') {
+        selectFlag.classList.add('flag--belgium');
+        selectFlagTooltip.textContent = 'Бельгия';
+      } else if (selectCountryOption.textContent === 'Чехия') {
+        selectFlag.classList.add('flag--czech');
+        selectFlagTooltip.textContent = 'Чехия';
+      } else if (selectCountryOption.textContent === 'Босния') {
+        selectFlag.classList.add('flag--bosnia');
+        selectFlagTooltip.textContent = 'Босния';
+      } else if (selectCountryOption.textContent === 'США') {
+        selectFlag.classList.add('flag--usa');
+        selectFlagTooltip.textContent = 'США';
+      } else if (selectCountryOption.textContent === 'Великобритания') {
+        selectFlag.classList.add('flag--britain');
+        selectFlagTooltip.textContent = 'Великобритания';
+      } else if (selectCountryOption.textContent === 'Германия') {
+        selectFlag.classList.add('flag--germany');
+        selectFlagTooltip.textContent = 'Германия';
+      } else if (selectCountryOption.textContent === 'Доминика') {
+        selectFlag.classList.add('flag--dominica');
+        selectFlagTooltip.textContent = 'Доминика';
+      } else if (selectCountryOption.textContent === 'Франция') {
+        selectFlag.classList.add('flag--france');
+        selectFlagTooltip.textContent = 'Франция';
+      } else {
+        selectFlag.classList.add('flag--no');
+        selectFlagTooltip.textContent = 'Нет флага';
+      }
+    });
   }
 }
 
