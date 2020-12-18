@@ -18,12 +18,12 @@
   box-shadow: 0 2px 16px 0 #d4d9eb;
 
   @media (min-width: @tablet-width) {
-    width: 265px;
+    width: 261px;
 
     padding-top: 35px;
     padding-right: 82px;
     padding-bottom: 33px;
-    padding-left: 27px;
+    padding-left: 30px;
 
     box-shadow: none;
 
@@ -41,7 +41,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 35px;
     padding-right: 102px;
-    width: 361px;
+    width: 358px;
     gap: 15px;
   }
 }
@@ -85,7 +85,20 @@
   background-color: @basic-blue-light;
   border-color: @basic-blue-light;
 
-  + .select-country__list {
+  + .filter-abc__option-list {
     display: block;
+  }
+}
+
+.filter-abc__option-list {
+  overflow-y: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 194px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 240px;
+    max-height: 459px;
   }
 }

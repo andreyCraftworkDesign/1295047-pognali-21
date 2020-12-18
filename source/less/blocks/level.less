@@ -12,46 +12,54 @@
 }
 
 .level--big {
-  width: 100px;
-  height: 100px;
-
-  .level__title {
-    font-size: 18px;
-    line-height: 18px;
-    padding-top: 6px;
-
-    &::before {
-      background-color: fade(@special-grey, 30%);
-    }
-
-    @media (min-width: @desktop-width) {
-      &::before {
-        background-color: @basic-white;
-      }
-    }
-  }
-
   .level__value {
     font-size: 38px;
     line-height: 38px;
-    margin-bottom: 6px;
+  }
+
+  .level__title {
+    padding-top: 7px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .level__progress {
+    cx: 50px;
+    cy: 51px;
+    r: 48px;
+  }
+
+  .level__progress--80 {
+    stroke-dasharray: 248%;
   }
 
   @media (min-width: @tablet-width) {
-    width: 94px;
-    height: 94px;
-
-    .level__background {
-      cx: 47px;
-      cy: 47px;
-      r: 45px;
+    .level__value {
+      padding-top: 8px;
     }
 
     .level__progress {
       cx: 47px;
-      cy: 47px;
+      cy: 48px;
       r: 45px;
-      stroke-dasharray: 235;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .level__value {
+      color: @basic-white;
+    }
+
+    .level__title {
+      color: @basic-white;
+
+      &::before {
+        background-color: fade(@basic-white, 30%);
+      }
     }
   }
 }
@@ -65,6 +73,12 @@
   }
 }
 
+.level__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .level__value {
   font-weight: 700;
@@ -73,10 +87,6 @@
   line-height: 24px;
   color: @basic-blue;
   vertical-align: top;
-
-  @media (min-width: @desktop-width) {
-    color: @basic-white;
-  }
 }
 
 .level__value--light {
@@ -103,17 +113,18 @@
     width: 100%;
     height: 1px;
 
-    background-color: fade(@basic-white, 30%);
-  }
-
-  @media (min-width: @desktop-width) {
-    color: @basic-white;
+    background-color: fade(@special-grey, 30%);
   }
 }
 
 .level__title--light {
   color: @basic-white;
+
+  &::before {
+    background-color: fade(@basic-white, 30%);
+  }
 }
+
 
 .level__icon {
   position: absolute;
@@ -160,7 +171,6 @@
     }
   }
 }
-
 
 .level__background {
   fill: fade(@basic-black, 60%);

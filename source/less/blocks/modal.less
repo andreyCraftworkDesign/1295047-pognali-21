@@ -1,32 +1,29 @@
 .modal {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
   display: none;
 }
 
 .modal--show {
-  display: block;
+  display: flex;
+
+  animation: scale 0.3s;
 }
 
-.modal__close {
-  width: 100%;
-  padding-top: 21px;
-  padding-bottom: 21px;
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
 
-  font-family: "BloggerSans", "Arial", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: @basic-blue-light;
-  text-transform: uppercase;
-
-  background-color: @blue-lighten;
-  border: none;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-
-  cursor: pointer;
-
-  &:active {
-    color: fade(@basic-blue-light, 30%);
+  100% {
+    transform: scale(1);
   }
 }

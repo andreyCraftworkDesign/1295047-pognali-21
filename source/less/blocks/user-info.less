@@ -7,8 +7,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 16px;
 
   .container();
 
@@ -28,25 +26,8 @@
   padding-right: 18px;
   padding-left: 16px;
 
-  .level {
-    width: 100px;
-    height: 100px;
-  }
-
-  .level__value {
-    font-size: 38px;
-    line-height: 38px;
-  }
-
-  .level__title {
-    font-size: 18px;
-    line-height: 18px;
-    color: @special-grey;
-
-    &::before {
-      background-color: fade(@special-grey, 30%);
-    }
-  }
+  width: 100px;
+  height: 100px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -54,52 +35,12 @@
 
     width: 94px;
     height: 94px;
-
-    .level {
-      width: 94px;
-      height: 94px;
-    }
-
-    .level__title {
-      font-size: 18px;
-      line-height: 18px;
-      padding-top: 6px;
-
-      &::before {
-        background-color: fade(@special-grey, 30%);
-      }
-    }
-
-    .level__value {
-      margin-bottom: 6px;
-    }
-
-    .level__background {
-      cx: 47px;
-      cy: 47px;
-      r: 45px;
-    }
-
-    .level__progress {
-      cx: 53px;
-      cy: 48px;
-      r: 45px;
-      stroke-dasharray: 235;
-    }
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     right: 390px;
     top: -190px;
-
-    .level__title {
-      color: @basic-white;
-
-      &::before {
-        background-color: @basic-white;
-      }
-    }
   }
 }
 
@@ -122,7 +63,7 @@
 .user-info__button {
   width: 100%;
   margin-top: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding-top: 11px;
   padding-bottom: 11px;
 
@@ -150,14 +91,16 @@
 
   @media (min-width: @tablet-width) {
     order: 4;
-    margin-top: 32px;
-    margin-bottom: 50px;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    margin-top: 35px;
+    margin-bottom: 52px;
+    padding-top: 21px;
+    padding-bottom: 21px;
 
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.09em;
+
+    border-radius: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -187,7 +130,7 @@
   width: 100%;
   margin-right: 0;
   margin-left: 0;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 
   border: none;
   border-radius: 10px;
@@ -210,7 +153,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: -8px;
+    bottom: -9px;
 
     font-weight: 500;
     font-size: 20px;
@@ -280,7 +223,7 @@
 
   padding-top: 7px;
   padding-right: 25px;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
   padding-left: 25px;
 
   box-sizing: border-box;
@@ -296,45 +239,4 @@
     order: 5;
     width: 384px;
   }
-}
-
-.user-info__label {
-  background-color: @basic-white;
-
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 2px 6px fade(@basic-blue, 17%);
-
-    .transport__icon {
-      fill: #b2b2b2;
-    }
-  }
-
-  &:active {
-    background-color: #e2e5f1;
-  }
-}
-
-.user-info .transport__icon {
-  fill: #d9d9d9;
-
-  @media (min-width: @tablet-width) {
-    width: 23px;
-    height: 22px;
-  }
-}
-
-.user-info__input-checkbox:checked + .transport__item .transport__icon {
-  fill: @basic-blue-light;
-}
-
-.user-info__input-checkbox:checked + .user-info__label:hover .transport__icon,
-.user-info__input-checkbox:checked + .user-info__label:focus .transport__icon {
-  fill: fade(@basic-blue-light, 70%);
-}
-
-.user-info__input-checkbox:checked + .user-info__label:active .transport__icon {
-  fill: fade(@basic-blue-light, 30%);
 }

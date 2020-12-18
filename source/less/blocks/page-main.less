@@ -2,8 +2,7 @@
   z-index: 2;
   display: flex;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 12px;
+  padding-top: 34px;
   background-color: @bg-main-header;
 
   border-bottom-right-radius: 20px;
@@ -17,7 +16,6 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 95px;
-    padding-bottom: 13px;
   }
 }
 
@@ -43,6 +41,7 @@
   position: relative;
   display: inline-block;
   margin: 0;
+  padding-bottom: 15px;
 
   font-weight: 700;
   font-style: normal;
@@ -56,7 +55,7 @@
     content: "";
 
     position: absolute;
-    bottom: -15px;
+    bottom: -2px;
     z-index: 1;
 
     width: 100%;
@@ -66,19 +65,22 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 58px;
+    padding-bottom: 70px;
     font-size: 60px;
     line-height: 60px;
 
     &::before {
-      bottom: -16px;
+      bottom: -4px;
       height: 8px;
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 72px;
+
     &::before {
-      bottom: -17px;
+      bottom: -4px;
+      height: 8px;
     }
   }
 }
