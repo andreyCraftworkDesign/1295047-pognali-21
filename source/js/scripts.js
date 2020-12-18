@@ -20,6 +20,7 @@ let selectCountryName = selectCountrySelect.querySelector('.select-country__name
 let selectCountryOptions = document.querySelectorAll('.select-country__option');
 let selectFlag = document.querySelector('.flag--select');
 let selectFlagTooltip = selectFlag.querySelector('.flag__tooltip');
+let selectCountryDeleteButtons = document.querySelectorAll('.select-country__delete');
 
 
 let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
@@ -119,9 +120,9 @@ if (selectCountryOptions) {
       } else if (selectCountryOption.textContent === 'Чехия') {
         selectFlag.classList.add('flag--czech');
         selectFlagTooltip.textContent = 'Чехия';
-      } else if (selectCountryOption.textContent === 'Босния') {
+      } else if (selectCountryOption.textContent === 'Босния и Герцеговина') {
         selectFlag.classList.add('flag--bosnia');
-        selectFlagTooltip.textContent = 'Босния';
+        selectFlagTooltip.textContent = 'Босния и Герцеговина';
       } else if (selectCountryOption.textContent === 'США') {
         selectFlag.classList.add('flag--usa');
         selectFlagTooltip.textContent = 'США';
@@ -145,6 +146,16 @@ if (selectCountryOptions) {
   }
 }
 
+
+if (selectCountryDeleteButtons) {
+  selectCountryDeleteButtons[2].addEventListener('click', function (evt) {
+    evt.preventDefault();
+    selectCountrySelect.classList.remove('select-country__choice--yes');
+    selectFlag.className = 'flag--select';
+    selectFlag.classList.add('flag');
+    selectCountryName.textContent = 'Выберите страну'
+  })
+}
 
 if (likesButtons) {
   for (let likesButton of likesButtons) {
