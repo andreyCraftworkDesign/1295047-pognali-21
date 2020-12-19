@@ -1,8 +1,32 @@
+.transport--travelers {
+  @media (min-width: @tablet-width) {
+    .transport__list {
+      flex-direction: column;
+    }
+
+    .transport__item {
+      background-color: transparent;
+    }
+
+    .transport__icon {
+      width: 22px;
+      height: 23px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    .transport__list {
+      flex-direction: row;
+    }
+  }
+}
+
 .transport__title {
   position: relative;
+  z-index: 1;
 
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
+  padding-left: 7px;
 
   font-weight: 400;
   font-style: normal;
@@ -15,7 +39,7 @@
     content: "";
 
     position: absolute;
-    top: 8px;
+    top: 10px;
     left: -20px;
 
     width: 15px;
@@ -28,13 +52,17 @@
     content: "";
 
     position: absolute;
-    top: 8px;
-    right: -119px;
+    top: 10px;
+    right: -65px;
 
     width: 168px;
     height: 1px;
 
     background-color: @basic-blue-lighten;
+  }
+
+  @media (min-width: @tablet-width) {
+    .visually-hidden();
   }
 }
 
@@ -110,7 +138,7 @@
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 44px;
-    margin-right: 0;
+    margin-right: 1px;
 
     .transport__icon {
       width: 22px;

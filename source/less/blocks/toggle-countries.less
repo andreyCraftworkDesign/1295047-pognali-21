@@ -7,6 +7,13 @@
   text-transform: uppercase;
   color: @basic-blue-saturate;
 
+  white-space: nowrap;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
   &::before {
     content: "";
     position: absolute;
@@ -21,11 +28,6 @@
     background-size: 53%;
   }
 
-  border: none;
-  background-color: transparent;
-
-  cursor: pointer;
-
   @media (min-width: @tablet-width) {
     &::before {
       right: -3px;
@@ -34,9 +36,26 @@
   }
 }
 
-// .toggle-countries--active {
-//   background-image: url("../img/decor/close-icon-dark.svg");
-// }
+
+
+.toggle-countries--active {
+
+  &::before {
+    height: 17px;
+    background-image: url("../img/decor/close-icon-dark.svg");
+  }
+  @media (min-width: @tablet-width) {
+    .toggle-countries__text-open {
+      display: none;
+    }
+
+    .toggle-countries__text-close {
+      display: inline-block;
+      padding-right: 28px;
+      vertical-align: top;
+    }
+  }
+}
 
 
 .toggle-countries__text-open {

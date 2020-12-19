@@ -27,6 +27,10 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+
+    &:nth-of-type(4).fieldset-accordion--active {
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -54,54 +58,20 @@
 }
 
 .fieldset-accordion--active {
-  .fieldset-accordion__toggle {
-    &::after {
-      transform: rotate(180deg);
-    }
-  }
-
   .fieldset-accordion__list {
     display: block;
   }
 
-  .transport__list {
-    display: flex;
-  }
-
   .fieldset-accordion__range {
     display: block;
-  }
-
-  @media (min-width: @tablet-width) {
-    .fieldset-accordion__list {
-      display: grid;
-    }
-
-    .transport__list {
-      display: flex;
-    }
-
-    .fieldset-accordion__range {
-      display: flex;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    .fieldset-accordion__list {
-      display: block;
-    }
-
-    .fieldset-accordion__range {
-      display: block;
-    }
   }
 }
 
 .fieldset-accordion__legend {
   width: 100%;
 
-  padding-top: 10px;
-  padding-bottom: 11px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   padding-right: 0;
   padding-left: 0;
 
@@ -140,7 +110,7 @@
   &::after {
     content: "";
     position: absolute;
-    right: 0;
+    right: -1px;
 
     width: 10px;
     height: 6px;
@@ -157,10 +127,16 @@
   }
 }
 
+.fieldset-accordion__toggle--active {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
 .fieldset-accordion__list {
   display: none;
-  margin-top: 4px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 17px;
   padding: 0;
 
   list-style: none;
@@ -256,16 +232,16 @@
 }
 
 .fieldset-accordion__transport {
-  @media (min-width: @tablet-width) {
-    .transport__list {
-      display: flex;
-      gap: 0;
-    }
+  display: none;
 
-    .transport__icon {
-      width: 22px;
-      height: 23px;
-    }
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+    margin-top: 8px;
+    margin-bottom: 0;
   }
 }
 
@@ -278,10 +254,12 @@
   display: none;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 7px;
+    display: none;
+    margin-top: 9px;
   }
 }
