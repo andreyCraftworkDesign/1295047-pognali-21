@@ -9,17 +9,17 @@ let toggleCountries = document.querySelector('.toggle-countries');
 let filterCountryClose = document.querySelector('.filter-country__button');
 let filterCountry = document.querySelector('.filter-country');
 
-let fieldsetAccordionToggle = document.querySelector('.fieldset-accordion__toggle');
-let fieldsetAccordion = document.querySelector('.fieldset-accordion');
+let fieldsetAccordionToggles = document.querySelectorAll('.fieldset-accordion__toggle');
+let fieldsetAccordions = document.querySelectorAll('.fieldset-accordion');
 
 let likesButtons = document.querySelectorAll('.likes__button');
 
 let selectCountryChoices = document.querySelectorAll('.select-country__choice');
 let selectCountrySelect = document.querySelector('.select-country__choice--select');
-let selectCountryName = selectCountrySelect.querySelector('.select-country__name');
+let selectCountryName = document.querySelector('.select-country__name--select');
 let selectCountryOptions = document.querySelectorAll('.select-country__option');
 let selectFlag = document.querySelector('.flag--select');
-let selectFlagTooltip = selectFlag.querySelector('.flag__tooltip');
+let selectFlagTooltip = document.querySelector('.flag__tooltip--select');
 let selectCountryDeleteButtons = document.querySelectorAll('.select-country__delete');
 
 
@@ -41,32 +41,53 @@ if (modalCloseButton) {
   });
 }
 
-for (let filterAbcList of filterAbcLists) {
-  filterAbcList.addEventListener('click', function(evt) {
-    if(evt.target.classList.contains('filter-abc__button')) {
-      let array = Array.from(filterAbcButtons);
-      let target = evt.target;
-      let index = array.indexOf(target);
+if (filterAbcLists) {
+  for (let filterAbcList of filterAbcLists) {
+    filterAbcList.addEventListener('click', function(evt) {
+      if(evt.target.classList.contains('filter-abc__button')) {
+        let array = Array.from(filterAbcButtons);
+        let target = evt.target;
+        let index = array.indexOf(target);
 
-      array.forEach(function(item, i, arr) {
-        if(i === index) {
-          item.classList.add('filter-abc__button--active');
-        } else {
-          item.classList.remove('filter-abc__button--active');
-        }
-      });
-    }
-  });
+        array.forEach(function(item, i, arr) {
+          if(i === index) {
+            item.classList.add('filter-abc__button--active');
+          } else {
+            item.classList.remove('filter-abc__button--active');
+          }
+        });
+      }
+    });
+  }
 }
 
 if (toggleCountries) {
   toggleCountries.addEventListener('click', function (evt) {
     evt.preventDefault();
     filterCountry.classList.toggle('filter-country--active');
+    toggleCountries.classList.toggle('toggle-countries--active')
     console.log('222222');
   });
 }
 
+if (fieldsetAccordionToggles) {
+  for (let fieldsetAccordionToggle of fieldsetAccordionToggles) {
+    fieldsetAccordionToggle.addEventListener('click', function(evt) {
+      if(evt.target.classList.contains('fieldset-accordion__toggle')) {
+        let array = Array.from(fieldsetAccordionToggles);
+        let target = evt.target;
+        let index = array.indexOf(target);
+
+        array.forEach(function(item, i, arr) {
+          if(i === index) {
+            item.classList.toggle('fieldset-accordion__toggle--active');
+            fieldsetAccordions[i].classList.toggle('fieldset-accordion--active')
+          }
+        });
+      }
+    });
+  }
+}
 
 mainMenuToggle.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -147,7 +168,7 @@ if (selectCountryOptions) {
 }
 
 
-if (selectCountryDeleteButtons) {
+if (selectCountryDeleteButtons[2]) {
   selectCountryDeleteButtons[2].addEventListener('click', function (evt) {
     evt.preventDefault();
     selectCountrySelect.classList.remove('select-country__choice--yes');
