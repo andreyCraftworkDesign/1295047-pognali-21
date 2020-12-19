@@ -12,6 +12,13 @@
 
   border-radius: 5px;
 
+  &:hover {
+    .flag__tooltip {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 70px;
     height: 47px;
@@ -20,11 +27,6 @@
 
 .flag__tooltip {
   display: none;
-}
-
-.flag:hover .flag__tooltip {
-  display: flex;
-  justify-content: center;
 }
 
 .flag--small {

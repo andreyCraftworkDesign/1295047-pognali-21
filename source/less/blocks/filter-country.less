@@ -253,10 +253,14 @@
 }
 
 .filter-country__item {
-  margin-bottom: 9px;
+  margin-bottom: 0;
 
-  &:last-child {
-    margin-bottom: 0;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

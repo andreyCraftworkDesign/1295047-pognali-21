@@ -168,9 +168,10 @@
   border-bottom-right-radius: 0;
 
   .select-country__name {
+    padding-left: 5px;
     color: @basic-white;
 
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
   }
 
   ~ .select-country__delete {
@@ -214,6 +215,13 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 27px;
+
+    .select-country__name {
+      padding-left: 0;
+      color: @basic-white;
+
+      letter-spacing: 0.1em;
+    }
 
     &::before {
       background:
