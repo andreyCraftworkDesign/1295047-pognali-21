@@ -1,12 +1,17 @@
 .page-header {
+  z-index: 20;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding-top: 19px;
   padding-bottom: 24px;
+  width: 100%;
 
   background-color: @basic-blue;
+
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     padding-top: 40px;
@@ -16,6 +21,35 @@
   @media (min-width: @desktop-width) {
     padding-top: 48px;
   }
+}
+
+.page-header--fixed-top {
+  position: fixed;
+  padding-top: 28px;
+  padding-bottom: 31px;
+
+  background-color: @basic-white;
+
+  .page-header__toggle {
+    &::before,
+    &::after {
+      background-color: #cccccc;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
+}
+
+.page-header--fixed-top.page-header--active {
+  position: fixed;
 }
 
 .page-header--active {

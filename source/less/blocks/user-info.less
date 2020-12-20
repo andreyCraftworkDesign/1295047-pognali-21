@@ -179,12 +179,22 @@
 
   background-color: transparent;
   border: none;
+  border-radius: 10px;
   resize: none;
 
   box-sizing: border-box;
 
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 1px #aeb4cb;
+  }
+
   &::placeholder {
     color: @special-grey;
+  }
+
+  &:valid {
+    box-shadow: inset 0 0 0 1px @basic-blue;
   }
 
   @media (min-width: @tablet-width) {

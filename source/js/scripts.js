@@ -1,5 +1,6 @@
 let mainMenuToggle = document.querySelector('.page-header__toggle');
 let pageHeader = document.querySelector('.page-header');
+let mainNav = document.querySelector('.main-nav');
 
 let priceModalButton = document.querySelector('.price__link');
 let priceModal = document.querySelector('.business-price');
@@ -26,6 +27,15 @@ let selectCountryDeleteButtons = document.querySelectorAll('.select-country__del
 let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
 let filterAbcLists = document.querySelectorAll('.filter-abc__list');
 
+window.addEventListener('scroll', function(evt) {
+  if (window.pageYOffset > 100) {
+    pageHeader.classList.add('page-header--fixed-top');
+    mainNav.classList.add('main-nav--light');
+  } else if (window.pageYOffset < 100) {
+    pageHeader.classList.remove('page-header--fixed-top');
+    mainNav.classList.remove('main-nav--light');
+  }
+});
 
 if (priceModalButton) {
   priceModalButton.addEventListener('click', function(evt) {
