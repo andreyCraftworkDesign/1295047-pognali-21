@@ -7,8 +7,13 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     margin-right: auto;
   }
+}
+
+.pagination__item {
+  display: flex;
 }
 
 .pagination__link {
@@ -48,12 +53,14 @@
   &::before {
     content: "";
     position: absolute;
+    top: 17px;
+    right: 59px;
     width: 13px;
-    height: 15px;
+    height: 20px;
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 
   &:hover,
@@ -73,6 +80,16 @@
     width: auto;
     padding-right: 25px;
     padding-left: 20px;
+
+    &::before {
+      right: 17px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      right: 20px;
+    }
   }
 }
 
@@ -81,7 +98,7 @@
   border-bottom-left-radius: 20px;
 
   &::before {
-    background-image: url("../img/decor/polygon-1.svg");
+    background-image: url("../img/decor/pagination-arrow.svg");
     transform: rotate(180deg);
   }
 }
@@ -91,6 +108,6 @@
   border-bottom-right-radius: 20px;
 
   &::before {
-    background-image: url("../img/decor/polygon-1.svg");
+    background-image: url("../img/decor/pagination-arrow.svg");
   }
 }

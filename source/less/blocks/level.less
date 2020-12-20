@@ -29,12 +29,8 @@
 
   .level__progress {
     cx: 50px;
-    cy: 51px;
+    cy: 50px;
     r: 48px;
-  }
-
-  .level__progress--80 {
-    stroke-dasharray: 248%;
   }
 
   @media (min-width: @tablet-width) {
@@ -44,8 +40,9 @@
 
     .level__progress {
       cx: 47px;
-      cy: 48px;
+      cy: 47px;
       r: 45px;
+      stroke-dasharray: 248%;
     }
   }
 
@@ -65,11 +62,62 @@
 }
 
 .level--small {
-  width: 45px;
-  height: 45px;
+  .level__title {
+    display: none;
+  }
 
   .level__progress {
     stroke-width: 3px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .level__title {
+      display: block;
+    }
+
+    .level__progress {
+      cx: 31px;
+      cy: 36px;
+      r: 30px;
+      stroke-width: 2px;
+    }
+  }
+}
+
+.level--99 {
+  stroke-dasharray: 120px;
+
+  @media (min-width: @tablet-width) {
+    stroke-dasharray: 184px;
+  }
+}
+
+.level--80 {
+  stroke-dasharray: 101px;
+
+  @media (min-width: @tablet-width) {
+    stroke-dasharray: 154px;
+  }
+}
+
+.level--50 {
+  stroke-dasharray: 65px;
+
+  @media (min-width: @tablet-width) {
+    stroke-dasharray: 94px;
+  }
+}
+
+.level--25 {
+  stroke-dasharray: 103px;
+  stroke-dashoffset: 70px;
+
+  .level__progress {
+    transform: rotate(-90deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    stroke-dasharray: 128px;
   }
 }
 
@@ -79,14 +127,12 @@
   align-items: center;
 }
 
-
 .level__value {
   font-weight: 700;
   font-style: normal;
   font-size: 24px;
   line-height: 24px;
   color: @basic-blue;
-  vertical-align: top;
 }
 
 .level__value--light {
@@ -125,7 +171,6 @@
   }
 }
 
-
 .level__icon {
   position: absolute;
   top: 0;
@@ -136,40 +181,7 @@
   justify-content: center;
 
   width: 100%;
-  height: auto;
-}
-
-.level__icon--99 {
-  @media (min-width: @tablet-width) {
-    .level__progress {
-      stroke-dasharray: 175px;
-    }
-  }
-}
-
-.level__icon--80 {
-  @media (min-width: @tablet-width) {
-    .level__progress {
-      stroke-dasharray: 150px;
-    }
-  }
-}
-
-.level__icon--50 {
-  @media (min-width: @tablet-width) {
-    .level__progress {
-      stroke-dasharray: 90px;
-    }
-  }
-}
-
-.level__icon--25 {
-  @media (min-width: @tablet-width) {
-    .level__progress {
-      stroke-dasharray: 63px;
-      transform: rotate(162deg);
-    }
-  }
+  height: 100%;
 }
 
 .level__background {

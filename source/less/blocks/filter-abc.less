@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+.filter-abc--bg-white {
+  background-color: @basic-white;
+
+  .filter-abc__option-list {
+    background-color: @basic-white;
+  }
+}
+
 .filter-abc__list {
   position: relative;
   z-index: 3;
@@ -18,31 +26,74 @@
   box-shadow: 0 2px 16px 0 #d4d9eb;
 
   @media (min-width: @tablet-width) {
-    width: 261px;
-
-    padding-top: 35px;
-    padding-right: 82px;
-    padding-bottom: 33px;
-    padding-left: 30px;
+    width: 262px;
 
     box-shadow: none;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
+  @media (min-width: @desktop-width) {
+    width: 358px;
+    gap: 15px;
+  }
+}
 
-      width: 1px;
-      height: 100%;
-      background-color: #d6d9e6;
+.filter-abc__list--country {
+  @media (min-width: @tablet-width) {
+    column-gap: 21px;
+
+    .filter-abc__button {
+      padding-top: 0;
+
+      font-size: 60px;
+      line-height: 60px;
+      color: fade(@basic-blue-saturate, 30%);
+      background-color: transparent;
+      border: none;
+
+      &:hover,
+      &:focus {
+        color: fade(@basic-blue-saturate, 60%);
+      }
+
+      &:active {
+        color: fade(@basic-blue-saturate, 10%);
+      }
+    }
+
+    .filter-abc__button--active {
+      color: @basic-blue-saturate;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 35px;
-    padding-right: 102px;
-    width: 358px;
-    gap: 15px;
+    column-gap: 0;
+    row-gap: 40px;
+    width: 100%;
+    margin-bottom: 92px;
+    padding-right: 0;
+    padding-left: 0;
+
+    .filter-abc__option-list {
+      position: static;
+      display: block;
+      padding-top: 36px;
+      height: 100%;
+    }
+
+    .filter-abc__button {
+      justify-content: flex-start;
+      padding: 0;
+      font-weight: 700;
+      color: @basic-blue-saturate;
+      outline: none;
+      cursor: auto;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: @basic-blue-saturate;
+      }
+    }
   }
 }
 
@@ -93,12 +144,7 @@
 .filter-abc__option-list {
   overflow-y: auto;
 
-  @media (min-width: @tablet-width) {
-    width: 194px;
-  }
-
   @media (min-width: @desktop-width) {
-    width: 240px;
-    max-height: 459px;
+    overflow-y: hidden;
   }
 }

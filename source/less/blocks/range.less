@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
-  margin-bottom: 26px;
+  margin-top: 0;
+  margin-bottom: 24px;
 
   background-color: @basic-white;
   border-radius: 4px;
@@ -27,6 +27,10 @@
   @media (min-width: @tablet-width) {
     order: 1;
     margin: 0;
+
+    &::before {
+      width: 21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -48,6 +52,12 @@
 
     background-color: @basic-border-input;
   }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      height: 14px;
+    }
+  }
 }
 
 .range__max {
@@ -64,12 +74,18 @@
 
     background-color: @basic-border-input;
   }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      height: 15px;
+    }
+  }
 }
 
 .range__input {
   width: 110px;
-  padding-top: 9px;
-  padding-bottom: 8px;
+  padding-top: 11px;
+  padding-bottom: 9px;
 
   font-family: "BloggerSans", "Arial", sans-serif;
   font-weight: 500;
@@ -105,12 +121,12 @@
 
 .range__controls {
   position: relative;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     align-self: center;
     margin: 0;
-    width: 281px;
+    width: 283px;
   }
 
   @media (min-width: @desktop-width) {

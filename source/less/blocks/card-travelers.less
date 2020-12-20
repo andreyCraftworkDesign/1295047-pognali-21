@@ -1,9 +1,23 @@
 .card-travelers {
   background-color: @basic-white;
 
+  &:nth-of-type(2n) {
+    .card-travelers__countries {
+      margin-bottom: 17px;
+    }
+  }
+
   &:hover,
   &:focus {
     box-shadow: 0 4px 9px fade(@basic-black, 16%);
+  }
+
+  @media (min-width: @tablet-width) {
+    &:nth-of-type(2n) {
+      .card-travelers__countries {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -13,7 +27,8 @@
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
     grid-row-end: 4;
-    margin-right: 33px;
+    margin-right: 29px;
+    padding-top: 4px;
 
     width: 190px;
     height: 190px;
@@ -22,6 +37,7 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 58px;
+    padding-top: 0;
     width: 285px;
     height: auto;
 
@@ -37,7 +53,6 @@
   top: 13px;
   left: 103px;
 
-
   @media (min-width: @tablet-width) {
     position: relative;
     top: auto;
@@ -48,6 +63,8 @@
 
     grid-row-start: 1;
     grid-row-end: 2;
+
+    padding-left: 4px;
 
     font-size: 30px;
     line-height: 30px;
@@ -66,6 +83,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 43px;
+    margin-bottom: 23px;
   }
 }
 
@@ -102,8 +120,8 @@
     }
 
     &::before {
-      top: 11px;
-      right: -38px;
+      top: 16px;
+      right: -31px;
       left: auto;
       width: 8px;
       height: 8px;
@@ -112,9 +130,9 @@
 
   @media (min-width: @desktop-width) {
     &::before {
-      top: 20px;
+      top: 17px;
       right: auto;
-      left: -22px;
+      left: -25px;
     }
   }
 }
@@ -134,15 +152,6 @@
   margin-top: 13px;
   padding-left: 6px;
 
-  .tags__list {
-    width: 176px;
-    justify-content: flex-start;
-  }
-
-  .tags__item {
-    font-size: 15px;
-    line-height: 18px;
-  }
 
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
@@ -152,20 +161,13 @@
     grid-row-end: 3;
 
     margin: 0;
-
-    .tags__list {
-      width: 246px;
-    }
-
-    .tags__item {
-      font-size: 20px;
-      line-height: 23px;
-    }
+    padding-top: 5px;
+    padding-left: 7px;
   }
 
   @media (min-width: @desktop-width) {
-    align-self: end;
-    margin-top: 22px;
+    align-self: center;
+    padding-top: 0;
   }
 }
 
@@ -174,47 +176,15 @@
   grid-column-end: 3;
 
   margin-top: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding-left: 6px;
-
-  .countries__list {
-    flex-direction: column;
-  }
-
-  .flag {
-    width: 26px;
-    height: 18px;
-  }
-
-  .countries__name {
-    margin-left: 13px;
-  }
 
   @media (min-width: @tablet-width) {
     grid-column-end: 5;
     grid-row-start: 5;
     margin: 0;
-    padding-top: 18px;
+    padding-top: 12px;
     padding-left: 0;
-
-    .countries__list {
-      flex-direction: row;
-    }
-
-    .countries__item {
-      margin-right: 27px;
-      margin-bottom: 0;
-    }
-
-    .flag {
-      width: 35px;
-      height: 24px;
-    }
-
-    .countries__name {
-      font-size: 20px;
-      line-height: 20px;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -222,41 +192,13 @@
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 3;
-    margin-top: 49px;
+    margin-top: 50px;
     padding: 0;
-
-
-    .countries__title {
-      .visually-hidden();
-    }
-
-    .countries__list {
-      flex-direction: column;
-      padding-left: 5px;
-    }
-
-    .countries__item {
-      margin-right: 0;
-      margin-bottom: 12px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    .countries__name {
-      margin-left: 18px;
-    }
   }
 }
 
 .card-travelers__transport {
   margin-bottom: 7px;
-
-  .transport__title {
-    margin-bottom: 17px;
-    padding-left: 6px;
-  }
 
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
@@ -264,50 +206,25 @@
     grid-column-start: 4;
     justify-self: center;
     margin: 0;
-
-    .transport__title {
-      .visualy-hidden();
-    }
-
-    .transport__list {
-      flex-direction: column;
-    }
-
-    .transport__item {
-      width: 26px;
-      height: 30px;
-      background-color: transparent;
-    }
-
-    .transport__icon {
-      width: 23px;
-      height: 22px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 3;
-    align-self: center;
+    align-self: end;
     justify-self: start;
-
-    .transport__list {
-      flex-direction: row;
-    }
-
-    .transport__item {
-      margin-right: 7px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+    margin-bottom: 55px;
   }
 }
 
 .card-travelers__level {
   position: relative;
   justify-self: end;
-  align-self: end;
+
+  align-self: start;
+  margin-top: 27px;
+
+  width: 45px;
+  height: 45px;
 
   &::before {
     content: "Левел:";
@@ -329,56 +246,24 @@
     text-transform: lowercase;
   }
 
-  .level {
-    width: 45px;
-    height: 45px;
-  }
-
-  .level__title {
-    display: none;
-  }
-
   @media (min-width: @tablet-width) {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 3;
-    justify-self: center;
+    margin-top: 3px;
+
+    width: 62px;
+    height: 71px;
 
     &::before {
       display: none;
-    }
-
-    .level__title {
-      display: inline;
-
-      &::before {
-        background-color: fade(@basic-black, 10%);
-      }
-    }
-
-    .level {
-      width: 63px;
-      height: 63px;
-    }
-
-    .level__progress {
-      r: 29px;
-      cx: 31px;
-      cy: 32px;
     }
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 5;
-    align-self: center;
-
-    .level__value {
-      color: @basic-blue-light;
-    }
-
-    .level__title {
-      color: @basic-black;
-    }
+    align-self: end;
+    margin-bottom: 35px;
   }
 }
 
@@ -401,7 +286,8 @@
     grid-column-start: 2;
     grid-row-start: 3;
     align-self: center;
-    margin: 0;
+    margin-top: 7px;
+    margin-bottom: 0;
     padding-top: 15px;
     padding-bottom: 15px;
     width: 150px;
@@ -410,6 +296,12 @@
     line-height: 20px;
 
     border-radius: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: end;
+    margin-top: 0;
+    margin-bottom: 48px;
   }
 }
 
@@ -429,5 +321,12 @@
     grid-column-start: 3;
     grid-row-start: 3;
     align-self: center;
+    margin-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: end;
+    margin-top: 0;
+    margin-bottom: 48px;
   }
 }

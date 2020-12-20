@@ -12,6 +12,13 @@
 
   border-radius: 5px;
 
+  &:hover {
+    .flag__tooltip {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 70px;
     height: 47px;
@@ -22,14 +29,25 @@
   display: none;
 }
 
-.flag:hover .flag__tooltip {
-  display: flex;
-  justify-content: center;
+.flag--small {
+  width: 28px;
+  height: 18px;
+  border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 35px;
+    height: 24px;
+  }
 }
 
-.flag--small {
+.flag--mini {
   width: 35px;
   height: 24px;
+}
+
+.flag--no {
+  background-image: none;
+  background-color: @bg-filter-country;
 }
 
 .flag--sri-lanka {
