@@ -4,6 +4,10 @@
   &:hover,
   &:focus {
     box-shadow: 0 4px 9px fade(@basic-black, 16%);
+
+    .card-user__photo {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -23,10 +27,6 @@
 
 .card-user__photo {
   transition: 0.3s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 
   @media (min-width: @tablet-width) {
     width: 285px;
