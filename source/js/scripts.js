@@ -1,20 +1,23 @@
 let mainMenuToggle = document.querySelector('.page-header__toggle');
 let pageHeader = document.querySelector('.page-header');
 let mainNav = document.querySelector('.main-nav');
-
 let priceModalButton = document.querySelector('.price__link');
 let priceModal = document.querySelector('.business-price');
 let modalCloseButton = document.querySelector('.modal__close');
-
+let travelersValue = document.getElementById('travelers-value');
+let daysValue = document.getElementById('days-value');
+let inputCounterButtons = document.querySelectorAll('.input-counter__button');
+let inputCounterNumbers = document.querySelectorAll('.input-counter__input-number');
+let stepMarkerItems = document.querySelectorAll('.step-marker__item');
+let planSteps = document.querySelectorAll('.plan-step');
+let planStepButtonNexts = document.querySelectorAll('.plan-step__button');
+let planStepButtonPrevs = document.querySelectorAll('.plane-step__button-prev');
 let toggleCountries = document.querySelector('.toggle-countries');
 let filterCountryClose = document.querySelector('.filter-country__button');
 let filterCountry = document.querySelector('.filter-country');
-
 let fieldsetAccordionToggles = document.querySelectorAll('.fieldset-accordion__toggle');
 let fieldsetAccordions = document.querySelectorAll('.fieldset-accordion');
-
 let likesButtons = document.querySelectorAll('.likes__button');
-
 let selectCountryChoices = document.querySelectorAll('.select-country__choice');
 let selectCountrySelect = document.querySelector('.select-country__choice--select');
 let selectCountryName = document.querySelector('.select-country__name--select');
@@ -22,8 +25,6 @@ let selectCountryOptions = document.querySelectorAll('.select-country__option');
 let selectFlag = document.querySelector('.flag--select');
 let selectFlagTooltip = document.querySelector('.flag__tooltip--select');
 let selectCountryDeleteButtons = document.querySelectorAll('.select-country__delete');
-
-
 let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
 let filterAbcLists = document.querySelectorAll('.filter-abc__list');
 
@@ -49,6 +50,85 @@ if (modalCloseButton) {
     evt.preventDefault();
     priceModal.classList.remove('modal--show');
   });
+}
+
+if (inputCounterNumbers) {
+  for (let inputCounterNumber of inputCounterNumbers) {
+    inputCounterNumber.oninput = function () {
+      if (inputCounterNumber.value < 0) {
+        inputCounterNumber.value = 0;
+      }
+    }
+  }
+}
+
+if (inputCounterButtons) {
+  for (let inputCounterButton of inputCounterButtons) {
+    inputCounterButton.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      if (inputCounterButton.dataset.travelers === "plus") {
+        travelersValue.value = parseInt(travelersValue.value,10) + parseInt(1,10);
+      } else if (inputCounterButton.dataset.travelers === "minus") {
+        travelersValue.value = parseInt(travelersValue.value,10) - parseInt(1,10);
+        if (travelersValue.value < 0) {
+          travelersValue.value = 0;
+        }
+      } else if (inputCounterButton.dataset.days === "plus") {
+        daysValue.value = parseInt(daysValue.value,10) + parseInt(1,10);
+      } else if (inputCounterButton.dataset.days === "minus") {
+        daysValue.value = parseInt(daysValue.value,10) - parseInt(1,10);
+        if (daysValue.value < 0) {
+          daysValue.value = 0;
+        }
+      }
+    });
+  }
+}
+
+if(planStepButtonNexts) {
+  for (let planStepButtonNext of planStepButtonNexts) {
+    planStepButtonNext.addEventListener('click', function(evt) {
+      if (planStepButtonNext.getAttribute('href')) {
+        evt.preventDefault();
+        for (let planStep of planSteps) {
+          planStep.scrollIntoView();
+        }
+        if (planStepButtonNext.getAttribute('href') === "#step-2") {
+          planSteps[0].classList.remove('plan-step--active');
+          planSteps[1].classList.add('plan-step--active');
+          stepMarkerItems[0].classList.remove('step-marker__item--active');
+          stepMarkerItems[1].classList.add('step-marker__item--active');
+        } else if (planStepButtonNext.getAttribute('href') === "#step-3") {
+          planSteps[1].classList.remove('plan-step--active');
+          planSteps[2].classList.add('plan-step--active');
+          stepMarkerItems[1].classList.remove('step-marker__item--active');
+          stepMarkerItems[2].classList.add('step-marker__item--active');
+        }
+      }
+    });
+  }
+}
+
+if(planStepButtonPrevs) {
+  for (let planStepButtonPrev of planStepButtonPrevs) {
+    planStepButtonPrev.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      for (let planStep of planSteps) {
+        planStep.scrollIntoView();
+      }
+      if (planStepButtonPrev.getAttribute('href') === "#step-2") {
+        planSteps[2].classList.remove('plan-step--active');
+        planSteps[1].classList.add('plan-step--active');
+        stepMarkerItems[2].classList.remove('step-marker__item--active');
+        stepMarkerItems[1].classList.add('step-marker__item--active');
+      } else if (planStepButtonPrev.getAttribute('href') === "#step-1") {
+        planSteps[1].classList.remove('plan-step--active');
+        planSteps[0].classList.add('plan-step--active');
+        stepMarkerItems[1].classList.remove('step-marker__item--active');
+        stepMarkerItems[0].classList.add('step-marker__item--active');
+      }
+    });
+  }
 }
 
 if (filterAbcLists) {
