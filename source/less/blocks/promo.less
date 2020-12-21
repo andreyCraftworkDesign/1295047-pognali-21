@@ -1,9 +1,19 @@
 .promo {
+  position: relative;
   background-color: @basic-blue;
   background-image: linear-gradient(to top, @basic-blue 504px, transparent 504px), url("../img/globe-back-mobile.jpg");
   background-repeat: no-repeat;
   background-position-y: -58px;
   background-size: 320px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -58px;
+    width: 100%;
+    height: 60px;
+    background-color: @basic-blue;
+  }
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(to top, @basic-blue 504px, transparent 504px), url("../img/globe-back-mobile@2x.jpg");
@@ -14,6 +24,14 @@
     background-image: url("../img/globe-back-tablet.jpg");
     background-position-y: 268px;
     background-size: 100%;
+
+    &::before {
+      top: -114px;
+      width: 100%;
+      height: 115px;
+
+      background-color: @bg-main-header;
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/globe-back-tablet@2x.jpg");
@@ -30,6 +48,14 @@
 
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+
+    &::before {
+      top: -114px;
+      width: 100%;
+      height: 115px;
+
+      background-color: @basic-blue;
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/globe-back-desktop@2x.jpg");

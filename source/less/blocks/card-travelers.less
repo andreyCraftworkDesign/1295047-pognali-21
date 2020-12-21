@@ -56,16 +56,23 @@
 }
 
 .card-travelers__photo {
+  display: flex;
+  border-radius: 50%;
   transition: 0.3s;
 
   @media (min-width: @tablet-width) {
     width: 190px;
     height: 190px;
+
+    border-radius: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 285px;
     height: auto;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -290,6 +297,8 @@
 
 
 .card-travelers__button {
+  display: flex;
+  justify-content: center;
   grid-column-start: 1;
   grid-column-end: 3;
 
