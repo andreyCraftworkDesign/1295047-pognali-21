@@ -43,11 +43,20 @@
   }
 }
 
+.page-footer__logo-image {
+  display: flex;
+}
+
 .page-footer__socials {
   margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    padding-right: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 44px;
   }
 }
 
@@ -55,6 +64,7 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
     width: auto;
   }
 }

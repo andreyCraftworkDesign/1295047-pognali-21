@@ -1,25 +1,91 @@
 .promo {
   background-color: @basic-blue;
+  background-image: linear-gradient(to top, @basic-blue 504px, transparent 504px), url("../img/globe-back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position-y: -58px;
+  background-size: 320px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to top, @basic-blue 504px, transparent 504px), url("../img/globe-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @bg-main-header;
+    background-image: url("../img/globe-back-tablet.jpg");
+    background-position-y: 268px;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    z-index: 8;
+    background-color: @basic-blue;
+    background-image: url("../img/globe-back-desktop.jpg");
+    background-size: 1800px;
+    background-position-y: -109px;
+    background-position-x: -184px;
+
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back-desktop@2x.jpg");
+
+      background-position-y: -109px;
+      background-position-x: -182px;
+    }
+  }
 }
 
 .promo__wrapper {
   .container();
 
+  background-image: url("../img/traveller-illustration-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 80px 131px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/traveller-illustration-mobile@2x.png");
+    background-size: 60%;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+
+    background-image: url("../img/traveller-illustration-tablet.png");
+    background-position: 285px 246px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png");
+      background-size: 48%;
+      background-position: 286px 249px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
+    padding-top: 94px;
+    padding-bottom: 113px;
+
+    background-image: url("../img/traveller-illustration-desktop.png");
+    background-size: 431px;
+    background-position: 604px 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png");
+    }
   }
 }
 
 .promo__title {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 266px;
 
   font-weight: 700;
   font-style: normal;
