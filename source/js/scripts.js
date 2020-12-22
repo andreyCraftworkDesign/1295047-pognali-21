@@ -29,7 +29,7 @@ let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
 let filterAbcLists = document.querySelectorAll('.filter-abc__list');
 
 window.addEventListener('scroll', function(evt) {
-  if (window.pageYOffset >= 20) {
+  if (window.pageYOffset >= 19) {
     pageHeader.classList.add('page-header--fixed-top');
     mainNav.classList.add('main-nav--light');
   } else if (window.pageYOffset < 25) {

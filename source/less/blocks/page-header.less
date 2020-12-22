@@ -44,15 +44,10 @@
     display: block;
   }
 
-  // @media (min-width: @tablet-width) {
-  //   padding-top: 40px;
-  //   padding-bottom: 42px;
-  // }
-
-  // @media (min-width: @desktop-width) {
-  //   padding-top: 28px;
-  //   padding-bottom: 10px;
-  // }
+  @media (min-width: @desktop-width) {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
 }
 
 @keyframes fade {
@@ -67,7 +62,7 @@
 
 
 .page-header--fixed-top.page-header--active {
-  position: fixed;
+  position: sticky;
 }
 
 .page-header--active {
