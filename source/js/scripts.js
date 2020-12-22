@@ -29,10 +29,10 @@ let filterAbcButtons = document.querySelectorAll('.filter-abc__button');
 let filterAbcLists = document.querySelectorAll('.filter-abc__list');
 
 window.addEventListener('scroll', function(evt) {
-  if (window.pageYOffset > 100) {
+  if (window.pageYOffset >= 20) {
     pageHeader.classList.add('page-header--fixed-top');
     mainNav.classList.add('main-nav--light');
-  } else if (window.pageYOffset < 100) {
+  } else if (window.pageYOffset < 25) {
     pageHeader.classList.remove('page-header--fixed-top');
     mainNav.classList.remove('main-nav--light');
   }
