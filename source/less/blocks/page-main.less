@@ -1,4 +1,5 @@
 .page-main__header {
+  position: relative;
   z-index: 6;
   display: flex;
   width: 100%;
@@ -8,14 +9,29 @@
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -58px;
+    width: 100%;
+    height: 60px;
+    background-color: @bg-main-header;
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 106px;
+
+    &::before {
+      top: -134px;
+      width: 100%;
+      height: 134px;
+    }
 
     .section-radius();
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 95px;
+    padding-top: 109px;
   }
 }
 
@@ -122,18 +138,19 @@
 }
 
 .page-main__promo {
+  position: relative;
   padding-top: 33px;
   padding-bottom: 27px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding-top: 44px;
+    padding-top: 24px;
     padding-bottom: 96px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 80px;
-    padding-bottom: 123px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -154,7 +171,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 118px;
+    padding-top: 128px;
     padding-bottom: 163px;
   }
 }
@@ -163,7 +180,7 @@
   z-index: 6;
 
   padding-top: 68px;
-  padding-bottom: 33px;
+  padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 80px;
@@ -192,8 +209,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 126px;
-    padding-bottom: 134px;
+    padding-top: 123px;
+    padding-bottom: 133px;
   }
 }
 

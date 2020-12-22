@@ -11,11 +11,75 @@
 }
 
 .users__wrapper {
+  position: relative;
   .container();
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    right: 25px;
+    z-index: -1;
+
+    width: 143px;
+    height: 143px;
+
+    background-image: url("../img/smolov-back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 11px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/smolov-back-desktop@2x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 241px;
+    left: -9px;
+    z-index: -1;
+
+    width: 71px;
+    height: 71px;
+
+    background-image: url("../img/rogovaya-back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 4px;
+    opacity: 0.14;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.jpg");
+    }
+  }
+
 
   @media (min-width: @tablet-width) {
     padding-right: 75px;
     padding-left: 75px;
+
+    &::before {
+      top: 290px;
+      right: auto;
+      left: 40px;
+    }
+
+    &::after {
+      width: 285px;
+      height: 285px;
+
+      top: -57px;
+      left: auto;
+      right: 74px;
+
+      border-radius: 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -23,19 +87,63 @@
     grid-template-columns: 1fr 1fr;
     padding-left: 130px;
     padding-right: 60px;
+
+    &::before {
+      top: 8px;
+      left: 547px;
+    }
+
+    &::after {
+      top: auto;
+      bottom: -50px;
+      left: 190px;
+    }
   }
 }
 
 .users__title {
+  position: relative;
   margin-top: 0;
   margin-bottom: 19px;
   padding-left: 24px;
 
   .section-title();
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: -44px;
+    top: -32px;
+    z-index: -1;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
     padding-left: 0;
+
+    &::before {
+      left: -34px;
+      top: -66px;
+
+      width: 212px;
+      height: 212px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: -70px;
+      top: -56px;
+
+      width: 212px;
+      height: 212px;
+    }
   }
 }
 

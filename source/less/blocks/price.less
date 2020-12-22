@@ -76,6 +76,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decor/price-icon@2x.png");
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -123,6 +127,12 @@
 
       width: 198px;
       height: 198px;
+
+      background-image: url("../img/decor/price-icon-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/decor/price-icon-desktop@2x.png");
+      }
     }
   }
 }

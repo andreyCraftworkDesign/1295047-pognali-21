@@ -11,8 +11,16 @@
       <div class="page-header__wrapper">
         <div class="page-header__content">
           <a class="page-header__logo logo">
-            <img class="page-header__logo-image page-header__logo-image--dark logo__image" src="img/logo-mobile-dark.png" alt="логотип сервиса Погнали?" width="95" height="15">
-            <img class="page-header__logo-image page-header__logo-image--white logo__image" src="img/logo-mobile-white.png" alt="логотип сервиса Погнали?" width="95" height="15">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image--white" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" alt="логотип сервиса Погнали?">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image--dark" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
+            </picture>
           </a>
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <nav class="page-header__main-nav main-nav">
@@ -106,9 +114,6 @@
       <div class="page-main__promo promo">
         <div class="promo__wrapper">
           <p class="promo__title">В путешествие<br>с крутыми<br>попутчиками!</p>
-          <div class="promo__image">
-            <img src="img/traveller-illustration-mobile-1.png" alt="" width="192" height="255">
-          </div>
           <div class="promo__user-menu user-menu">
             <a class="user-menu__link user-menu__phone" href="tel:+78005558628">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,9 +160,9 @@
       <section class="page-main__about about">
         <div class="about__wrapper">
           <h2 class="about__title">О сервисе</h2>
-          <p class="about__text">Любое путешествие <nobr class="nobr">веселее с&nbsp;попутчиками,</nobr> которые на<br> одной волне с&nbsp;тобой! Делитесь
-            своими идеями путешествий <nobr class="nobr">и черпайте вдохновение</nobr> в&nbsp;чужих.</p>
-          <p class="about__text about__text--accent"><nobr class="nobr">А если найдете кого-то</nobr> близкого&nbsp;по&nbsp;духу &mdash;<br> скорее<nobr class="nobr"> зовите в совместный трип!</nobr></p>
+          <p class="about__text">Любое путешествие <span class="nobr">веселее с&nbsp;попутчиками,</span> которые на<br> одной волне с&nbsp;тобой! Делитесь
+            своими идеями путешествий <span class="nobr">и черпайте вдохновение</span> в&nbsp;чужих.</p>
+          <p class="about__text about__text--accent"><span class="nobr">А если найдете кого-то</span> близкого&nbsp;по&nbsp;духу &mdash;<br> скорее<span class="nobr"> зовите в совместный трип!</span></p>
           <a class="about__button button button--big" href="#">Подробнее</a>
         </div>
       </section>
@@ -169,7 +174,12 @@
           <ul class="directions__list">
             <li class="directions__item">
               <a class="card-country" href="#">
-                <img class="card-country__image" src="img/thailand-mobile-1.jpg" alt="" width="270" height="110">
+                <div class="card-country__image">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/thailand-desktop.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+                    <img src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Тайланд, море, солнце, пляж">
+                  </picture>
+                </div>
                 <div class="card-country__flag">
                   <div class="flag flag--thailand">
                     <span class="flag__tooltip tooltip">Тайланд</span>
@@ -187,7 +197,12 @@
             </li>
             <li class="directions__item">
               <a class=" card-country" href="#">
-                <img class="card-country__image" src="img/france-mobile-1.jpg" alt="" width="270" height="110">
+                <div class="card-country__image">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/france-desktop.jpg 1x, img/france-desktop@2x.jpg 2x">
+                    <img src="img/france-mobile.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Франция">
+                  </picture>
+                </div>
                 <div class="card-country__flag">
                   <div class="flag flag--france">
                     <span class="flag__tooltip tooltip">Франция</span>
@@ -205,7 +220,12 @@
             </li>
             <li class="directions__item">
               <a class="card-country" href="#">
-                <img class="card-country__image" src="img/czech-mobile-1.jpg" alt="" width="270" height="110">
+                <div class="card-country__image">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/czech-desktop.jpg 1x, img/czech-desktop@2x.jpg 2x">
+                    <img src="img/czech-mobile.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Чехия">
+                  </picture>
+                </div>
                 <div class="card-country__flag">
                   <div class="flag flag--czech">
                     <span class="flag__tooltip tooltip">Чехия</span>
@@ -228,13 +248,16 @@
       <section class="page-main__users users">
         <div class="users__wrapper">
           <h2 class="users__title">Попутчики</h2>
-          <p class="users__text">Все мы индивидуальны и у<nobr class="nobr"> каждого<br> свой взгляд на</nobr> идеальный&nbsp;отдых.<br> Одному нужен&nbsp;пляж и
-            коктейль,<br> а <nobr class="nobr"> другому маршрут для хайкинга.</nobr></p>
+          <p class="users__text">Все мы индивидуальны и у<span class="nobr"> каждого<br> свой взгляд на</span> идеальный&nbsp;отдых.<br> Одному нужен&nbsp;пляж и
+            коктейль,<br> а <span class="nobr"> другому маршрут для хайкинга.</span></p>
           <p class="users__text users__text--accent">Теперь можно легко<br> найти единомышленников!</p>
           <ul class="users__list">
             <li class="users__item card-user">
               <div class="card-user__image">
-                <img class="card-user__photo" src="img/travelers__photo-1.jpg" alt="" width="270" height="270">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/travelers_1-desktop.jpg 1x, img/travelers_1-desktop@2x.jpg 2x">
+                  <img class="card-user__photo" src="img/travelers_1-tablet.jpg" srcset="img/travelers_1-tablet@2x.jpg 2x" alt="Девушка в бассейне">
+                </picture>
               </div>
               <div class="card-user__content">
                 <a class="card-user__traveler" href="#">Таня Фирсова</a>
@@ -313,7 +336,7 @@
                     <span class="level__title level__title--light">level</span>
                     <svg class="level__icon" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
                       <circle class="level__background" cx="30" cy="30" r="28"></circle>
-                      <circle class="level__progress" cx="30" cy="30" r="27" stroke-dasharray="160";></circle>
+                      <circle class="level__progress" cx="30" cy="30" r="27" stroke-dasharray="160"></circle>
                     </svg>
                   </div>
                 </div>
@@ -321,7 +344,10 @@
             </li>
             <li class="users__item card-user">
               <div class="card-user__image">
-                <img class="card-user__photo" src="img/travelers__photo-2.jpg" alt="" width="270" height="270">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/travelers_2-desktop.jpg 1x, img/travelers_2-desktop@2x.jpg 2x">
+                  <img class="card-user__photo" src="img/travelers_2-tablet.jpg" srcset="img/travelers_2-tablet@2x.jpg 2x" alt="Мужчина с бородой, в темных очках">
+                </picture>
               </div>
               <div class="card-user__content">
                 <a class="card-user__traveler card-user__traveler--online" href="#">Петя Демин</a>
@@ -395,7 +421,7 @@
                     <span class="level__title level__title--light">level</span>
                     <svg class="level__icon" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
                       <circle class="level__background" cx="30" cy="30" r="28"></circle>
-                      <circle class="level__progress" cx="30" cy="30" r="27" stroke-dasharray="140";></circle>
+                      <circle class="level__progress" cx="30" cy="30" r="27" stroke-dasharray="140"></circle>
                     </svg>
                   </div>
                 </div>
@@ -484,7 +510,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
-          <img src="img/logo-mobile-dark.png" alt="логотип сервиса Погнали?" width="95" height="15">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
+          </picture>
         </a>
         <div class="page-footer__socials socials">
           <ul class="socials__list">

@@ -11,8 +11,16 @@
       <div class="page-header__wrapper">
         <div class="page-header__content">
           <a class="page-header__logo logo" href="index.html">
-            <img class="page-header__logo-image page-header__logo-image--dark logo__image" src="img/logo-mobile-dark.png" alt="логотип сервиса Погнали?" width="95" height="15">
-            <img class="page-header__logo-image page-header__logo-image--white logo__image" src="img/logo-mobile-white.png" alt="логотип сервиса Погнали?" width="95" height="15">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image--white" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" alt="логотип сервиса Погнали?">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image--dark" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
+            </picture>
           </a>
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <nav class="page-header__main-nav main-nav">
@@ -118,17 +126,23 @@
                   <span class="level__title">level</span>
                 </div>
                 <svg class="level__icon" width="100" height="102" xmlns="http://www.w3.org/2000/svg">
-                  <circle class="level__progress" cx="50" cy="51" r="48" stroke-dasharray="240";></circle>
+                  <circle class="level__progress" cx="50" cy="51" r="48" stroke-dasharray="240"></circle>
                 </svg>
               </div>
             </div>
-            <img class="user-info__avatar avatar" src="img/travelers__photo-2.jpg" alt="" width="100" height="100">
+            <div class="user-info__avatar avatar">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/travelers_2-desktop.jpg 1x, img/travelers_2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/user-avatar-tablet.jpg 1x, img/user-avatar-tablet@2x.jpg 2x">
+                  <img class="avatar__image" src="img/user-avatar-mobile.jpg" srcset="img/user-avatar-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </div>
             <label class="user-info__button" for="avatar"><span>Сменить </span> фото</label>
             <input class="visually-hidden" id="avatar" name="avatar" type="file">
             <fieldset class="user-info__fieldset user-info__tags">
               <legend class="user-info__legend">Тэги</legend>
               <label class="visually-hidden" for="tags">Укажите список тэгов</label>
-              <textarea class="user-info__textarea" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="user-info__textarea" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов" required>#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
             <fieldset class="user-info__fieldset user-info__transport transport">
               <legend class="user-info__legend">Транспорт</legend>
@@ -190,13 +204,13 @@
                 <p class="plan-item__country"><span class="plan-item__number">1.</span>Франция, Италия</p>
                 <p class="plan-item__travelers">3 попутчика</p>
                 <p class="plan-item__dates">26 мар — 29 мар</p>
-                <a class="plan-item__edit" href="#">Изменить</a>
+                <a class="plan-item__edit" href="my-plans.html">Изменить</a>
               </li>
               <li class="user-plan__item plan-item">
                 <p class="plan-item__country"><span class="plan-item__number">2.</span>Тайланд, Индонезия</p>
                 <p class="plan-item__travelers">1 попутчик</p>
                 <p class="plan-item__dates">1 июл — 15 июл</p>
-                <a class="plan-item__edit" href="#">Изменить</a>
+                <a class="plan-item__edit" href="my-plans.html">Изменить</a>
               </li>
             </ol>
           </div>
@@ -214,7 +228,7 @@
                 </ul>
               </div>
             </div>
-            <section class="add-plan__plan-step plan-step plan-step--1" id="step-1">
+            <section class="add-plan__plan-step plan-step plan-step--active plan-step--1" id="step-1">
               <h3 class="plan-step__title"><span class="plan-step__number">Шаг 1. </span> Даты пребывания</h3>
               <p class="plan-step__text">Укажите предпочтительное количество попутчиков, которых<br> вы хотели бы позвать
                 в
@@ -224,22 +238,22 @@
                   <label class="plan-step__label input-counter__label" for="travelers-value">Ищу попутчиков:</label>
                   <span class="input-counter__unit-measure">Чел.</span>
                   <div class="input-counter__inner">
-                    <button class="input-counter__button input-counter__button--minus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--minus" data-travelers="minus" type="button"></button>
                     <input class="input-counter__input-number" id="travelers-value" name="travelers-value" type="number"
                     value="2">
-                    <button class="input-counter__button input-counter__button--plus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--plus" data-travelers="plus" type="button"></button>
                   </div>
                 </div>
-                <input class="plan-step__input-checkbox visually-hidden" id="child-yes" type="checkbox" checked>
-                <label class="plan-step__checkbox" for="child-yes" name="child-yes">Можно с детьми</label>
+                <input class="plan-step__input-checkbox visually-hidden" id="child-yes" type="checkbox" name="child-yes" checked>
+                <label class="plan-step__checkbox" for="child-yes">Можно с детьми</label>
                 <div class="plan-step__input-counter input-counter">
                   <label class="plan-step__label input-counter__label" for="days-value">Длительность:</label>
                   <span class="input-counter__unit-measure">Дн.</span>
                   <div class="input-counter__inner">
-                    <button class="input-counter__button input-counter__button--minus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--minus" data-days="minus" type="button"></button>
                     <input class="input-counter__input-number" id="days-value" name="days-value" type="number"
                       value="3">
-                    <button class="input-counter__button input-counter__button--plus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--plus" data-days="plus" type="button"></button>
                   </div>
                 </div>
               </div>
@@ -474,10 +488,10 @@
                           <button class="filter-abc__button" type="button">б</button>
                           <ul class="select-country__list filter-abc__option-list">
                             <li class="select-country__item">
-                              <label class="select-country__option" for="select-country-bosnia">Босния и
+                              <label class="select-country__option" for="select-country-1-bosnia">Босния и
                                 Герцеговина</label>
                               <input class="visually-hidden" type="radio" name="select-country-1"
-                                id="select-country-bosnia" value="bosnia" checked>
+                                id="select-country-1-bosnia" value="bosnia" checked>
                             </li>
                           </ul>
                         </li>
@@ -631,9 +645,9 @@
                           <button class="filter-abc__button" type="button">ч</button>
                           <ul class="select-country__list filter-abc__option-list">
                             <li class="select-country__item">
-                              <label class="select-country__option" for="select-country-czech">Чехия</label>
+                              <label class="select-country__option" for="select-country-2-czech">Чехия</label>
                               <input class="visually-hidden" type="radio" name="select-country-2"
-                                id="select-country-czech" value="czech" checked>
+                                id="select-country-2-czech" value="czech" checked>
                             </li>
                           </ul>
                         </li>
@@ -660,7 +674,7 @@
                   <button class="select-country__delete" type="button"></button>
                 </div>
                 <div class="select-country__inner">
-                  <div class="select-country__choice select-country__choice--select select-country__choice--active" tabindex="0">
+                  <div class="select-country__choice select-country__choice--select" tabindex="0">
                     <span class="select-country__name select-country__name--select">Выберите страну</span>
                   </div>
                   <div class="select-country__dropdown">
@@ -1348,7 +1362,7 @@
                             <li class="select-country__item">
                               <label class="select-country__option" for="select-country-senegal">Сенегал</label>
                               <input class="visually-hidden" type="radio" name="select-country-3"
-                                id="select-country-lsenega" value="senegal">
+                                id="select-country-senegal" value="senegal">
                             </li>
                             <li class="select-country__item">
                               <label class="select-country__option" for="select-country-serbia">Сербия</label>
@@ -1396,9 +1410,9 @@
                                 id="select-country-thailand" value="thailand">
                             </li>
                             <li class="select-country__item">
-                              <label class="select-country__option" for="select-country-sanmarino">Танзания</label>
+                              <label class="select-country__option" for="select-country-tanzania">Танзания</label>
                               <input class="visually-hidden" type="radio" name="select-country-3"
-                                id="select-country-sanmarino" value="sanmarino">
+                                id="select-country-tanzania" value="tanzania">
                             </li>
                             <li class="select-country__item">
                               <label class="select-country__option" for="select-country-togo">Того</label>
@@ -1670,8 +1684,12 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo logo">
-          <img src="img/logo-mobile-dark.png" alt="логотип сервиса Погнали?" width="95" height="15">
+        <a class="page-footer__logo logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
+          </picture>
         </a>
         <div class="page-footer__socials socials">
           <ul class="socials__list">
