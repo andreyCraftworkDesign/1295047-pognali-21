@@ -1,4 +1,6 @@
 .page-header {
+  position: sticky;
+  top: 0;
   z-index: 20;
 
   display: flex;
@@ -9,31 +11,23 @@
   padding-bottom: 24px;
   width: 100%;
 
-  // background-color: @basic-blue;
-
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     padding-top: 40px;
-    padding-bottom: 24px;
-
-    // background-color: @bg-main-header;
+    padding-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 48px;
+    padding-top: 28px;
     padding-bottom: 10px;
-
-    // background-color: @basic-blue;
   }
 }
 
 .page-header--fixed-top {
-  position: fixed;
-  padding-top: 28px;
-  padding-bottom: 31px;
-
   background-color: @basic-white;
+
+  animation: fade 0.3s;
 
   .page-header__toggle {
     &::before,
@@ -50,16 +44,27 @@
     display: block;
   }
 
-  @media (min-width: @tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 42px;
+  // @media (min-width: @tablet-width) {
+  //   padding-top: 40px;
+  //   padding-bottom: 42px;
+  // }
+
+  // @media (min-width: @desktop-width) {
+  //   padding-top: 28px;
+  //   padding-bottom: 10px;
+  // }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.8;
   }
 
-  @media (min-width: @desktop-width) {
-    padding-top: 18px;
-    padding-bottom: 20px;
+  100% {
+    opacity: 1;
   }
 }
+
 
 .page-header--fixed-top.page-header--active {
   position: fixed;
