@@ -12,11 +12,17 @@
         <div class="page-header__content">
           <a class="page-header__logo logo">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white.webp 1x, img/logo-mobile-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="page-header__logo-image page-header__logo-image--white" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" alt="логотип сервиса Погнали?">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
               <img class="page-header__logo-image page-header__logo-image--dark" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
@@ -167,6 +173,8 @@
               <a class="card-country" href="#">
                 <div class="card-country__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/thailand-desktop.webp 1x, img/thailand-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/thailand-mobile.webp 1x, img/thailand-mobile@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/thailand-desktop.jpg 1x, img/thailand-desktop@2x.jpg 2x">
                     <img src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Тайланд, море, солнце, пляж">
                   </picture>
@@ -190,6 +198,8 @@
               <a class=" card-country" href="#">
                 <div class="card-country__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/france-desktop.webp 1x, img/france-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/france-mobile.webp 1x, img/france-mobile@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/france-desktop.jpg 1x, img/france-desktop@2x.jpg 2x">
                     <img src="img/france-mobile.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Франция">
                   </picture>
@@ -213,6 +223,8 @@
               <a class="card-country" href="#">
                 <div class="card-country__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/czech-desktop.webp 1x, img/czech-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/czech-mobile.webp 1x, img/czech-mobile@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/czech-desktop.jpg 1x, img/czech-desktop@2x.jpg 2x">
                     <img src="img/czech-mobile.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Чехия">
                   </picture>
@@ -246,6 +258,8 @@
             <li class="users__item card-user">
               <div class="card-user__image">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/travelers_1-desktop.webp 1x, img/travelers_1-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/travelers_1-tablet.webp 1x, img/travelers_1-tablet@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/travelers_1-desktop.jpg 1x, img/travelers_1-desktop@2x.jpg 2x">
                   <img class="card-user__photo" src="img/travelers_1-tablet.jpg" srcset="img/travelers_1-tablet@2x.jpg 2x" alt="Девушка в бассейне">
                 </picture>
@@ -320,6 +334,8 @@
             <li class="users__item card-user">
               <div class="card-user__image">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/travelers_2-desktop.webp 1x, img/travelers_2-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/travelers_2-tablet.webp 1x, img/travelers_2-tablet@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/travelers_2-desktop.jpg 1x, img/travelers_2-desktop@2x.jpg 2x">
                   <img class="card-user__photo" src="img/travelers_2-tablet.jpg" srcset="img/travelers_2-tablet@2x.jpg 2x" alt="Мужчина с бородой, в темных очках">
                 </picture>
@@ -447,7 +463,7 @@
           <h2 class="visually-hidden">Наш адрес и местоположение на карте</h2>
           <div class="location__adress-wrapper">
             <span class="location__icon">
-              <svg class="location__picture" width="16" height="21">
+              <svg class="location__picture" width="16" height="21" viewBox="0 0 32 42">
                 <use xlink:href="img/decor/sprites.svg#map-icon"></use>
               </svg>
             </span>
@@ -469,6 +485,9 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
             <img class="page-footer__logo-image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
@@ -477,23 +496,23 @@
         <div class="page-footer__socials socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a class="socials__link socials__link--bg" href="#">
-                <svg class="socials__icon socials__icon--facebook" width="11" height="20">
+              <a class="socials__link socials__link--bg" href="#" aria-label="Сайт Facebook">
+                <svg role="img" class="socials__icon socials__icon--facebook" width="11" height="20">
                   <use xlink:href="img/decor/sprites.svg#facebook-icon"></use>
                 </svg>
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--bg" href="#">
-                <svg class="socials__icon socials__icon--vkontakte" width="23" height="12">
+              <a class="socials__link socials__link--bg" href="#" aria-label="Сайт Вконтакте">
+                <svg role="img" class="socials__icon socials__icon--vkontakte" width="23" height="12">
                   <use xlink:href="img/decor/sprites.svg#vkontakte-icon"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте</span></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--bg" href="#">
-                <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+              <a class="socials__link socials__link--bg" href="#" aria-label="Сайт Instagram">
+                <svg role="img" class="socials__icon socials__icon--instagram" width="18" height="18">
                   <use xlink:href="img/decor/sprites.svg#instagram-icon"></use>
                 </svg>
               <span class="visually-hidden">Instagram</span></a>
@@ -501,9 +520,9 @@
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано <span
+          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">Разработано <span
               class="visually-hidden">htmlacademy</span>
-            <svg class="copyright__icon" width="27" height="34">
+            <svg role="img" class="copyright__icon" width="27" height="34">
               <use xlink:href="img/decor/sprites.svg#htmlacademy-logo"></use>
             </svg>
           </a>

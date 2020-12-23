@@ -12,11 +12,17 @@
         <div class="page-header__content">
           <a class="page-header__logo logo" href="index.html">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white.webp 1x, img/logo-mobile-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="page-header__logo-image page-header__logo-image--white" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" alt="логотип сервиса Погнали?">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
               <img class="page-header__logo-image page-header__logo-image--dark" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
@@ -26,7 +32,7 @@
           <nav class="page-header__main-nav main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">
+                <a class="main-nav__link" href="#">
                   <span class="main-nav__transition-text" data-hover="О сервисе">О сервисе</span></a>
               </li>
               <li class="main-nav__item">
@@ -127,7 +133,7 @@
                   <a class="macro-regions__link" href="#">Острова</a>
                 </li>
               </ul>
-              <button class="filter-country__toggle toggle-countries">
+              <button class="filter-country__toggle toggle-countries" aria-label="Открыть фильтр стран">
                 <span class="toggle-countries__text-open">Показать все</span>
                 <span class="toggle-countries__text-close">Свернуть</span>
               </button>
@@ -765,7 +771,7 @@
             <form class="filter-travelers__form" action="https://echo.htmlacademy.ru" method="GET">
               <fieldset class="filter-travelers__fieldset fieldset-accordion">
                 <legend class="fieldset-accordion__legend">
-                  <button class="fieldset-accordion__toggle" type="button">Хобби</button>
+                  <button class="fieldset-accordion__toggle" type="button" aria-label="Раскрыть список Хобби">Хобби</button>
                 </legend>
                 <span class="fieldset-accordion__title">Хобби:</span>
                 <ul class="fieldset-accordion__list">
@@ -785,7 +791,7 @@
               </fieldset>
               <fieldset class="filter-travelers__fieldset fieldset-accordion">
                 <legend class="fieldset-accordion__legend">
-                  <button class="fieldset-accordion__toggle" type="button">Музыка</button>
+                  <button class="fieldset-accordion__toggle" type="button" aria-label="Раскрыть список Музыка">Музыка</button>
                 </legend>
                 <span class="fieldset-accordion__title">Музыка:</span>
                 <ul class="fieldset-accordion__list">
@@ -805,7 +811,7 @@
               </fieldset>
               <fieldset class="filter-travelers__fieldset fieldset-accordion">
                 <legend class="fieldset-accordion__legend">
-                  <button class="fieldset-accordion__toggle" type="button">Еда</button>
+                  <button class="fieldset-accordion__toggle" type="button" aria-label="Раскрыть список Еда">Еда</button>
                 </legend>
                 <span class="fieldset-accordion__title">Еда:</span>
                 <ul class="fieldset-accordion__list">
@@ -825,7 +831,7 @@
               </fieldset>
               <fieldset class="filter-travelers__fieldset fieldset-accordion">
                 <legend class="fieldset-accordion__legend">
-                  <button class="fieldset-accordion__toggle" type="button">Транспорт</button>
+                  <button class="fieldset-accordion__toggle" type="button" aria-label="Раскрыть список Транспорт">Транспорт</button>
                 </legend>
                 <span class="fieldset-accordion__title fieldset-accordion__title--align-center">Транспорт:</span>
                 <div class="fieldset-accordion__list fieldset-accordion__transport">
@@ -903,6 +909,9 @@
               <li class="travelers__item card-travelers">
                 <div class="card-travelers__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/travelers_1-desktop.webp 1x, img/travelers_1-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/travelers_1-tablet.webp 1x, img/travelers_1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/travelers_1-mobile.webp 1x, img/travelers_1-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/travelers_1-desktop.jpg 1x, img/travelers_1-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/travelers_1-tablet.jpg 1x, img/travelers_1-tablet@2x.jpg 2x">
                     <img class="card-travelers__photo" src="img/travelers_1-mobile.jpg" srcset="img/travelers_1-mobile@2x.jpg 2x" alt="Девушка в бассейне">
@@ -989,6 +998,9 @@
               <li class="travelers__item card-travelers">
                 <div class="card-travelers__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/travelers_2-desktop.webp 1x, img/travelers_2-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/travelers_2-tablet.webp 1x, img/travelers_2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/travelers_2-mobile.webp 1x, img/travelers_2-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/travelers_2-desktop.jpg 1x, img/travelers_2-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/travelers_2-tablet.jpg 1x, img/travelers_2-tablet@2x.jpg 2x">
                     <img class="card-travelers__photo" src="img/travelers_2-mobile.jpg" srcset="img/travelers_2-mobile@2x.jpg 2x" alt="Мужчина с бородой, в темных очках">
@@ -1069,6 +1081,9 @@
               <li class="travelers__item card-travelers">
                 <div class="card-travelers__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/travelers_3-desktop.webp 1x, img/travelers_3-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/travelers_3-tablet.webp 1x, img/travelers_3-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/travelers_3-mobile.webp 1x, img/travelers_3-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/travelers_3-desktop.jpg 1x, img/travelers_3-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/travelers_3-tablet.jpg 1x, img/travelers_3-tablet@2x.jpg 2x">
                     <img class="card-travelers__photo" src="img/travelers_3-mobile.jpg" srcset="img/travelers_3-mobile@2x.jpg 2x" alt="Молодой парень, сидит на крыше авто и считает денги">
@@ -1155,6 +1170,9 @@
               <li class="travelers__item card-travelers">
                 <div class="card-travelers__image">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/travelers_4-desktop.webp 1x, img/travelers_4-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/travelers_4-tablet.webp 1x, img/travelers_4-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/travelers_4-mobile.webp 1x, img/travelers_4-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/travelers_4-desktop.jpg 1x, img/travelers_4-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/travelers_4-tablet.jpg 1x, img/travelers_4-tablet@2x.jpg 2x">
                     <img class="card-travelers__photo" src="img/travelers_4-mobile.jpg" srcset="img/travelers_4-mobile@2x.jpg 2x" alt="Молодой парень, сидит на крыше авто и считает денги">
@@ -1250,8 +1268,8 @@
                 <a href="#" class="pagination__link">4</a>
               </li>
             </ul>
-            <a class="pagination__button pagination__button--prev" href="#"></a>
-            <a class="pagination__button pagination__button--next" href="#"></a>
+            <a class="pagination__button pagination__button--prev" href="#" aria-label="Предыдущая страница"></a>
+            <a class="pagination__button pagination__button--next" href="#" aria-label="Следующая страница"></a>
           </div>
         </div>
       </div>
@@ -1260,6 +1278,9 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
             <img class="page-footer__logo-image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">

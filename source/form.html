@@ -12,21 +12,27 @@
         <div class="page-header__content">
           <a class="page-header__logo logo" href="index.html">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white.webp 1x, img/logo-mobile-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="page-header__logo-image page-header__logo-image--white" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" alt="логотип сервиса Погнали?">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
               <img class="page-header__logo-image page-header__logo-image--dark" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
             </picture>
           </a>
-          <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="page-header__toggle" type="button" aria-label="Кнопка мобильного меню"><span class="visually-hidden">Открыть меню</span></button>
           <nav class="page-header__main-nav main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">
+                <a class="main-nav__link" href="#">
                   <span class="main-nav__transition-text" data-hover="О сервисе">О сервисе</span></a>
               </li>
               <li class="main-nav__item">
@@ -124,9 +130,12 @@
             </div>
             <div class="user-info__avatar avatar">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/travelers_2-desktop.jpg 1x, img/travelers_2-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/user-avatar-desktop.webp 1x, img/user-avatar-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/user-avatar-tablet.webp 1x, img/user-avatar-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/user-avatar-mobile.webp 1x, img/user-avatar-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/user-avatar-desktop.jpg 1x, img/user-avatar-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/user-avatar-tablet.jpg 1x, img/user-avatar-tablet@2x.jpg 2x">
-                  <img class="avatar__image" src="img/user-avatar-mobile.jpg" srcset="img/user-avatar-mobile@2x.jpg 2x" alt="Фотография пользователя">
+                <img class="avatar__image" src="img/user-avatar-mobile.jpg" srcset="img/user-avatar-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </div>
             <label class="user-info__button" for="avatar"><span>Сменить </span> фото</label>
@@ -214,10 +223,10 @@
                   <label class="plan-step__label input-counter__label" for="travelers-value">Ищу попутчиков:</label>
                   <span class="input-counter__unit-measure">Чел.</span>
                   <div class="input-counter__inner">
-                    <button class="input-counter__button input-counter__button--minus" data-travelers="minus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--minus" aria-label="Уменьшить количество попутчиков" data-travelers="minus" type="button"></button>
                     <input class="input-counter__input-number" id="travelers-value" name="travelers-value" type="number"
                     value="2">
-                    <button class="input-counter__button input-counter__button--plus" data-travelers="plus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--plus" aria-label="Увеличить количество попутчиков" data-travelers="plus" type="button"></button>
                   </div>
                 </div>
                 <input class="plan-step__input-checkbox visually-hidden" id="child-yes" type="checkbox" name="child-yes" checked>
@@ -226,10 +235,10 @@
                   <label class="plan-step__label input-counter__label" for="days-value">Длительность:</label>
                   <span class="input-counter__unit-measure">Дн.</span>
                   <div class="input-counter__inner">
-                    <button class="input-counter__button input-counter__button--minus" data-days="minus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--minus" aria-label="Уменьшить количество дней" data-days="minus" type="button"></button>
                     <input class="input-counter__input-number" id="days-value" name="days-value" type="number"
                       value="3">
-                    <button class="input-counter__button input-counter__button--plus" data-days="plus" type="button"></button>
+                    <button class="input-counter__button input-counter__button--plus" aria-label="Увеличить количество дней" data-days="plus" type="button"></button>
                   </div>
                 </div>
               </div>
@@ -548,7 +557,7 @@
                       <span class="flag__tooltip tooltip">Босния и Герцеговина</span>
                     </div>
                   </div>
-                  <button class="select-country__delete" type="button"></button>
+                  <button class="select-country__delete" type="button" aria-label="Убрать маршрут"></button>
                 </div>
                 <div class="select-country__inner">
                   <div class="select-country__choice select-country__choice--yes" tabindex="0">
@@ -647,7 +656,7 @@
                       <span class="flag__tooltip tooltip">Чехия</span>
                     </div>
                   </div>
-                  <button class="select-country__delete" type="button"></button>
+                  <button class="select-country__delete" type="button" aria-label="Убрать маршрут"></button>
                 </div>
                 <div class="select-country__inner">
                   <div class="select-country__choice select-country__choice--select" tabindex="0">
@@ -1595,7 +1604,7 @@
                       <span class="flag__tooltip flag__tooltip--select tooltip"></span>
                     </div>
                   </div>
-                  <button class="select-country__delete" type="button"></button>
+                  <button class="select-country__delete" type="button" aria-label="Убрать маршрут"></button>
                 </div>
                 <div class="select-country__inner">
                   <div class="select-country__choice select-country__choice--add-country">
@@ -1662,6 +1671,9 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
             <img class="page-footer__logo-image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" alt="логотип сервиса Погнали?">
