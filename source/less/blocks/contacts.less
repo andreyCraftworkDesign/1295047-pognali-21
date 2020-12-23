@@ -23,8 +23,8 @@
     color: @special-yellow-dark;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover .contacts__picture,
+  &:focus .contacts__picture {
     fill: @special-yellow-dark;
   }
 
@@ -32,7 +32,7 @@
     color: fade(@special-yellow-dark, 30%);
   }
 
-  &:active path {
+  &:active .contacts__picture {
     fill: fade(@special-yellow-dark, 30%);
   }
 
@@ -64,9 +64,15 @@
 }
 
 .contacts__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 45px;
   height: 45px;
   margin-right: 16px;
+
+  background-color: @bg-contacts-icon;
 
   border-radius: 50%;
 
@@ -82,3 +88,38 @@
     margin-right: 31px;
   }
 }
+
+.contacts__picture {
+  fill: @basic-yellow;
+}
+
+.contacts__picture--phone {
+  width: 18px;
+  height: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 27px;
+    height: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 36px;
+    height: 34px;
+  }
+}
+
+.contacts__picture--mail {
+  width: 18px;
+  height: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 27px;
+    height: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 37px;
+    height: 25px;
+  }
+}
+

@@ -62,8 +62,16 @@
 }
 
 .location__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 45px;
   height: 45px;
+
+  background-color: @bg-contacts-icon;
+
+  border-radius: 50%;
 
   @media (min-width: @tablet-width) {
     width: 68px;
