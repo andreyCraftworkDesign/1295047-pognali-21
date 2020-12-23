@@ -35,8 +35,8 @@
     flex-direction: column;
   }
 
-  .filter-country__dropdown {
-    display: flex;
+  .filter-country__body {
+    display: block;
   }
 
   .filter-country__button {
@@ -193,13 +193,13 @@
 
 .filter-country__body {
   position: relative;
+  display: none;
 }
 
 .filter-country__dropdown {
-  position: absolute;
   z-index: 2;
 
-  display: none;
+  display: flex;
 
   top: auto;
   flex-direction: column;

@@ -1,6 +1,9 @@
 .page-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
+
   z-index: 20;
 
   display: flex;
@@ -19,12 +22,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     padding-top: 28px;
     padding-bottom: 10px;
   }
 }
 
 .page-header--fixed-top {
+  position: fixed;
   background-color: @basic-white;
 
   animation: fade 0.3s;
@@ -45,6 +50,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: sticky;
     padding-top: 19px;
     padding-bottom: 19px;
   }
@@ -60,13 +66,7 @@
   }
 }
 
-
-.page-header--fixed-top.page-header--active {
-  position: sticky;
-}
-
 .page-header--active {
-  position: absolute;
   z-index: 10;
 
   width: 100%;
@@ -123,7 +123,15 @@
     }
 
     .page-header__toggle {
-      top: 16px;
+      top: 0;
+
+      &::before {
+        top: 25px;
+      }
+
+      &::after {
+        bottom: 23px;
+      }
     }
   }
 }
@@ -161,13 +169,6 @@
 
   cursor: pointer;
 
-  @media (min-width: @tablet-width) {
-    top: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -190,6 +191,24 @@
 
     background-color: @basic-white;
     border-radius: 2px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      top: 21px;
+    }
+
+    &::after {
+      bottom: 18px;
+    }
   }
 
   @media (min-width: @desktop-width) {
