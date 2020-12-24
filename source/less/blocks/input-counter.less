@@ -161,10 +161,18 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 50px;
+  }
 }
 
 .input-counter__input-number::-webkit-outer-spin-button,
 .input-counter__input-number::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.input-counter__input-number[type=number] {
+  -moz-appearance:textfield;
 }
