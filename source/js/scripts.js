@@ -81,6 +81,7 @@ Array.from(inputCounterButtons).forEach(inputCounterButton =>
 
 Array.from(planStepButtonNexts).forEach(planStepButtonNext =>
   planStepButtonNext.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (planStepButtonNext.getAttribute('href') === "#step-2") {
       planSteps[0].classList.remove('plan-step--active');
       planSteps[1].classList.add('plan-step--active');
@@ -118,6 +119,7 @@ Array.from(planStepButtonPrevs).forEach(planStepButtonPrev =>
 
 Array.from(filterAbcLists).forEach(filterAbcList =>
   filterAbcList.addEventListener('click', function(evt) {
+    evt.preventDefault();
     if(evt.target.classList.contains('filter-abc__button')) {
       let array = Array.from(filterAbcButtons);
       let target = evt.target;
