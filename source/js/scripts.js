@@ -81,8 +81,8 @@ Array.from(inputCounterButtons).forEach(inputCounterButton =>
 
 Array.from(planStepButtonNexts).forEach(planStepButtonNext =>
   planStepButtonNext.addEventListener('click', function (evt) {
-    evt.preventDefault();
     if (planStepButtonNext.getAttribute('href')) {
+      evt.preventDefault();
       if (planStepButtonNext.getAttribute('href') === "#step-2") {
         planSteps[0].classList.remove('plan-step--active');
         planSteps[1].classList.add('plan-step--active');
