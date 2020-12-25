@@ -165,7 +165,7 @@
           <fieldset class="user-info__fieldset user-info__transport transport">
             <legend class="user-info__legend">Транспорт</legend>
             <div class="transport__list">
-              <input class="transport__input-checkbox visually-hidden" id="aeroplan" name="aeroplan" type="checkbox"
+              <input class="transport__input-checkbox visually-hidden" id="aeroplan" name="aeroplan" type="checkbox" aria-label="Авиаперелет"
                 checked>
               <label class="transport__item transport__label" for="aeroplan">
                 <svg class="transport__icon" width="17" height="16" viewBox="0 0 23 21">
@@ -173,21 +173,21 @@
                 </svg>
                 <span class="transport__tooltip tooltip">Авиаперелет</span>
               </label>
-              <input class="transport__input-checkbox visually-hidden" id="car" name="car" type="checkbox" checked>
+              <input class="transport__input-checkbox visually-hidden" id="car" name="car" type="checkbox" aria-label="Автотранспорт" checked>
               <label class="transport__item transport__label" for="car">
                 <svg class="transport__icon" width="17" height="16" viewBox="0 0 18 21">
                   <use xlink:href="img/sprite.svg#car-icon"></use>
                 </svg>
                 <span class="transport__tooltip tooltip">Автотранспорт</span>
               </label>
-              <input class="transport__input-checkbox visually-hidden" id="bike" name="bike" type="checkbox">
+              <input class="transport__input-checkbox visually-hidden" id="bike" name="bike" type="checkbox" aria-label="Велосипед">
               <label class="transport__item transport__label" for="bike">
                 <svg class="transport__icon" width="17" height="16" viewBox="0 0 26 25">
                   <use xlink:href="img/sprite.svg#bike-icon"></use>
                 </svg>
                 <span class="transport__tooltip tooltip">Велосипед</span>
               </label>
-              <input class="transport__input-checkbox visually-hidden" id="walk" name="walk" type="checkbox" checked>
+              <input class="transport__input-checkbox visually-hidden" id="walk" name="walk" type="checkbox" aria-label="Пешком" checked>
               <label class="transport__item transport__label" for="walk">
                 <svg class="transport__icon" width="17" height="16" viewBox="0 0 23 24">
                   <use xlink:href="img/sprite.svg#walk-icon"></use>
@@ -265,9 +265,9 @@
             </div>
             <div class="plan-step__calendar calendar">
               <div class="calendar__header">
-                <button class="calendar__button calendar__button--prev" type="button"></button>
+                <button class="calendar__button calendar__button--prev" type="button" aria-label="Предыдущий месяц"></button>
                 <p class="calendar__title">Март 2019</p>
-                <button class="calendar__button calendar__button--next" type="button"></button>
+                <button class="calendar__button calendar__button--next" type="button" aria-label="Следующий месяц"></button>
               </div>
               <table class="calendar__table">
                 <thead class="calendar__head">

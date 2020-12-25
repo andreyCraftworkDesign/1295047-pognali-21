@@ -861,14 +861,14 @@
                 <div class="transport">
                   <div class="transport__list">
                     <input class="transport__input-checkbox visually-hidden" id="aeroplan" name="aeroplan"
-                      type="checkbox" checked>
+                      type="checkbox" aria-label="Авиаперелет" checked>
                     <label class="transport__item transport__label" for="aeroplan">
                       <svg class="transport__icon" width="17" height="16" viewBox="0 0 23 21">
                         <use xlink:href="img/sprite.svg#plane-icon"></use>
                       </svg>
                       <span class="transport__tooltip tooltip">Авиаперелет</span>
                     </label>
-                    <input class="transport__input-checkbox visually-hidden" id="car" name="car" type="checkbox"
+                    <input class="transport__input-checkbox visually-hidden" id="car" name="car" type="checkbox" aria-label="Автотранспорт"
                       checked>
                     <label class="transport__item transport__label" for="car">
                       <svg class="transport__icon" width="17" height="16" viewBox="0 0 18 21">
@@ -876,14 +876,14 @@
                       </svg>
                       <span class="transport__tooltip tooltip">Автотранспорт</span>
                     </label>
-                    <input class="transport__input-checkbox visually-hidden" id="bike" name="bike" type="checkbox">
+                    <input class="transport__input-checkbox visually-hidden" id="bike" name="bike" type="checkbox" aria-label="Велосипед">
                     <label class="transport__item transport__label" for="bike">
                       <svg class="transport__icon" width="17" height="16" viewBox="0 0 26 25">
                         <use xlink:href="img/sprite.svg#bike-icon"></use>
                       </svg>
                       <span class="transport__tooltip tooltip">Велосипед</span>
                     </label>
-                    <input class="transport__input-checkbox visually-hidden" id="walk" name="walk" type="checkbox"
+                    <input class="transport__input-checkbox visually-hidden" id="walk" name="walk" type="checkbox" aria-label="Пешком"
                       checked>
                     <label class="transport__item transport__label" for="walk">
                       <svg class="transport__icon" width="17" height="17" viewBox="0 0 23 24">
@@ -905,13 +905,13 @@
                   <div class="range__min">
                     <label>
                       <span class="visually-hidden">от</span>
-                      <input class="range__input" type="number" name="level" value="30">
+                      <input class="range__input" type="number" name="level" value="30" aria-label="Минимальное значение уровня">
                     </label>
                   </div>
                   <div>
                     <label>
                       <span class="visually-hidden">да</span>
-                      <input class="range__input" type="number" name="level" value="100">
+                      <input class="range__input" type="number" name="level" value="100" aria-label="Максимальное значение уровня">
                     </label>
                   </div>
                 </div>
@@ -1105,7 +1105,7 @@
               </div>
               <a class="card-travelers__button button" href="call-travelers.html">Позвать!</a>
               <div class="card-travelers__likes likes">
-                <button class="likes__button likes__button--active">
+                <button class="likes__button">
                   <svg class="likes__icon" width="13" height="14" viewBox="0 0 21 19">
                     <use xlink:href="img/sprite.svg#like-icon"></use>
                   </svg>
