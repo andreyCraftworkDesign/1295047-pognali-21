@@ -82,18 +82,20 @@ Array.from(inputCounterButtons).forEach(inputCounterButton =>
 Array.from(planStepButtonNexts).forEach(planStepButtonNext =>
   planStepButtonNext.addEventListener('click', function (evt) {
     evt.preventDefault();
-    if (planStepButtonNext.getAttribute('href') === "#step-2") {
-      planSteps[0].classList.remove('plan-step--active');
-      planSteps[1].classList.add('plan-step--active');
-      stepMarkerItems[0].classList.remove('step-marker__item--active');
-      stepMarkerItems[1].classList.add('step-marker__item--active');
-      planSteps[1].scrollIntoView();
-    } else if (planStepButtonNext.getAttribute('href') === "#step-3") {
-      planSteps[1].classList.remove('plan-step--active');
-      planSteps[2].classList.add('plan-step--active');
-      stepMarkerItems[1].classList.remove('step-marker__item--active');
-      stepMarkerItems[2].classList.add('step-marker__item--active');
-      planSteps[2].scrollIntoView();
+    if (planStepButtonNext.getAttribute('href')) {
+      if (planStepButtonNext.getAttribute('href') === "#step-2") {
+        planSteps[0].classList.remove('plan-step--active');
+        planSteps[1].classList.add('plan-step--active');
+        stepMarkerItems[0].classList.remove('step-marker__item--active');
+        stepMarkerItems[1].classList.add('step-marker__item--active');
+        planSteps[1].scrollIntoView();
+      } else if (planStepButtonNext.getAttribute('href') === "#step-3") {
+        planSteps[1].classList.remove('plan-step--active');
+        planSteps[2].classList.add('plan-step--active');
+        stepMarkerItems[1].classList.remove('step-marker__item--active');
+        stepMarkerItems[2].classList.add('step-marker__item--active');
+        planSteps[2].scrollIntoView();
+      }
     }
   })
 );
