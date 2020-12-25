@@ -7,8 +7,10 @@
 
   &::before {
     .section-bg-mod();
+    z-index: 1;
+    top: -25px;
 
-    background-color: @basic-blue-lighten;
+    background-color: @basic-yellow;
   }
 
   &::after {
@@ -20,6 +22,10 @@
   @media (min-width: @tablet-width) {
     padding-top: 65px;
     padding-bottom: 42px;
+
+    &::before {
+      background-color: @basic-blue-lighten;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -51,7 +57,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 51px;
+    padding-top: 49px;
     padding-bottom: 65px;
 
     border-top-right-radius: 60px;
